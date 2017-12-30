@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				
+	</head>
+	<body>
+		<form action="#" method="post">
+			<style>
+				.bg{background: lightcyan;}
+				.r{color: red;}
+				.b{color: cornflowerblue;}
+			</style>
+			
+			<table border="1" cellspacing="0" bordercolor="lightgrey">
+			
+				<tr>
+	                <!--
+	                	第一行合并3列，colspan=3
+	                -->
+					<td colspan="3" class="bg"><b>1. 会员登录名和密码</b></td>
+					
+				</tr>
+				
+				<tr> 
+					<!--
+	                	第二行
+	                -->
+					<td align="right">用户名:</td>
+					<td><input type="text" name="username" min="5" maxlength="15"/><span class="r">*</span></td>
+					<td><input type="button" name="verify" value="检测用户名"/><span class="b">5-15位,请使用英文(a-z、A-Z)、数字(0-9)</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第三行
+	                -->
+					<td align="right">密&nbsp;&nbsp;&nbsp;&nbsp;码:</td>
+					<td><input type="password" name="pwd1" min="5" maxlength="15"/><span class="r">*</span></td>
+					<td><span class="b">5-15位,请使用(a-z)、数字(0-9)注意区分大小写;<br />密码不能与登陆名相同;易记;难猜</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第四行
+	                -->
+					<td align="right">再次输入密码:</td>
+					<td><input type="password" name="pwd2"/><span class="r">*</span></td>
+					<td><span class="b">两次输入的密码必须一致</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第五行合并3列，colspan=3
+	                -->
+					<td colspan="3" class="bg"><b>2. 姓名和联系方式</b></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第六行
+	                -->
+					<td align="right">真实姓名:</td>
+					<td><input type="text" name="realname"/><span class="r">*</span></td>
+					<td><input type="radio" name="gender" value="1" checked="checked"/>男
+						<input type="radio" name="gender" value="0" >女
+					</td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第七行
+	                -->
+					<td align="right">电子邮箱:</td>
+					<td><input type="email" name="email"/><span class="r">*</span></td>
+					<td><span class="r"><strong>非常重要！</strong></span><br /><span class="b">这是客户与您联系的首选方式,请一定填写真实.</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第八行
+	                -->
+					<td align="right">固定电话</td>
+					<td><input type="text" name="phone"/><span class="r">*</span></td>
+					<td><span class="b">区号+电话号码</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第九行合并2列，colspan=2，2个select
+	                -->
+					<td align="right">公司所在地:</td>
+					<td colspan="2">
+						<select name="city">
+							<option value="" selected="selected">北京</option>
+							<option value="">上海</option>
+							<option value="">广州</option>
+							<option value="">深圳</option>
+							<option value="">成都</option>
+							<option value="">武汉</option>
+						</select>
+						<select name="district">
+							<option value="" selected="selected">东城</option>
+							<option value="">西城</option>
+							<option value="">南城</option>
+							<option value="">北城</option>
+						</select>
+					</td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十行合并2列，colspan=2
+	                -->
+					<td align="right">街道地址:</td>
+					<td colspan="2"><input type="text" size="40"/><span class="r">*</span><span class="b">填写县(区)、街道、门牌号</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十一行合并2列，colspan=2
+	                -->
+					<td align="right">传真号码:</td>
+					<td colspan="2"><input type="text" name="fax"/></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十二行合并2列，colspan=2
+	                -->
+					<td align="right">手机号码:</td>
+					<td colspan="2"><input type="text" name="cellphone"/></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十三行合并2列，colspan=2
+	                -->
+					<td align="right">邮政编码</td>
+					<td colspan="2"><input type="text" name="postcode"/></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十四行合并3列，colspan=3
+	                -->
+					<td colspan="3" class="bg"><b>3. 公司名称和主营业务</b></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十五行
+	                -->
+					<td align="right">贵公司名称:</td>
+					<td><input type="text" name="co"/><span class="r">*</span></td>
+					<td><span class="b">请填写在工商局注册的公司/商号全称;<br />无商号的个体经营者填写执照上的姓名,如:张三(个体经营)</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十六行
+	                -->
+					<td align="right">你的职位:</td>
+					<td><input type="text" name="position"/><span class="r">*</span></td>
+					<td></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十七行
+	                -->
+					<td align="right">主营行业:</td>
+					<td><select name="industry">
+							<option value="" selected="selected">电子电工</option>
+							<option value="">对外贸易</option>
+							<option value="">制造业</option>
+							<option value="">电子商务</option>
+							<option value="">家政服务</option>
+							<option value="">种植业</option>
+						</select>
+					</td>
+					<td><span class="b">请正确选择。您会收到该行业、该产品的供应信息</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十八行合并2列，colspan=2
+	                -->
+					<td align="right">主营产品/服务:</td>
+					<td colspan="2"><input type="text" size="30"/><span class="r">*</span><span class="b">3个主要相关产品名/服务名，最少要填一个。例如:太阳帽,布料,拉链</span></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第十九行合并2列，colspan=2
+	                -->
+					<td align="right">公司网址:</td>
+					<td colspan="2"><input type="text" size="30" value="http://"/></td>
+				</tr>
+				
+				
+				<tr><!--
+	                	第二十行合并2列，colspan=2
+	                -->
+					<td align="right"></td>
+					<td colspan="2"><input type="submit" value="确认提交"/></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
