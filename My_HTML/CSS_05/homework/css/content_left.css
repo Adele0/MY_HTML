@@ -1,0 +1,98 @@
+#wrapper{
+		background-color: #F2F2F2;
+}
+
+/*1.整个页面主体背景色样式*/
+#main{
+	padding: 16px;
+}
+
+	/*1.1主体左侧统一样式*/
+	#mLeft{
+		width: 852px;
+	}
+		/*1.1.1博客的统一样式*/
+		.content{
+			padding: 16px;
+			border: solid 1px #EAEAEA;
+			background-color: white;
+			margin-bottom: 16px;
+		}
+	
+			/*1.1.1.1图片的统一样式*/
+			.content .pic{
+				width: 202px;
+				height: 168px;	
+				margin-right: 16px;
+			}
+			
+			/*1.1.1.2文字的统一样式*/
+			.text{
+				width: 600px;
+			}
+				
+				/*1.1.2.1文字下所有类的统一样式*/
+					.content h4,.sprites,.content p{
+						margin-bottom: 17px;
+					}
+					
+						/*1.1.2.1.2图标精灵文字样式*/
+						.sprites span{
+							padding-right: 20px;
+							background: url(../images/icon.png) no-repeat 2px 4px;
+							text-indent: 20px;
+							display: inline-block;
+						}
+						
+							/*1.1.2.1.2.1第二个图标精灵定位*/
+							.sprites span:nth-child(2){
+								background-position:0px -13px;
+							}
+			
+							/*1.1.2.1.2.2第三个图标精灵定位*/
+							.sprites span:nth-child(3){
+								background-position:0px -29px;
+							}
+							
+							/*1.1.2.1.2.3第四个图标精灵定位*/
+							.sprites span:nth-child(4){
+								background-position:0px -45px;
+							}
+							
+							
+								
+		
+		/*1.1.2分页的整体样式*/
+		.pager{
+			width: 378px;
+			height: 40px;
+			margin: auto;
+			padding-bottom: 10px;
+			
+		}
+		
+			/*1.1.2.1分页的圆角样式*/
+			.pager .radius{
+				width: 50px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				border: solid 1px lightblue;
+				background-color: white;
+				
+				border-radius: 10px;
+				margin-right: 2px;
+				float: left;
+			}
+		
+			/*1.1.2.2分页的超链接样式*/
+				.pager .radius:hover{
+					background-color: #00AFEF;
+					color: white;
+				}	
+				
+		/*1.1.3友情链接的整体样式*/
+		#links h4, #links li{
+			float: left;
+			padding-left: 14px;
+		}

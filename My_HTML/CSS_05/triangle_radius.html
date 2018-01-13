@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			#addTriangle{
+				width: 240px;
+				height: 30px;
+				background: orangered;
+				text-align: center;
+				line-height: 30px;/* 垂直居中 行高设置为宽度*/
+				position: relative;
+			}
+			
+			#addTriangle:after{
+				content: "";
+				width: 0px;
+				height: 0px;
+				display: block;
+				
+				border: solid 10px transparent;
+				border-left-color:orangered;
+				
+				position: absolute;/*使用定位时配合方向*/
+				right: -20px; /*left: 240*/
+				top: 5px;
+			}
+			
+			div{
+				margin-bottom: 30px;
+				margin-left: 15px;
+			}
+			
+			#radius1{
+				width: 120px;
+				height: 40px;
+				background-color: lightcoral;
+				border: dotted rosybrown 2px;
+				border-radius: 5px;
+			}
+			
+			
+			#radius2{
+				width: 60px;
+				height: 50px;
+				background-color: yellowgreen;
+				border: dotted greenyellow 2px;
+				border-radius: 20px 0px;
+			}
+			
+			#radius3{
+				width: 60px;
+				height: 50px;
+				background-color: lightblue;
+				border: dotted lightcyan 2px;
+				border-radius: 80px 0px;
+			}
+			
+			#radius4{
+				width: 100px;
+				height: 100px;
+				background-color: lightsalmon;
+				border: dotted lightpink 2px;
+				border-radius: 20px;
+				transform: rotate(45deg);
+			}
+			
+			#radius4:hover{
+				transition: all ease-in-out 1s;
+				transform: rotate(360deg);
+			}
+			
+			#radius5{
+				width: 80px;
+				height: 80px;
+				border: dotted lightpink 5px;
+				border-radius: 50%;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="addTriangle">
+			伪类+子绝父相--》确定三角位置
+		</div>
+		
+		<div id="radius1"></div>
+		
+		<div id="radius2"></div>
+		
+		<div id="radius3"></div>
+		
+		<div id="radius4"></div>
+		
+		<div id="radius5"></div>
+	</body>
+</html>

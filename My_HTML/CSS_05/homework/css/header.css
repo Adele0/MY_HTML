@@ -1,0 +1,75 @@
+/*1.头部第一行文本样式*/
+#first{
+	height: 24px;
+	background-color: #444444;
+}
+
+/*2.头部第二行整体文本样式*/
+#menu{
+	font-size: 18px;
+	margin-top: 12px;
+	margin-left: 30px;
+}
+	/*2.1中间菜单列表子元素文本样式*/
+	#menu li{
+		float: left;
+		margin: 15px;
+	}
+
+	/*2.2右侧搜索整体文本样式*/
+	#search{
+		width: 204px;
+		height: 34px;
+		line-height: 34px;
+		margin-top: 18px;
+		border: solid 1px #EAEAEA;
+		background-color: #F5F5F5;
+	}
+
+		/*2.2.1右侧搜索框样式*/
+		#search form input, .webDiv form input{
+			float: left;
+			background-color: #F5F5F5;
+			border: none;
+			outline: none;
+		}
+			
+			/*2.2.1.1文字框样式*/
+			#keyWords{
+				font-size: 16px;
+				text-indent: 12px;
+				width: 170px;
+				height: 34px;
+			}
+
+			/*2.2.1.2按钮样式*/
+			#searchBtn{
+				width: 34px;
+				height: 34px;
+				background: url(../images/search.png) no-repeat;
+			}
+			
+				/*2.2.1.2.1按钮移入样式*/
+				#searchBtn:hover{
+					background-position:-30px 0px;
+					background-color: lightblue;
+					transition: all ease-in-out 0.7s;
+				}
+	
+/*3.头部第三行banner整体样式*/				
+#third{
+	color: white;
+	height: 180px;
+	background-image:url(../images/banner.png);
+}
+	
+	/*3.1背景文字样式*/
+	#third h2{
+		margin-top: 60px;
+		margin-bottom: 10px;
+	}
+	
+	#third a{
+		margin-left: 10px;
+		margin-top: 64px;
+	}
