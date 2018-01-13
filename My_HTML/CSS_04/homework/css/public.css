@@ -1,0 +1,30 @@
+.autoBox{
+	width: 100%;
+}
+
+.box1200{
+	width: 1200px;
+	margin: 0px auto;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+.clear:after{
+	content: "";
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+
+a:hover{
+	color: #00afef;
+}
+

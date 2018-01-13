@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+		
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			#web{
+				width: 1000px;
+				text-align: center;
+			}
+			
+			#web div{
+				background-color: aquamarine;
+				border: solid 1px blue;
+				margin: 5px;
+			}
+			
+			#header, #footer{
+				height: 80px;
+			}
+			
+			#menu{
+				height: 50px;
+			}
+			
+			#main div{
+				float: left;
+				height: 120px;
+				width: 282px;
+				margin: 0px 5px;
+			}
+			
+			#web #main{
+				border: none;
+				padding: 0px;
+				margin: 0px;
+				background-color: white;
+			}
+			
+			#web #m_center{
+				width:400px;
+			}
+			
+			.clear:after{
+				content: "";
+				width: 0;
+				height: 0;
+				display: block;
+				clear: both;
+			}
+		</style>
+		
+	</header>
+	<body>
+		
+		<!--网站-->
+		<div id="web">
+			
+			<!--头部-->
+			<div id="header">头部</div>
+			
+			<!--菜单栏-->
+			<div id="menu">菜单栏</div>
+			
+			<!--主体-->
+			<div id="main" class="clear">
+				<!--左-->
+				<div id="m_left">左</div>
+				<!--中-->
+				<div id="m_center">中</div>
+				<!--右-->
+				<div id="m_right">右</div>
+			</div>
+			
+			<!--尾部-->
+			<div id="footer">尾部</div>
+		</div>
+		
+	</body>
+</html>

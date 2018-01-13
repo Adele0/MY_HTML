@@ -1,0 +1,70 @@
+/*1.头部样式*/
+#top{
+	height: 26px;
+	background-color: #444;
+	color:#aaa;
+}
+
+/*2.导航菜单样式*/
+#nav{
+	margin:25px 30px;
+}
+
+	/*2.1导航菜单子列表样式*/
+	#nav li{
+		float: left;
+		margin: 0px 15px;/*上下的外边距设置到ur或者它的父类上*/
+		font-size: 18px;
+	}
+
+		/*2.1.1导航菜单子列表的当前子列表样式*/
+	
+		#menu #nav #current{
+			color: #00afef;
+		}
+		
+
+
+	/*2.2搜索框表单样式*/
+	#search form{
+		width: 204px;
+		height: 32px;
+		border: solid 1px #EAEAEA;
+		margin-top: -53px;
+	}
+	
+	
+		/*2.2.1去除搜索框所有input的边框和边缘线*/
+		#search form input{
+			float: left;
+			border: none;
+			outline: none;
+		}
+	
+			/*2.2.1.1搜索框内置第一个input的字体样式*/
+			#search #keywords{
+				text-indent: 12px;
+				width: 172px;
+				margin-top: 8px;
+			}
+			
+			/*2.2.1.2搜索框内置第二个input的背景样式*/
+			#search #searchButton{
+				height: 32px;
+				width: 32px;
+				background:#eee url(../images/search.png) no-repeat;
+			}
+		
+				/*2.2.1.2.1搜索框内置第二个input的鼠标样式*/
+				#search #searchButton:hover{
+					background-color: aqua;
+					background-position: -30px 0px;
+					transition:all ease-in-out 0.5s;
+				}
+				
+/*3.轮播图样式*/
+#banner{
+	height: 182px;
+	background: url(../images/banner.png) no-repeat;
+	background-size: cover;
+}
