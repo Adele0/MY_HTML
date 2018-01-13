@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			
+			/*后代选择器*/
+			.part1 span h6{
+				color: mediumturquoise;
+			}
+			
+			/*父子选择器*/
+			.part2>span{
+				color:mediumvioletred;
+			}
+			
+			/*分组选择器*/
+			h1,h2,h3{
+				color: #008000;
+			}
+			
+			/*邻居选择器*/
+			.part4+span{
+				color: goldenrod;
+			}
+			
+			/*兄弟选择器*/
+			.part5~span{
+				color:red;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="part1">这是part1 div的根<br />
+			<span>
+				这是part1 div根下第一级span1
+			</span><br />
+			<span>
+				这是part1 div根下第一级span2
+			</span><br />
+			<span>
+				这是part1 div根下第一级span3<br />
+				<h6>这是part1 div根下第一级span3下的6号标签,用来测试,后代选择器</h6>
+			</span>
+		</div>
+		
+		<hr />
+		
+		<div class="part2">这是part2 div的根<br />
+			<span>
+				这是part2 div根下第一级span1,用来测试,父子选择器
+			</span><br />
+			<span>
+				这是part2 div根下第一级span2,用来测试,父子选择器
+			</span><br />
+			<span>
+				这是part2 div根下第一级span3,用来测试,父子选择器<br />
+				<h6>这是part div根下第一级span3下的6号标签,继承父子选择器</h6>
+			</span>
+		</div>
+		
+		<hr />
+
+
+			<h1>
+				这是body中的h1,用来测试,分组选择器
+			</h1>
+			<h2>
+				这是body中的h2,用来测试,分组选择器
+			</h2>
+			<h3>
+				这是body中的h3,用来测试,分组选择器
+			</h3>
+			<h4>
+				这是body中的h4,用来测试,分组选择器，被排除在外
+			</h4>
+			
+			<hr />
+
+
+			<div>
+				<span class="part4">这是part4 div的根</span>
+				<span>
+					这是part4 div根下第一级span,用来测试,邻居选择器
+				</span><br />
+				<span>
+					这是part4 div根下第一级span,用来测试,邻居选择器
+				</span><br />
+				<span>
+					这是part4 div根下第一级span,用来测试,邻居选择器
+				</span><br />
+				<span>
+					这是part4 div根下第一级span,用来测试,邻居选择器
+				</span><br />
+			</div>
+			
+			<hr />
+			
+			<div>
+				这是part5 div的根<br />
+				<span class="part5">
+					这是part5 div根下第一级span,用来测试,兄弟选择器
+				</span><br />
+				<span>
+					这是part5 div根下第一级span,用来测试,兄弟选择器
+				</span><br />
+				<span>
+					这是part5 div根下第一级span,用来测试,兄弟选择器
+				</span><br />
+				<span>
+					这是part5 div根下第一级span,用来测试,兄弟选择器
+				</span><br />
+			</div>
+	</body>
+</html>
