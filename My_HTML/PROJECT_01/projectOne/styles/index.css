@@ -1,0 +1,192 @@
+	/*3.3 about us了解更多样式*/
+	.aboutus .usMore {
+		width: 106px;
+		height: 36px;
+		
+		margin: 30px auto 0px auto;
+		text-align: center;
+		line-height: 36px;
+		
+		border-radius: 30px;
+		box-shadow: 2px 2px 3px #626262;
+	}
+
+/*4. 公司介绍整体样式*/
+#companyIntroduction #companyTitle .introList {
+	width: 360px;
+	margin: 0px auto;
+	
+	position: relative;
+	top: 1px;
+}
+
+	#companyIntroduction #companyTitle .introItem {
+		width: 106px;
+		height: 34px;
+		line-height: 34px;
+		margin-right: 12px;
+		
+		background-color: #626262;
+		color: #fff;
+		border: solid 1px #cbcbcb;
+		
+		font-size: 16px;
+		text-align: center;
+		
+		float: left;
+	}
+	/*4.2 当前介绍样式*/
+	#companyIntroduction #companyTitle .current {
+		background-color: #fff;
+		color: #d43b33;
+		border-bottom-color: #fff;
+	}
+
+	/*4.3 当前介绍内容*/
+	#companyCon {
+		padding-left: 112px ;
+	}
+	
+	#companyCon img {
+		width: 336px;
+		height: 184px;
+		padding-right: 40px ;
+	}
+
+	#companyCon .conList dt, #companyCon .conList dd {
+		margin-bottom: 8px;
+	}
+
+	#companyCon .conList dd {
+		font-weight: bold;
+	}
+
+/*5. 项目介绍*/
+#project {
+	height: 348px;
+	background-image: url(../images/project_bg.png);
+}
+
+	#project p {
+		font-size: 18px;
+		padding-top: 40px;
+	}
+
+	#project p span {
+		display: inline-block;
+		padding-top: 5px;
+	}
+	
+	#projectCon img:nth-child(1){
+		padding-right: 10px;
+	}
+	
+	#projec #projectCon #projectMoving960 {
+		width: 960px;
+		height: 148px;
+		margin: 0px 5px 0px 10px;
+	}
+	
+	#projectCon #projectMoving960 .projectBox310 {
+		width: 310px;
+		height: 148px;
+		padding-right: 5px;
+		
+		float: left;
+		
+		position: relative;
+	}
+	
+	#project #projectMoving960 .projectBox310 img {
+		width: 310px;
+		height: 148px;
+	}
+
+	#project #projectMoving960 .projectBox310 h3 {
+		text-indent: 20px;
+		font-weight: normal;
+		color: #fff;
+		
+		background-color: rgba(0,0,0,0.7);
+		width: 310px;
+		height: 30px;
+		line-height: 30px;
+		
+		position: absolute; /*相对于盒子而不是盒子里的内容*/
+		bottom: 0px;
+	}
+
+/*6. 新闻和留言*/
+#newsMsg #newsTitle, #newsMsg #messagesTitle {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+	#newsMsg #newsCon {
+		width: 460px;
+	}
+
+	#newsMsg #newsCon ul li {
+		font-size: 14px;
+		color: #000;
+		
+		padding: 10px 0px;
+		border-bottom: dashed 1px #666;
+	}
+
+	#newsMsg #newsCon ul li span {
+		color: #cbcbcb;
+		
+		float: right;
+	}
+	
+	#newsMsg #newsMore {
+		text-align: left;
+		display: inline-block; /*使一个块元素同时具备行内元素的属性*/
+		
+		margin-top: 20px;
+	}
+
+	#newsMsg #messages {
+		width: 500px;
+	}
+	
+	#newsMsg #messagesCon input {
+		width: 240px;
+		height: 38px;
+	
+		font-size: 16px;
+		text-indent: 16px;
+		margin: 5px 4px 5px 0px;
+	}
+
+	#newsMsg #messagesCon input:nth-of-type(4) {
+		width: 90px;
+	}
+	
+	#newsMsg #messagesCon #description {
+		margin-top: 5px;
+		padding-top: 10px;
+		width: 495px; 
+		height: 198px;
+		
+		font-size: 18px;
+		text-indent: 16px;
+	}
+	
+	#newsMsg #messagesCon p {	
+		margin-top: 5px;
+		line-height: 33px;
+	}
+	
+	#newsMsg #messagesCon #submitBtn {
+		width: 130px;
+		height: 30px;
+		margin-right: 4px;
+		
+		border: none;
+		
+		background-color: #d43b33;
+		color: #fff;
+	}

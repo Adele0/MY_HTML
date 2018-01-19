@@ -1,0 +1,29 @@
+/*1.页头整体样式*/
+#header {
+	height: 72px;
+	background-color: #d43b33;
+}
+	/*1.1页头下的列表样式*/
+	#topNav li {
+		float: left;
+		
+		margin: 20px 20px 0 20px;
+	}
+	
+	/*1.2页头下的a标签样式*/
+	#topNav a {
+		font-size: 18px;
+		color: #fff;
+		
+		display: block;
+		height: 52px;
+	}
+	
+	#topNav a:hover, .current {
+		background: url(../images/nav_bg.png) no-repeat center bottom;
+	}
+	
+/*2.banner样式,img的三像素问题参见reset*/
+#banner img {
+	width: 100%;
+}

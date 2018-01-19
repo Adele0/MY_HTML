@@ -1,0 +1,25 @@
+/*重置页面所有默认边距*/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+/*重置列表样式*/
+li {
+	list-style: none;
+}
+
+/*重置a标签样式，页面有不同链接颜色就不统一设置*/
+a {
+	text-decoration: none;
+}
+
+/*重置img标签样式，解决图片三像素问题*/
+img {
+	vertical-align:middle;
+	/*display: block;*/
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+}

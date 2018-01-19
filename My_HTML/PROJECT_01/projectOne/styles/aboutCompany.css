@@ -1,0 +1,18 @@
+/*3.about us整体样式*/
+.aboutus .usTitle {
+	height: 38px;
+}
+	/*3.1 about us公共标题样式*/
+	.aboutus .usTitle .publicTitle {
+		padding-top: 10px;
+		width: 174px;
+		
+		background-color: #fff;
+	}
+
+	/*3.2  about us内容样式*/
+	.aboutus .usCon p {
+		text-align: center;
+		margin-bottom: 14px;
+	}
+	

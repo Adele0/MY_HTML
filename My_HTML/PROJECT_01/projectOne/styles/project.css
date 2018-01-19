@@ -1,0 +1,38 @@
+/*项目详细信息右侧样式*/
+#projectLeft {
+	width: 718px;
+	margin-right: 30px;
+}
+
+.projectItem {
+	width: 656px;
+	height: 130px;
+	padding: 26px 10px 26px 10px;
+}
+
+.projectItem img {
+	margin-right: 20px;
+}
+
+.projectItem .itemContent p {
+	font-size: 14px;
+	padding-top: 10px;
+}
+
+.projectItem .itemContent .viewNum {
+	display: inline-block;
+	text-indent: 20px;
+	margin: 0 175px 0 30px;
+	
+	background: url(../images/eye.png) no-repeat 0px;
+}
+
+/*项目详细信息左侧样式*/
+#projectRight {
+	width: 250px;
+}
+
+#projectRight .recommend {
+	padding: 16px 20px;
+}
+

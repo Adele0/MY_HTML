@@ -1,0 +1,69 @@
+/*团队标题*/
+.teamTitle span {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/*团队介绍*/
+#teamIntroduction {
+	height: 272px;
+}
+
+#teamIntroduction img {
+	margin-left: 20px;
+}
+
+.teamCon {
+	width: 520px;
+	height: 220px;
+	margin-left: 30px;
+	padding: 0 40px;
+	
+	background-color: #fafafa;
+}
+
+.teamCon h3 {
+	margin: 18px 0;
+}
+
+/*团队-专家风采*/
+#teamExperts {
+	height: 520px;
+	background-color: #f7f7f7;
+}
+
+#teamExperts a {
+	color: #000;
+}
+
+#teamExperts>.teamTitle {
+	padding-top: 50px;
+}
+
+#teamExperts>.teamTitle>span{
+	background-color: #3399ff;
+	color: #fff;
+}
+
+#teamExperts .teamBox948 {
+	width: 948px;
+	
+	margin-left: 54px;
+}
+
+#teamExperts .teamBox300 {
+	width: 300px;
+	height: 80px;
+	
+	margin-right: 16px;
+	float: left;
+}
+#teamExperts .teamBox300 p {
+	background-color: #fff;
+	height: 80px;
+}
+
+#teamExperts .teamBox300 span {
+	display: inline-block;
+	margin-top: 25px;
+}

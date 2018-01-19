@@ -1,0 +1,30 @@
+/*新闻菜单样式*/
+#newsMenu ul {
+	width: 668px;
+}
+
+#newsWrapper .newsDetails {
+	width: 480px;
+	height: 200px;
+	
+	margin-right: 20px;
+	margin-bottom: 20px;
+	
+	background-color: #f2f2f2;
+}
+
+.newsDetails .newsItem img {
+	padding-right: 28px;
+}
+
+.newsDetails .newsItem .newsContent {
+	padding-top: 12px;
+}
+
+.newsContent p {
+	font-size: 14px;
+}
+
+.newsContent .conMiddle {
+	margin: 10px 0 14px 0;
+}
