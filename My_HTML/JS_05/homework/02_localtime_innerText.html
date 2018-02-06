@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="timeDiv">
+			
+		</div>
+		
+		<script type="text/javascript">
+			var timeDiv = document.getElementById("timeDiv");
+
+			setInterval(function(){
+				timeDiv.innerText = new Date().toLocaleString();
+			},1000);
+			
+			
+		</script>
+		
+	</body>
+</html>

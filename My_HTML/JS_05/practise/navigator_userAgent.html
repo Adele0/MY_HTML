@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			var userBrowser = navigator.userAgent; // =navigator["userAgent"];
+			console.log(userBrowser);
+			
+			if (userBrowser.indexOf("WebKit")>0) {
+				alert("This is a Chrome Browser");
+			} else if (userBrowser.indexOf("WebKit")<0 && userBrowser.indexOf("Gecko")>0 && userBrowser.indexOf("Trident")<0) {
+				alert("This is a Mozilla Firefox Browser");
+			}else if (userBrowser.indexOf("Trident")>0) {
+				alert("This is a IE Browser");
+			}
+		</script>
+		
+	</body>
+</html>

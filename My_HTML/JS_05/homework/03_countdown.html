@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var num = 5;
+			var jumping = setInterval(function(){
+				document.write(num+"<br />");
+				num--;
+				
+				if (num == -1) {
+					clearInterval(jumping);
+					location.href="https://www.bilibili.com/";
+				}
+			},1000);
+			
+		</script>
+		
+	</body>
+</html>

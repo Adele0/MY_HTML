@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>div1</div>
+		<div>div2</div>
+		<div>div3</div>
+		
+		<script type="text/javascript">
+			var userDiv = document.getElementsByTagName("div");
+			console.log(userDiv);
+			
+			for (x in userDiv) {
+				userDiv[x].style.backgroundColor="yellow";
+			}
+			
+		/*	用 for-in背景色能设置，但是控制台有报错信息。这里尽量用
+			for (var i = 0; i < Things.length; i++) {
+				Things[i]
+			}
+		*/
+		</script>
+		
+		
+	</body>
+</html>

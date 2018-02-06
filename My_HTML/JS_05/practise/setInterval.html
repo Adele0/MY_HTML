@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			console.log("倒计时10秒，公布中奖奖品");
+			var num =10;
+			
+			var lottery = setInterval(function(){	//此时lottery就是setInterval的id
+				
+				console.log(num);	//每隔一秒（1000ms）数字减一
+				num--;
+				
+				if(num == 0) {
+					console.log("%c中奖者是：tamaki","color:red;font-size:20px;");
+					clearInterval(lottery);
+				}
+			},1000);
+			
+		</script>
+		
+	</body>
+</html>
