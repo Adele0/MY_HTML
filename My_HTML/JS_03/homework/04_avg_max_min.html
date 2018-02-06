@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	<!--	求该数组的平均值，最大值，最小值
+	-->
+		
+		<script type="text/javascript">
+			var arr = [
+				[12,43,23,123],
+				[54,54,23,64],
+				[86,67,34,23]
+			];
+			var sum=0, count=0, max=arr[0][0], min=arr[0][0];
+		
+			for (var x in arr) {
+				for (var y in arr[x]) {
+					if (max < arr[x][y]) {
+						max = arr[x][y];
+					} else if (min > arr[x][y]) {
+						min = arr[x][y];
+					}
+					sum += arr[x][y];
+					count++;
+				}
+			}
+			
+			console.log("最大值是：",max,"最小值是：",min, "总和是：", sum, "元素个数是：", count, "平均值是：",sum/count);
+		</script>
+		
+	</body>
+</html>

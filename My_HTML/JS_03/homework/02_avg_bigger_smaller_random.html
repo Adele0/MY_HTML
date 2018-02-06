@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	<!--	定义一个数组，并给出8个任意的初始数值，求该数组中大于平均值的数的
+			个数，和小于平均值的数的个数
+	-->
+		
+		<script type="text/javascript">
+			var arr = [23,3,5,7,243,1,25,48];
+			var sum=0, countBigger=0, countSmaller=0;
+			for (var x in arr) {
+				sum += arr[x];
+			}
+			
+			for (var x in arr) {
+				if (arr[x]>sum/arr.length) {
+					countBigger++;
+				}else if (arr[x]<sum/arr.length) {
+					countSmaller++;
+				}
+			}
+		
+			console.log("总和是：",sum,"平均值是：",sum/arr.length,"大于平均值的个数是：",countBigger,"小于平均值的个数是：",countSmaller);
+		</script>
+		
+	</body>
+</html>

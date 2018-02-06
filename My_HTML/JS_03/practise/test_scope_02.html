@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//测试作用域。scope of action。为了在代码中遇到错误，应该先定义变量，后调用。
+			//测试是为了应对面试题
+				
+			scope();	//后面没有定义函数，会报错，is not defined
+			
+			console.log("函数外：",a);	//函数外能得到a变量，调用的时候，未经初始化。
+			
+			function scope(){
+				console.log("全部变量能被函数内外得到，但是如果赋值在调用之后，只能得到undefined");
+				console.log("函数内：",a);	//函数内能得到a变量，调用的时候，未经初始化。
+			}
+			
+			var a = 100;	//全部变量能被得到，但是如果赋值在调用之后，只能得到undefined
+		</script>
+		
+	</body>
+</html>

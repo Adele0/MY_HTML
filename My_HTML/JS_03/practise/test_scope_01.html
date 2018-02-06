@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			//测试作用域。scope of action。为了在代码中遇到错误，应该先定义变量，后调用。
+			//测试是为了应对面试题
+				
+			scope();	//定义函数可以在调用函数的语句后定义，但是后面没有定义函数，会报错，is not defined
+			
+			
+			function scope(){
+				console.log("定义函数可以在调用函数的语句后定义,此时你就能在控制台看到这句话，但是后面没有定义函数，会报错，is not defined");
+			}
+		</script>
+		
+	</body>
+</html>

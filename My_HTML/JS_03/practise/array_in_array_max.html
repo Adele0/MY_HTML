@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var group = [
+				[80,92,92],
+				[61,65,71],
+				[59,99,70],
+				[85,87,90],
+				[76,77,88]
+			];
+			
+			var max = null;
+			for (var x in group) {
+				for (var y in group[x]) {
+					if (group[x][y]>max) {
+						max = group[x][y];
+					}
+				}
+			}
+			console.log("数组：", group);
+			console.log("最大值是：", max);
+		</script>
+		
+	</body>
+</html>
