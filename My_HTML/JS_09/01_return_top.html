@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>返回顶部测试</title>
+		
+		<style type="text/css">
+			#slidNav {
+				width: 73px;
+				background-color: lightblue;
+				
+				position: fixed;
+				right: 10px;
+				bottom: 200px;
+			}
+			
+			#returnTop {
+				display: none;
+			}
+		</style>
+		
+	</head>
+	<body style="height: 3000px;">
+		
+		<div id="slidNav">
+			<img src="img/r_phone.png"/>
+			<img src="img/r_qq.png"/>
+			<img src="img/r_wx.png"/>
+			<img src="img/r_top.png" id="returnTop"/>	
+		</div>
+		
+		<script type="text/javascript">
+			//1.当滚动条达到一定高度显示返回顶部
+			var returnTop = document.getElementById("returnTop");
+			
+			//1.1增添窗口加载事件
+			window.onload=function(){
+
+
+				//1.2添加鼠标滚动事件
+				window.onscroll=function(){				
+					//1.2.1获得滚动条高度
+					var scrollHight = document.documentElement.scrollTop;
+//					console.log(scrollHight); 测试是否得到滚动条高度
+					//1.2.2如果高度大于指定的值，弹出返回顶部的图标
+					if (scrollHight>=1000) {
+						returnTop.style.display="block";
+					} else{
+						returnTop.style.display="none";
+					}
+				}
+				
+				//1.3添加点击事件，点击需要做到缓慢的返回顶部（使用setInterval，以固定的时间间隔，改变scrollTop的值）
+				returnTop.onclick=function(){
+					//1.3.1设置固定时间的间隔 定时器
+					var timeId = setInterval(function () {
+						//1.3.1.1 重新获取滚动条高度（新值）
+						var anchorScroll = document.documentElement.scrollTop;
+						//1.3.1.2在固定的时间间隔里更新滚动条的值（向上移动，top值下降）
+						anchorScroll -= 100;
+						//1.3.1.3条件判断，如果已经回到了顶部，清除定时器；如果还没有回到最顶部，更新anchorScroll的值
+						if(anchorScroll==0){
+							clearInterval(timeId);
+						}else{
+							document.documentElement.scrollTop = anchorScroll
+						}
+					},50);
+				}
+			}
+		</script>
+		
+	</body>
+</html>

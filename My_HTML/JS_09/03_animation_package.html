@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>封装动画移动函数</title>
+		
+		<style type="text/css">
+			#circle {
+				width: 150px;
+				height: 150px;
+				
+				border-radius: 50%;
+				background-color: lightgreen;
+				
+				position: absolute;
+			}
+			
+			#square {
+				width: 150px;
+				height: 150px;
+				
+				background-color: lightcoral;
+				
+				position: absolute;
+			}
+		</style>
+		
+	</head>
+	<body style="height: 3000px;">
+		
+		<div id="circle"></div>
+		<div id="square"></div>
+		
+		<script type="text/javascript">
+		/*需求：让圆从某位置开始，移动到某位置
+					
+		 animationFn(placeEnd,placeStart,moveTime,eleTarget,moveType)动画效果函数
+		 
+		 placeEnd 运动的终点px
+		 placeStart 运动的起点px
+		 moveTime 完成动画运动的时间 (ms 毫秒)
+		 eleTarget 要运动的目标元素
+		 moveType 动画运动的类型,可取值left|right|width|height
+		*/
+		
+		function animationFn(eleTarget,placeStart,placeEnd,moveTime,moveType){
+		
+			var eleStyle = eleTarget.currentStyle || document.defaultView.getComputedStyle(eleTarget);
+			
+			var distance = placeEnd - placeStart;
+			var speed = distance/moveTime;
+			
+			var count = 0;
+			
+			var moveId = setInterval(function(){
+			
+				var moveDirection = parseInt(eleStyle[moveType]);
+				
+				count++;		
+				moveDirection = speed*count;
+
+				
+				if (moveDirection>=placeEnd) {
+					clearInterval(moveId);
+				} else{
+					eleTarget.style[moveType] = moveDirection+"px";
+				}
+				
+			},50);
+			
+		}
+		
+		//调用参数：
+		var square = document.getElementById("square");
+		animationFn(square,200,1000,500,"top");
+		
+		var circle = document.getElementById("circle");
+		animationFn(circle,0,1000,100,"left");
+		</script>
+		
+	</body>
+</html>

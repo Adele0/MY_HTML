@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>单个方向（左）动画</title>
+		
+		<style type="text/css">
+			#circle {
+				width: 150px;
+				height: 150px;
+				
+				border-radius: 50%;
+				background-color: lightgreen;
+				
+				position: absolute;
+				top: 10px;
+				left: 0;
+			}
+		</style>
+		
+	</head>
+	<body style="height: 3000px;">
+		
+		<div id="circle">
+			
+		</div>
+		
+		<script type="text/javascript">
+			//需求：让圆从0位置开始，移动到1000px的位置
+			
+			//1.获得元素
+			var circle =document.getElementById("circle");
+			
+			//2.获得元素样式集合（同时解决兼容性问题），具体需要哪一个属性到时候再调用
+			var eleStyle = circle.currentStyle || document.defaultView.getComputedStyle(circle);
+			
+//			console.log(eleStyle);	打印集合（两百多个属性...）
+
+			//3.设置动画相关属性
+			var placeStart = 0;
+			var placeEnd = 1000;
+			var distance = placeEnd - placeStart;
+			var moveTime = 100; //以毫秒为单位
+			var speed = distance/moveTime;
+			
+			var count = 0;	//该变量用来计算以规定速度移动的次数
+			
+			//4.以定时器的方式，使动画运动（）；
+			var moveId = setInterval(function(){
+				//4.1获得位置属性
+				var moveDirection = parseInt(eleStyle.left);	//获得的属性带有px参数，为了方便后面的叠加计算，需要转数字类型
+				
+				count++;		//进入计时器才进行++
+				moveDirection = speed*count;	//每一次以固定的速度移动
+				console.log(moveDirection);
+				
+				//条件：运动到了终点，就停止，否则更新位置（即属性）
+				if (moveDirection>=placeEnd) {
+					clearInterval(moveId);
+				} else{
+/*					eleStyle.left = moveDirection;	
+					Failed to set the 'left' property on 'CSSStyleDeclaration':
+					These styles are computed, and therefore the 'left' property is read-only.
+					通过document.defaultView.getComputedStyle得到的属性，不可更改，只读。
+					重新赋值只能通过行内样式
+*/					circle.style.left = moveDirection+"px";
+				}
+				
+			},100);
+		</script>
+		
+	</body>
+</html>
