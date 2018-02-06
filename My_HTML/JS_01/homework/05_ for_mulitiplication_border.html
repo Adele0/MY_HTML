@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			table {
+				/*border-collapse: collapse;*/
+			}
+			
+			td{
+				border: solid 1px darkcyan;
+				background-color: cadetblue;	
+			}
+		</style>
+		
+		
+	</head>
+	
+	<body>
+		<script type="text/javascript">
+			
+			/*
+			 根据table的样式 套用在循环代码中，样式单独使用css来实现
+			 
+			 <table>不需要循环
+			 	<tr>外循环，tr自带换行属性，不需要强行换行了
+			 		<td>内循环
+			 		</td>
+			 	</tr>
+			 </table>
+			 
+			*/
+			
+			//行
+			document.write("<table>");
+			for (var i = 1; i < 10; i++) {
+				document.write("<tr>");
+					//列(在行内，数量小于等于行)
+				for (var j = 1; j <= i; j++) {
+					//循环体就是td的内容，所以用td来包裹内循环体的内容。再使用字符串来拼接减少代码
+//					document.write("<td>"); 
+
+					document.write("<td>"+j+"x"+i+"="+j*i+"</td>");
+					
+//					document.write("</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+		</script>
+		
+	</body>
+</html>

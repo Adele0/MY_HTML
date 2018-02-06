@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var money = prompt("欢迎选购我司车型，请输入您的本金，以便我们给您专业的建议：","");
+			if(money>=200000){
+				alert("导购小姐推荐您购买进口车型！");
+			}else if(money>=100000 && money<200000){
+				alert("导购小姐推荐您购买合资车型！");
+			}else if( money>=50000 && money<100000){
+				alert("导购小姐推荐您购买国产车型！");
+			}else if( money>=0 && money<50000){
+				alert("导购小姐推荐您购买小黄车包月套餐！");
+			}else{
+				alert("你逗我？请输入阿拉伯数字");
+			}
+			
+		</script>
+	</body>
+</html>
