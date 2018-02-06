@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS+DOM操作表格</title>
+		<!--		
+			样式操作还是使用css
+			用DOM创建表单，先在HTML中正常的写元素
+			抽掉空格和换行，剪切到script中通过DOM字符串拼接即可
+			
+			注意：1. 相同类型的单选框/复选框的name属性应该是不同的值，否则，单选框会造成上下都只能选一个值的情况
+				2. 拼接的时候注意：双引号单引号一定要统一
+		-->
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			table {
+				border-collapse: collapse;
+				width: 500px;
+				margin: 20px auto;
+			}
+			
+			th,td {
+				border: solid 1px cornflowerblue;
+				padding: 5px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<button id="clickBtn">点击创建表单模板</button>
+		<table id="createTable">
+			
+			<!--
+				
+				这里可以把所有的tr和成一个字符串的，但是为了好理解，分为了三行，全部剪切到script中
+				
+			-->
+			<!--第一行-->
+			<!--<tr><th>姓名</th><th>性别</th><th>年龄</th></tr>-->
+			
+			<!--第二行-->
+			<!--<tr><td>张三 <img src="../../20180130/teacher/code/images/1219.gif"/></td><td><input type="radio" name="gender1" />男<input type="radio" name="gender1" />女</td><td><input type="checkbox" name="hobby1" />兵乓球<input type="checkbox" name="hobby1" />羽毛球<input type="checkbox" name="hobby1" />足球<input type="checkbox" name="hobby1" />象棋</td></tr>-->
+			
+			<!--第三行-->
+			<!--<tr><td>李四 </td><td><input type="radio" name="gender2" />男<input type="radio" name="gender2" />女</td><td><input type="checkbox" name="hobby2" id="" />兵乓球<input type="checkbox" name="hobby2" id="" />羽毛球<input type="checkbox" name="hobby2" id="" />足球<input type="checkbox" name="hobby2" id="" />象棋</td></tr>-->
+			
+		</table>
+		
+		
+		<script type="text/javascript">
+			
+			var clickBtn = document.getElementById("clickBtn");
+			clickBtn.onclick = function () {
+				trStr = '<tr><th>姓名</th><th>性别</th><th>年龄</th></tr>';
+				trStr += '<tr><td>张三 <img src="../../20180130/teacher/code/images/1219.gif"/></td><td><input type="radio" name="gender1" />男<input type="radio" name="gender1" />女</td><td><input type="checkbox" name="hobby1" />兵乓球<input type="checkbox" name="hobby1" />羽毛球<input type="checkbox" name="hobby1" />足球<input type="checkbox" name="hobby1" />象棋</td></tr>';
+				trStr += '<tr><td>李四 </td><td><input type="radio" name="gender2" />男<input type="radio" name="gender2" />女</td><td><input type="checkbox" name="hobby2" id="" />兵乓球<input type="checkbox" name="hobby2" id="" />羽毛球<input type="checkbox" name="hobby2" id="" />足球<input type="checkbox" name="hobby2" id="" />象棋</td></tr>';
+				
+				//到此时为止trStr还只存在内存中,要找到放入的位置
+				
+				var createTable = document.getElementById("createTable");
+				createTable.innerHTML=trStr;
+			};
+			
+		</script>
+		
+		
+	</body>
+</html>

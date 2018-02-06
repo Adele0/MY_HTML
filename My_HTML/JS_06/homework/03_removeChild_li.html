@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除ul下面所有的li标签</title>
+	</head>
+	<body>
+		
+				<ul id="menu" class="clear">
+					<li >首页</li>
+					<li>关于我们</li>
+					<li>产品展示</li>
+					<li>新闻动态</li>
+					<li>在线留言</li>
+					<li>联系我们</li>
+				</ul>
+
+		
+		<script type="text/javascript">
+		
+			var ul = document.getElementById("menu");
+			console.log(ul);
+			
+			var lis = document.getElementsByTagName("li");
+			console.log(lis);
+			
+			while(ul.hasChildNodes()){
+				ul.removeChild(ul.firstChild);
+			}
+		
+		</script>
+		
+	</body>
+</html>

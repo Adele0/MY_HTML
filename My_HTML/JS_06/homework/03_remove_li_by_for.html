@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除ul下面所有的li标签</title>
+	</head>
+	<body>
+		
+				<ul id="menu" class="clear">
+					<li >首页</li>
+					<li>关于我们</li>
+					<li>产品展示</li>
+					<li>新闻动态</li>
+					<li>在线留言</li>
+					<li>联系我们</li>
+				</ul>
+
+		
+		<script type="text/javascript">
+			
+			/*  测试for循环删除li标签，
+				不能用自上而下删，没次删除的时候，索引数字都在变化，所以导致偶数位的li被保留下来了。
+				自下而上地删除,就不会出现索引变化的问题
+			*/
+			var lis = document.getElementById("menu").getElementsByTagName("li");
+			console.log(lis);
+			
+			for (var i = lis.length-1; i >=0 ; i--) {
+				lis[i].remove();
+			}
+		
+		</script>
+		
+	</body>
+</html>

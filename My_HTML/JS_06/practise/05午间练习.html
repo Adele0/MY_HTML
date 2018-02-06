@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="gushi1">
+			<h2 id="myson">水调歌头·明月几时有</h2>
+			<p>朝代：宋代  作者：苏轼</p>
+			<p>明月几时有？把酒问青天。</p>
+			<p>不知天上宫阙，今夕是何年。</p>
+			<p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</p>
+			<p>起舞弄清影，何似在人间？</p>
+			<p id="brother">转朱阁，低绮户，照无眠。</p>
+			<p>不应有恨，何事长向别时圆？</p>
+			<p>人有悲欢离合，月有阴晴圆缺，此事古难全。</p>
+			<p>但愿人长久，千里共婵娟。</p>
+		</div>
+		<script type="text/javascript">
+			/*需求: 
+			1. 找到大小儿子并设置文字颜色
+			2. 遍历显示所有儿子
+			3. 等待10秒删除大小儿子
+			*/
+			
+			var parent = document.getElementById("gushi1");
+			var firstSon = parent.firstElementChild;
+			var lastSon = parent.lastElementChild;
+			
+//			console.log(firstSon,lastSon);	测试是否找到
+			
+			firstSon.style.color="chartreuse";
+			lastSon.style.color="gold";
+			
+			var sonList = parent.childNodes;
+//			console.log(sonList);	测试是否找到
+			
+			for (var i = 0; i < sonList.length; i++) {
+				if (sonList[i].nodeType==1) {
+					sonList[i].style.color="orchid";	//节点类型是元素节点设置颜色。这里不对nodeTpye做判断，会报错，因为换行不能设置样式
+				}
+				console.log(sonList[i]);
+			}
+			
+			var timeId = setTimeout(function () {
+				firstSon.remove();
+				lastSon.remove();
+			},10000);
+			
+			
+		</script>
+	</body>
+</html>

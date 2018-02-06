@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除body下面所有的元素</title>
+	</head>
+	<body>
+		
+		<div id="header1" class="widthAuto">
+		<!--header content-->
+			<div id="header1Con" class="width1200 clear">
+				<h3 class="fl">欢迎来到house家居网</h3>
+				<ul id="contact" class="fr clear">
+					<li><img src="images/tel.png"/></li>
+					<li>400-00-000xxx </li>
+					<li><img src="images/mail.png"/></li>
+					<li> 123468@gmail.com</li>
+				</ul>
+			</div>
+		</div>	
+	
+	
+	<div id="header2" class="widthAuto">
+			<!--logo in header-->
+			<div id="logo" class="width1200 clear">
+				<img src="images/logo.png" class="fl"/>
+				<!--menu in header-->
+				<ul id="menu" class="clear">
+					<li class="current"><a href="" >首页</a></li>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">产品展示</a></li>
+					<li><a href="">新闻动态</a></li>
+					<li><a href="">在线留言</a></li>
+					<li><a href="">联系我们</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			
+//			方法1： 直接清空innerHTML
+			document.body.innerHTML="";
+			
+			/*方法2： 循环删除第一个子节点
+				while(document.body.hasChildNodes()){
+					document.body.removeChild(document.body.firstChild);
+				}
+			*/
+		</script>
+		
+	</body>
+</html>

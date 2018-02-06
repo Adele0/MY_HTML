@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>蒙尘</title>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			ul {
+				height: 50px;
+			}
+			li {
+				margin-left: 20px;
+				list-style: none;
+				color: #2B78E4;
+				
+				float: left;
+				cursor: pointer;
+			}
+			
+			#mask {
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.2);
+				
+				position: fixed;
+				left: 0;
+				top: 0;
+				
+				display:none;
+			}
+			
+			#maskWindow {
+				width: 500px;
+				height: 400px;
+				background-color: #fff;
+				
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin:auto;
+			}
+			
+			#maskWindow p {
+				padding: 5px 15px;
+			}
+			
+			#maskWindow :nth-child(1){
+				background-color: dodgerblue;
+			}
+			
+			#maskWindow :nth-child(1) span {
+				float: right;
+				cursor: pointer;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<ul>
+			<li id="create">新建</li>
+			<li>删除</li>
+		</ul>
+		
+		<div id="mask">
+			<div id="maskWindow">
+				<p>新建<span id="xclose" >x关闭</span></p>
+				<p>blabla的各种内容</p>
+			</div>
+		</div>
+		
+		<div>
+			<h2 >水调歌头·明月几时有</h2>
+			<p>朝代：宋代  作者：苏轼</p>
+			<p>明月几时有？把酒问青天。</p>
+			<p>不知天上宫阙，今夕是何年。</p>
+			<p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</p>
+			<p>起舞弄清影，何似在人间？</p>
+			<p >转朱阁，低绮户，照无眠。</p>
+			<p>不应有恨，何事长向别时圆？</p>
+			<p>人有悲欢离合，月有阴晴圆缺，此事古难全。</p>
+			<p>但愿人长久，千里共婵娟。</p>
+		</div>
+		<div>
+			<h2>蝶恋花·伫倚危楼风细细</h2>
+			<p>朝代：宋代   作者：柳永</p>
+			<p>伫倚危楼风细细。</p>
+			<p>望极春愁，黯黯生天际。</p>
+			<p>草色烟光残照里。</p>
+			<p>无言谁会凭阑意。</p>
+			<p>拟把疏狂图一醉。</p>
+			<p>对酒当歌，强乐还无味。</p>
+			<p>衣带渐宽终不悔，为伊消得人憔悴。</p>
+		</div>
+		<div >
+			<h2 >水调歌头·明月几时有</h2>
+			<p>朝代：宋代  作者：苏轼</p>
+			<p>明月几时有？把酒问青天。</p>
+			<p>不知天上宫阙，今夕是何年。</p>
+			<p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</p>
+			<p>起舞弄清影，何似在人间？</p>
+			<p >转朱阁，低绮户，照无眠。</p>
+			<p>不应有恨，何事长向别时圆？</p>
+			<p>人有悲欢离合，月有阴晴圆缺，此事古难全。</p>
+			<p>但愿人长久，千里共婵娟。</p>
+		</div>
+		<div>
+			<h2>蝶恋花·伫倚危楼风细细</h2>
+			<p>朝代：宋代   作者：柳永</p>
+			<p>伫倚危楼风细细。</p>
+			<p>望极春愁，黯黯生天际。</p>
+			<p>草色烟光残照里。</p>
+			<p>无言谁会凭阑意。</p>
+			<p>拟把疏狂图一醉。</p>
+			<p>对酒当歌，强乐还无味。</p>
+			<p>衣带渐宽终不悔，为伊消得人憔悴。</p>
+		</div>
+		<div >
+			<h2 >水调歌头·明月几时有</h2>
+			<p>朝代：宋代  作者：苏轼</p>
+			<p>明月几时有？把酒问青天。</p>
+			<p>不知天上宫阙，今夕是何年。</p>
+			<p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</p>
+			<p>起舞弄清影，何似在人间？</p>
+			<p >转朱阁，低绮户，照无眠。</p>
+			<p>不应有恨，何事长向别时圆？</p>
+			<p>人有悲欢离合，月有阴晴圆缺，此事古难全。</p>
+			<p>但愿人长久，千里共婵娟。</p>
+		</div>
+		<div>
+			<h2>蝶恋花·伫倚危楼风细细</h2>
+			<p>朝代：宋代   作者：柳永</p>
+			<p>伫倚危楼风细细。</p>
+			<p>望极春愁，黯黯生天际。</p>
+			<p>草色烟光残照里。</p>
+			<p>无言谁会凭阑意。</p>
+			<p>拟把疏狂图一醉。</p>
+			<p>对酒当歌，强乐还无味。</p>
+			<p>衣带渐宽终不悔，为伊消得人憔悴。</p>
+		</div>
+		<div >
+			<h2 >水调歌头·明月几时有</h2>
+			<p>朝代：宋代  作者：苏轼</p>
+			<p>明月几时有？把酒问青天。</p>
+			<p>不知天上宫阙，今夕是何年。</p>
+			<p>我欲乘风归去，又恐琼楼玉宇，高处不胜寒。</p>
+			<p>起舞弄清影，何似在人间？</p>
+			<p >转朱阁，低绮户，照无眠。</p>
+			<p>不应有恨，何事长向别时圆？</p>
+			<p>人有悲欢离合，月有阴晴圆缺，此事古难全。</p>
+			<p>但愿人长久，千里共婵娟。</p>
+		</div>
+		<div>
+			<h2>蝶恋花·伫倚危楼风细细</h2>
+			<p>朝代：宋代   作者：柳永</p>
+			<p>伫倚危楼风细细。</p>
+			<p>望极春愁，黯黯生天际。</p>
+			<p>草色烟光残照里。</p>
+			<p>无言谁会凭阑意。</p>
+			<p>拟把疏狂图一醉。</p>
+			<p>对酒当歌，强乐还无味。</p>
+			<p>衣带渐宽终不悔，为伊消得人憔悴。</p>
+		</div>
+		
+		<script type="text/javascript">
+			var create = document.getElementById("create");
+			var mask = document.getElementById("mask");
+			var maskWindow = document.getElementById("maskWindow");
+			
+			create.onclick=function () {
+				mask.style.display="block";
+			}
+			
+			var xclose = document.getElementById("xclose");
+			xclose.onclick = function () {
+				mask.style.display = "none";
+			}
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加a标签，href属性内容</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			
+			var a = document.createElement("a");
+			var aCon = document.createTextNode("源码时代教育");
+			
+			a.appendChild(aCon);
+			a.setAttribute("href","http://www.itsource.cn");
+			
+			document.body.appendChild(a);
+			
+			console.log(a);
+		</script>
+		
+	</body>
+</html>

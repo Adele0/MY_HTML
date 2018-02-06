@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>纯DOM操作表格</title>
+		
+		<style type="text/css">
+			
+			#myTable {
+				height: 400px;
+				background-color: gray;
+				padding-top: 100px;
+			}
+			
+		</style>
+	</head>
+	
+	
+	<body>
+		<div id="myTable">
+			<!--<table border="" cellspacing="" cellpadding="">
+				<tr><th>Header</th></tr>
+				<tr><td>Data</td></tr>
+			</table>-->
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+			//外围白底div框的创建和样式
+			var div2 = document.createElement("div");
+			div2.style.height = 300+"px";
+			div2.style.width = 800+"px";
+			div2.style.backgroundColor = "white";
+			div2.style.border = "solid 1px blue";
+			div2.style.margin ="0px auto";
+			
+			myTable.appendChild(div2);
+			
+			//内层table的创建
+			var table = document.createElement("table");
+			table.style.border = "solid 1px gray";
+			table.style.margin ="0px auto";
+			div2.appendChild(table);
+
+			//第一排元素创建
+			var tr1 = document.createElement("tr");
+			table.appendChild(tr1);
+				//第一排第一列
+			var th1 = document.createElement("th");
+			var thName = document.createTextNode("姓名");
+			th1.appendChild(thName);
+			tr1.appendChild(th1);
+				//第一排第二列
+			var th2 = document.createElement("th");
+			var thGender = document.createTextNode("姓别");
+			th2.appendChild(thGender);
+			tr1.appendChild(th2);
+				//第一排第三列
+			var th3 = document.createElement("th");
+			var thAge = document.createTextNode("年龄");
+			th3.appendChild(thAge);
+			tr1.appendChild(th3);
+			
+			//第二排元素创建
+			var tr2 = document.createElement("tr");
+			table.appendChild(tr2);
+				//第二排第一列
+			var td1 = document.createElement("td");
+				var tdName1 = document.createTextNode("张三");
+				td1.appendChild(tdName1);
+				tr2.appendChild(td1);
+				//第二排第二列
+			var td2 = document.createElement("td");
+				var radioGender1 = document.createElement("input");
+				radioGender1.type="radio";
+				radioGender1.checked=true;
+				var genderCon1 = document.createTextNode("男");
+				radioGender1.appendChild(genderCon1);
+				
+				var radioGender2 = document.createElement("input");
+				radioGender2.type="radio";
+				var genderCon2 = document.createTextNode("女");
+				radioGender2.appendChild(genderCon2);
+				
+				td2.appendChild(radioGender1);
+				td2.appendChild(radioGender2);
+				tr2.appendChild(td2);
+				
+				//第二排第三列
+			var td3 = document.createElement("td");
+			
+				var radioAge1 = document.createElement("input");
+				radioAge1.type="checkbox";
+				var ageCon1 = document.createTextNode("乒乓球");
+				radioAge1.appendChild(ageCon1);
+				
+				var radioAge2 = document.createElement("input");
+				radioAge2.type="checkbox";
+				var ageCon2 = document.createTextNode("羽毛球");
+				radioAge2.appendChild(ageCon2);
+				
+				var radioAge3 = document.createElement("input");
+				radioAge3.type="checkbox";
+				var ageCon3 = document.createTextNode("足球");
+				radioAge3.appendChild(ageCon3);
+				
+				var radioAge4 = document.createElement("input");
+				radioAge4.type="checkbox";
+				var ageCon4 = document.createTextNode("象棋");
+				radioAge4.appendChild(ageCon4);
+				
+				td3.appendChild(radioAge1);
+				td3.appendChild(radioAge2);
+				td3.appendChild(radioAge3);
+				td3.appendChild(radioAge4);
+				tr2.appendChild(td3);
+		
+			//第三排元素创建
+			var tr3 = document.createElement("tr");
+			table.appendChild(tr3);
+				//第三排第一列
+			var td4 = document.createElement("td");
+				var tdName4 = document.createTextNode("李四");
+				td4.appendChild(tdName4);
+				tr3.appendChild(td4);
+				//第三排第二列
+			var td5 = document.createElement("td");
+				var radioGender1 = document.createElement("input");
+				radioGender1.type="radio";
+				radioGender1.checked=true;
+				var genderCon1 = document.createTextNode("男");
+				radioGender1.appendChild(genderCon1);
+				
+				var radioGender2 = document.createElement("input");
+				radioGender2.type="radio";
+				var genderCon2 = document.createTextNode("女");
+				radioGender2.appendChild(genderCon2);
+				
+				td5.appendChild(radioGender1);
+				td5.appendChild(radioGender2);
+				tr3.appendChild(td5);
+				
+				//第三排第三列
+			var td6 = document.createElement("td");
+			
+				var radioAge1 = document.createElement("input");
+				radioAge1.type="checkbox";
+				var ageCon1 = document.createTextNode("乒乓球");
+				radioAge1.appendChild(ageCon1);
+				
+				var radioAge2 = document.createElement("input");
+				radioAge2.type="checkbox";
+				var ageCon2 = document.createTextNode("羽毛球");
+				radioAge2.appendChild(ageCon2);
+				
+				var radioAge3 = document.createElement("input");
+				radioAge3.type="checkbox";
+				var ageCon3 = document.createTextNode("足球");
+				radioAge3.appendChild(ageCon3);
+				
+				var radioAge4 = document.createElement("input");
+				radioAge4.type="checkbox";
+				var ageCon4 = document.createTextNode("象棋");
+				radioAge4.appendChild(ageCon4);
+				
+				td6.appendChild(radioAge1);
+				td6.appendChild(radioAge2);
+				td6.appendChild(radioAge3);
+				td6.appendChild(radioAge4);
+				tr3.appendChild(td6);
+				
+			div2.appendChild(table);
+
+		</script>
+		
+	</body>
+</html>
