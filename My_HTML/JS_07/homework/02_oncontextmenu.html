@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				width: 140px;
+				padding-left: 8px;
+				background-color: lightcyan;
+				border: dotted 1px lightblue;
+				
+				/*忘记设置position，要获取鼠标点击右键位置为position赋值！！！*/
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+				display: none;
+			}
+			
+			li {
+				list-style: none;
+			}
+			
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<ul id="diyMenu">
+			<li>复制（C）</li>
+			<li>粘贴（V）</li>
+			<li>剪切（T）</li>
+			<li>另存为（SaveAs）</li>
+			<li>翻译（Trans）</li>
+		</ul>
+		
+		<script type="text/javascript">
+			
+//			自定义一个浏览器右键菜单，单击右键是显示它有多个按钮，制作点击某个按钮，就让这个按钮隐藏掉；
+			/*
+			 	var ul = document.getElementById("diyMenu");
+	
+				function showUl() {
+					this.style.display="block";
+				}
+			
+				ul.oncontextmenu=showUl;
+			*/
+			
+//			oncontextmenu是在window下的注册事件，直接定义
+			window.oncontextmenu=function (e) {
+				var e  = e || window.event;
+				var ul = document.getElementById("diyMenu");
+				
+				var x = e.clientX;	//横坐标--》left
+				var y = e.clientY;	//纵坐标--》top
+				
+				ul.style.left = x +"px";	//此处变为字符串拼接
+				ul.style.top = y +"px";
+				ul.style.display="block";
+				
+				e.preventDefault();  //此处阻止浏览器的右键菜单弹出
+			}
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			input {
+				width: 50px;
+				height: 30px;
+				margin-right: 10px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<input type="button" id="btn1" value="按钮1" />
+		<input type="button" id="btn2" value="按钮2" />
+		<input type="button" id="btn3" value="按钮3" />
+		
+		<script type="text/javascript">
+			
+//			有多个按钮，制作点击某个按钮，就让这个按钮隐藏掉；
+			var btn1 = document.getElementById("btn1");
+			var btn2 = document.getElementById("btn2");
+			var btn3 = document.getElementById("btn3");
+			
+			function hiddenBtn() {
+				this.style.display="none";		//可以用 event.target.display="none";
+			}
+			
+			btn1.onclick=hiddenBtn;
+			btn2.onclick=hiddenBtn;
+			btn3.onclick=hiddenBtn;
+		</script>
+		
+	</body>
+</html>

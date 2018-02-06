@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>淋酱商城官方注册</title>
+		<!--引入外部：重置样式-->
+			<link rel="stylesheet" href="styles/reset.css" />
+		<!--引入外部：通用样式-->
+			<link rel="stylesheet" href="styles/common.css" />
+		<!--引入外部：验证样式-->
+			<link rel="stylesheet" href="styles/confirm.css" />
+	</head>
+	<body>
+		<!--验证页面-->
+		<div class="width800" id="wrapper">
+			<!--头部-->
+			<div class="clear" id="header">
+				<img src="images/head.png"/>
+				<a href="" class="fr">返回淋酱商城首页</a>
+			</div>
+			<!--竞价-->
+			<p class="fontBold">淋酱搜索竟价排行服务</p>
+			
+			<!--流程-->
+			<div class="marginTop20 clear">
+				<p id="radius1" class="fl"></p>
+				<p>1.注册账号&nbsp;&nbsp;2.挑选产品关键字&nbsp;&nbsp;3.给钱&nbsp;&nbsp;4.回家坐等消息</p>
+			</div>
+			
+			<!--注册提示-->
+			<p class="marginTop20">请务必真实填写信息以便淋酱商城为你提供针对性服务。</p>
+			
+			<div class="marginTop20 width750">
+				<form action="" method="post" id="formWrapper">
+					<table>
+						<tr><td>用户名</td><td><input type="text" name="username" id="username" value="" />&nbsp;（&nbsp;*&nbsp;）</td></tr>
+						<tr><td>密码</td><td><input type="password" name="pwd" id="pwd" value="" />&nbsp;（&nbsp;*&nbsp;至少6位）</td></tr>
+						<tr><td>校验密码</td><td><input type="password" name="pwd2" id="pwd2" value="" /></td></tr>
+						<tr><td>Email地址</td><td><input type="email" name="email" id="email" value="" />&nbsp;（&nbsp;*&nbsp;正确邮件格式）</td></tr>
+						<tr><td>联系人姓名</td><td><input type="text" name="contact" id="contact" value="" /></td></tr>
+						<tr><td>联系人性别 </td><td>
+							<input type="radio" name="gender" id="male" value="" />男
+							<input type="radio" name="gender" id="female" value="" />女&nbsp;（&nbsp;*&nbsp;）
+						</td></tr>
+						<tr><td>公司(或网络)名称</td><td><input type="text" name="companyname" id="companyname" value="" />&nbsp;（&nbsp;*&nbsp;）</td></tr>
+						<tr><td>网站URL地址</td><td><input type="text" name="companyweb" id="companyweb" value="" />&nbsp;（&nbsp;*&nbsp;）</td></tr>
+						<tr><td>通讯地址</td><td>
+							<select name="province" id="province">
+								<option value="-1">您所在的省份</option>
+								<option value="hb">河北</option>
+								<option value="hn">河南</option>
+								<option value="sx">山西</option>
+							</select>
+							<select name="city" id="city">
+								<option value="-1">您所在的城市</option>
+								<option value="bj">北京</option>
+								<option value="sh">上海</option>
+								<option value="gz">广州</option>
+							</select><br />
+							<input type="text" id="address" value="" />
+						</td></tr>
+						<tr><td>邮政编码</td><td><input type="text" id="postcode" value="" /></td></tr>
+						<tr><td>联系电话</td><td><input type="text" id="tel" value="" />&nbsp;（&nbsp;*&nbsp;必须与网站上出现的联系电话一致）</td></tr>
+						<tr><td>手机号码</td><td><input type="text" id="phone" value="" />&nbsp;（&nbsp;*&nbsp;必须与网站上出现的手机电话一致）</td></tr>
+						<tr><td>接受用户协议</td><td><input type="checkbox" name="agree" id="agree" value="" />我已阅读声明并同意淋酱商城的服务协议</td></tr>
+					</table>
+					<input type="submit" value="提交"/>
+				</form>
+			</div>
+			
+		</div>
+		
+		<script src="js/formVerify.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
