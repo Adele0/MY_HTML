@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第一题</title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			function max(n) {
+				var maxNum = null;
+				for (var i = 0; i < n.length; i++) {
+					if (n[i]>= maxNum) {
+						maxNum = n[i];
+					}
+				}
+				return maxNum;
+			}
+			var n=[3,56,89];
+			document.write(max(n));
+		</script>
+		
+	</body>
+</html>

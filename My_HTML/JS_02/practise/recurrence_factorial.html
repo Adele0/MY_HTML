@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//求某数的阶乘
+			function factorial(num) {
+				//0的阶乘为1,1的阶乘为1
+				if (num == 1 || num == 0) {
+					return 1;
+				} else{
+					return num * factorial(num-1);
+				}
+			}
+			
+			console.log(factorial(5));
+		</script>
+		
+	</body>
+</html>

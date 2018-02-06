@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			td {
+				width: 40px;
+				height: 40px;
+				border: dotted 1px mediumslateblue;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			function printTable(rows,cols) {
+				document.write("<table>");
+				for (var i = 0; i < rows; i++) {
+					document.write("<tr>");
+					for (var j = 0; j < cols; j++) {
+						document.write("<td> </td>");
+					}
+					document.write("</tr>");
+				}
+				document.write("</table>");
+			}
+			
+			printTable(5,5);
+			
+			document.write("-----↑ 使用内部打印的效果------ ↓ 使用字符串拼接，返回字符串得到的效果---");
+			
+			function printTable2(rows,cols) {
+				var tableStr="";
+				tableStr=tableStr+"<table>";
+				for (var i = 0; i < rows; i++) {
+					tableStr=tableStr+"<tr>";
+					for (var j = 0; j < cols; j++) {
+					tableStr=tableStr+"<td> </td>";
+					}
+					tableStr=tableStr+"</tr>";
+				}
+				tableStr=tableStr+"</table>";
+				return tableStr;
+			}
+			
+			var myTable=printTable2(8,8);
+			document.write(myTable);
+		</script>
+		
+	</body>
+</html>
