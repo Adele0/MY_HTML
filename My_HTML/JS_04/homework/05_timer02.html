@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--2017-3-30 18:03:46 星期四-->
+		
+		<script type="text/javascript">
+			var myDate = new Date();
+			var myDay = myDate.getDay();
+			
+			document.write(myDate.getFullYear()+"-"+(myDate.getMonth()+1)+"-"+myDate.getDate()+" "+myDate.getHours()+":"+myDate.getMinutes()+":"+myDate.getSeconds()+" ");
+			
+			switch (myDay){
+				case 0:
+					document.write("星期天");
+					break;
+				case 1:
+					document.write("星期一");
+					break;
+				case 2:
+					document.write("星期二");
+					break;
+				case 3:
+					document.write("星期三");
+					break;
+				case 4:
+					document.write("星期四");
+					break;
+				case 5:
+					document.write.log("星期五");
+					break;
+				case 6:
+					document.write("星期六");
+					break;
+				default:
+					break;
+			}
+			
+		</script>
+		
+	</body>
+</html>

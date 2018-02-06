@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var matrials = "我忍屎忍尿也忍不下你呀。把你的眼屎擦掉了看清楚是谁说话再行不。贱人的生活方式就是，只许自己吃屎，不许别人放屁。";
+			var filter = "屎 尿 屁 贱人";
+			var filterStr = filter.split(" ");
+			
+			console.log(filterStr);			
+			console.log("过滤前",matrials);
+
+			for (var i = 0; i < filterStr.length; i++) {
+				matrials = matrials.replace(eval("/"+filterStr[i]+"/g"),"###");
+			}
+			
+			console.log("过滤后",matrials);
+		</script>
+		
+	</body>
+</html>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var s1 = prompt("请输入任意多个字符","字符1 字符2....");
+			var userStr = s1.split("");
+			console.log("翻转之前的数组是： ", userStr);
+			/*userStr = */userStr.reverse();		//在原数组中改变，不需要赋值给新数组
+			console.log("翻转之后的数组是： ", userStr);
+			
+			for (var i = 0; i < userStr.length; i++) {
+				if (i==0 || i==userStr.length-1) {
+					userStr[i] = userStr[i].toUpperCase();
+				}else {
+					userStr[i] = userStr[i].toLowerCase();
+				}
+			}
+			console.log("改变大小写后的数组是： ", userStr.toString());
+		</script>
+		
+	</body>
+</html>
+</html>
