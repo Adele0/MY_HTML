@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>假百度登陆</title>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background-color: lightgray;
+			}
+			
+			form {
+				width: 400px;
+				height: 300px;
+				background-color: #fff;
+				
+				margin: 100px auto;
+			}
+			
+			form p {
+				position: relative;
+			}
+			
+			form p span {
+				width: 48px;
+				height: 50px;
+				background-color: #ccc;
+				
+				text-align: center;
+				line-height: 48px;
+				
+				position: absolute;
+				top: 31px;
+				left: 65px;
+			}
+			
+			#username {
+				text-indent: 50px;
+			}
+			
+			form input {
+				font-size: 16px;
+				
+				width: 270px;
+				height: 48px;
+				line-height: 48px;
+				margin: 30px 64px 0px 64px;
+			}
+			
+			#delIcon {
+				position: absolute;
+				top:45px;
+				right: 70px;
+				
+				display: none;
+				cursor: pointer;
+			}
+			
+			
+			#loginBtn {
+				width: 274px;
+				border: none;
+				background-color: red;
+				color: #fff;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<form action="" method="post">
+			<!--由于每个input框都是独占一行，用 一个p标签包裹-->
+			<p>
+				<span><img src="images/icon1.png"/></span>
+				<input type="text" id="username" placeholder="会员名/电话号码/邮箱" value=""/>
+				<img src="images/delIcon.png"/ id="delIcon">
+			</p>
+			<p>
+				<span><img src="images/icon2.png"/></span>
+				<input type="password" name="pwd" id="pwd" />
+			</p>
+			
+			<input type="submit" value="登陆" id="loginBtn"/>
+			
+		</form>
+		
+		
+		<script type="text/javascript">
+			/*需求：鼠标放在方框一时，所有的字消失
+			      当方框一有文字输入时，x图标出现,文字消失x图标出现消失
+			      点击x图标，输入的文字被清除   
+			*/
+			var username = document.getElementById("username");
+			var delIcon = document.getElementById("delIcon");
+			
+			username.onclick = function(){
+				username.placeholder="";
+			}
+			
+			username.onkeyup = function(){		//是否有文字，是键盘事件。
+				if(username.value.length > 0){
+					delIcon.style.display = "block";
+				}else{
+					delIcon.style.display = "none";		//没有文字的时候（value为0时）
+				}
+			}
+			
+			delIcon.onclick = function(){
+				username.value="";		//点击x图标，被清除的是value不是placeholder
+			}
+		</script>
+	</body>
+</html>

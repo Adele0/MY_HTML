@@ -1,0 +1,37 @@
+body {
+	font-size: 14px;
+}
+
+.fontBold {
+	font-weight: bold; 
+}
+
+.width800 {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.width750 {
+	width: 750px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float:right;
+}
+
+.clear:after {
+	content: "";
+	width: 0;
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+.marginTop20 {
+	margin-top: 20px;
+}

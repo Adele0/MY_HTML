@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滑动菜单效果</title>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#wrapper {
+				margin: 0 auto;
+				width: 1000px;
+				padding-top: 50px;
+			}
+			
+			#menu ul li {
+				width: 300px;
+				height: 40px;
+				line-height: 40px;
+				background-color: salmon;	
+				
+				list-style: none;
+				text-align: center;
+				margin-right: 10px;
+				
+				float: left;
+			}
+			
+			#menu ul li.current {
+				color: #fff;
+				border: dotted 1px plum;
+			}
+			
+			.menuCon {
+				margin-top: 10px;
+				width: 920px;
+				height: 100px;
+				background-color: plum;
+			}
+			.clear:after {
+				content: "";
+				width: 0;
+				height: 0;
+				display: block;
+				clear: both;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="wrapper">
+			<div id="menu">
+				<ul class="clear">
+					<li>第一块</li>
+					<li>第二块</li>
+					<li>第三块</li>
+				</ul>
+			</div>
+			<div class="menuCon">1111</div>
+			<div class="menuCon">2222</div>
+			<div class="menuCon">3333</div>
+			
+		</div>
+		
+		
+		<script type="text/javascript">
+			/*需求：
+			      鼠标放在li上，那个li的类的名称就是current，其他的都是类都被清除
+			      鼠标放在li上,对应的menuCon就被显示，其他的都被隐藏
+			*/
+			
+			
+//			1.找到元素节点
+			var lis = document.getElementById("menu").getElementsByTagName("li");
+			var menuCons = document.getElementsByClassName("menuCon");
+			
+//			lis是一个集合，只能一边遍历一边添加事件
+			
+//			2.循环添加事件
+			for (var i = 0; i < lis.length; i++) {
+				
+//				3.在小循环外，用变量保存li的索引，一一对应地分配给menuCons作为它的索引
+				lis[i].tabIndex = i;
+				
+				lis[i].onmouseover = function () {
+//					2.2解决具体事件多余的效果
+					for (var i = 0; i < lis.length; i++) {
+						lis[i].className = "";
+//						3.1.1
+						menuCons[i].style.display="none";
+					}
+					
+//				2.1添加具体事件
+				console.log(lis[i]);
+//				lis[i].className = "current";		会报错，className is undefined,具体添加需要再循环
+				this.className = "current";			//实现了，添加current的效果，但是所有的都添加上了却没有消失
+					
+//				3.1 用保存的索引来实现内容的显示，而显示的前提是全部隐藏，回到2.2中添加menuCon的样式是隐藏
+//				3.1.2
+				menuCons[this.tabIndex].style.display="block";
+				}
+			}
+			
+			
+		</script>
+	</body>
+</html>
