@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加商品到购物车</title>
+		
+		<style type="text/css">
+			#products {
+				text-align: center;
+				list-style: none;
+				color: lightcoral;
+			}
+			
+			#products li {
+				margin-bottom: 5px;
+				width: 100px;
+				background-color: lightgray;
+			}
+			
+	
+			#trolley {
+				width: 300px;
+				height: 200px;
+				background-color: lightblue;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<ul id="products">
+			<li>tamaki</li>
+			<li>ouran</li>
+			<li>high</li>
+			<li>school</li>
+			<li>host</li>
+			<li>club</li>
+			<li>music</li>
+			<li>No.3room</li>
+		</ul>
+		
+		<ul id="trolley">
+			
+		</ul>
+		
+		<script type="text/javascript" src="../practise/js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			
+			//节点复制
+			$("#products li").click(function () {
+				//变量保存节点
+				var pro_clone = $(this).clone();
+//				console.log(pro_clone);
+				//添加节点到指定位置
+				$("#trolley").append(pro_clone);
+			})
+			
+		</script>
+	</body>
+</html>

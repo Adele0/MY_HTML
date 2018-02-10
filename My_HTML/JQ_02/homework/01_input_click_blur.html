@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery搜索框提示</title>
+	</head>
+	<body>
+		
+		<input type="text" id="search" value="世界第一个帅：tamaki" />
+		
+		<script type="text/javascript" src="../practise/js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			
+			//搜索框，点击事件---清空输入框内容
+			$("#search").click(function () {
+				if ($("#search").val()=="世界第一个帅：tamaki") {
+					$("#search").val("");
+				}
+			})
+			
+			//搜索框，移开事件---增加输入框内容
+			$("#search").blur(function () {
+				if ($("#search").val()=="") {
+					$("#search").val("世界第一个帅：tamaki");
+				}
+			})
+			
+		</script>
+	</body>
+</html>

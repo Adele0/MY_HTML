@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery删</title>
+	</head>
+	<body>
+		<ul id="uL">
+			<li>1.测试remove</li>
+			<li>2.测试empty</li>
+			<li>3.测试detach</li>
+		</ul>
+		
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			
+			//remove()
+			$("#uL :first-child").click(function () {
+				alert("使用remove(),删除会保留内容（可以用变量接收起来），但是绑定的事件会消失");
+			})
+			
+			//用变量接收要remove()的对象，因为保留本身，可以做其他的操作
+			var removeLi1 = $("#uL :first-child").remove();
+			
+			//这里是重新作为子元素被添加给ul，重新添加但是事件消失了
+			$("uL").append(removeLi1);
+			
+//			------------------------------------------------------------------------
+
+			//detach()
+			$("#uL :last-child").click(function () {
+				alert("使用detach(),删除会保留内容,绑定的事件不会消失");
+			})
+			
+			var detachLi2 = $("#uL :last-child").detach();
+			$("uL").append(detachLi2);
+			
+//			------------------------------------------------------------------------
+			
+			//empty()
+			$("#uL :nth-child(2)").click(function () {
+				alert("使用empty(),删除了内容,绑定的事件居然也在");
+			})
+			
+			var emptyLi3 = $("#uL :nth-child(2)").empty();
+			$("uL").append(emptyLi3);
+		</script>
+	</body>
+	
+</html>

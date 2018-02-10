@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>each遍历</title>
+	</head>
+	<body>
+		<select>
+			<!--获取option的value的值用:val()-->
+			<option value="111">值是1</option>
+			<option value="222">值是2</option>
+			<option value="333">值是3</option>
+			<option value="444">值是4</option>
+			<option value="555">值是5</option>
+			<option value="666">值是6</option>
+		</select>
+		
+		<script type="text/javascript" src="../practise/js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			$("select option").each(function (index,item){
+				//索引值
+				console.log("索引值",index);
+				//item 
+				console.log("item的详细信息，包括标签和属性",item);
+				//文本内容 
+				console.log("文本内容需要dom对象转为jquery对象",$(item).text());
+			});
+		</script>
+	</body>
+</html>

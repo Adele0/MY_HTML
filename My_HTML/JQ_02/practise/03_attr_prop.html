@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性操作</title>
+	</head>
+	
+	<body>
+		
+		<div id="div_W3C">这是测试W3C的div盒子0</div>
+		<div id="div1_W3C" title="删掉title 万一呢" class="author">这是测试W3C的div盒子1</div>
+		<div id="div_custom">这是测试自定义的div盒子0</div>
+		<div id="div1_custom" my-dir="ltr" my-title="假的">这是测试自定义的div盒子1</div>
+		
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			
+			//添加W3C属性-属性值----by attr
+			$("#div_W3C").attr("title","attr是万能的");
+			
+			//删掉div1_W3C的title属性----by attr
+			$("#div1_W3C").removeAttr("title","万一呢");		//直接删掉title，没有读取值
+			
+			//添加W3C属性-属性值----by prop
+			$("#div_W3C").prop("class","prop不能用在自定义");
+			
+			//删掉div1_W3C的class属性----by prop
+//			$("#div1_W3C").removeProp("class","prop不能用在自定义"); 		//class属性正确，属性值变成了undefined
+			$("#div1_W3C").removeProp("class","author");		//class属性正确，属性值变成了undefined
+			
+//			-----------------------------------------------------------------------------------------------------
+
+			//添加自定义属性-属性值----by attr
+			$("#div_custom").attr("my-title","attr是万能的");
+			
+			//删掉自定义的ltr属性----by attr
+			$("#div1_custom").removeAttr("my-dir");		//直接删掉
+			
+			//添加自定义属性-属性值----by prop
+			$("#div_custom").prop("my-class","prop不能用在自定义");		//不能用在自定义
+			
+			//删掉自定义属性----by prop
+			$("#div1_custom").removeProp("my-title");		//不能用在自定义
+		</script>
+		
+	</body>
+</html>

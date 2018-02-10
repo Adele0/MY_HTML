@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作业1：电话列表</title>
+		<style type="text/css">
+			table {
+				border-collapse: collapse;
+				text-align: center;
+				width: 500px;
+				
+				margin: 20px auto;
+			}
+			
+			tr, th, td {
+				border: 2px solid #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr><th>序号 <input type="checkbox" /></th><th>名称</th><th>价格</th><th>数量</th></tr>
+			<tr><td>1<input type="checkbox" /></td><td>Apple手机</td><td>5000</td><td>10</td></tr>
+			<tr><td>2<input type="checkbox" /></td><td>HTC手机</td><td>3000</td><td>11</td></tr>
+			<tr><td>3<input type="checkbox" /></td><td>诺基亚手机</td><td>2000</td><td>12</td></tr>
+			<tr><td>4<input type="checkbox" /></td><td>三星手机</td><td>1000</td><td>13</td></tr>
+			<tr><td>5<input type="checkbox" /></td><td>黑莓手机</td><td>5500</td><td>14</td></tr>
+		</table>
+		
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			//表头颜色单独
+			$("table tr:first-child").css("background-color", "yellow");
+			//除了表头外 奇偶行颜色不一致
+			$("table tr:nth-child(odd):not('tr:first-child')").css("background-color", "lightblue");
+			//内容包含“黑莓”的一行单独设置样式
+			$("tr:contains('黑莓')").css({"color":"lawngreen","font-size":"14px"});
+			
+			//找到表头的选框，添加事件(所有的判断都是在点击事件中产生的)
+//			console.log($("table tr:first-child th:first-child input"));
+
+			$("table tr:first-child th:first-child input").click(function(){
+				//如果点击表头的复选框，导致复选框值为false，则所有的td的input的复选框的值也为false
+				if ($("table tr:first-child th:first-child input").prop("checked")==false) {
+					$("table tr td input").prop("checked",false);
+				}else{
+				//否则点击表头的复选框，则所有的td的input的复选框的值为true
+					$("table tr td input").prop("checked",true);
+				}
+			})
+			
+			//当鼠标移动的高亮事件
+			/*$("table tr").mouseover(function(){
+				$("table tr").css("opacity",0.5);
+				$(this).css("opacity",1);
+			})
+			
+			$("table tr").mouseout(function(){
+				$("table tr").css("opacity",1);
+			})
+			*/
+			
+			//当鼠标移动的高亮事件---teacher
+				//初始颜色设为全局变量
+			var initColor;
+				//除去第一个tr,其他的tr都有高亮效果,使用合成事件。
+			$("table tr:gt(0)").hover(function(){
+				//移入效果，保存当前的颜色，更改当前背景颜色
+				initColor = $(this).css("background-color");
+				$(this).css("background-color","lightcoral");
+			}, function(){
+				//移出效果,背景色重置为原来的颜色
+				$(this).css("background-color",initColor);
+			})
+			
+			 
+		</script>
+	</body>
+</html>

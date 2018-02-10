@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery增</title>
+	</head>
+	<body>
+		<ul id="uL">
+			<li>测试append</li>
+			<li>测试prepend</li>
+		</ul>
+		
+		<script type="text/javascript" src="js/jquery-1.11.0.js" ></script>
+		<script>
+			//append()....之后
+			$("#uL").append("<ul><li>使用append添加的html标签外加内容1---之后(是该元素节点的子元素)</li><li>使用append添加的html标签外加内容2---之后(是该元素节点的子元素)</li></ul>");
+			
+			//prepend()....之前
+			$("#uL").prepend("<ol><li>使用prepend添加的html标签外加内容1---之前(是该元素节点的子元素)</li><li>使用prepend添加的html标签外加内容2---之前(是该元素节点的子元素)</li></ol>");
+			
+			//after()
+			$("#uL").after("<p>使用after添加的html标签外加内容1---之后(是该元素节点的兄弟元素)</p>");
+			
+			//after()
+			$("#uL").before("<p>使用before添加的html标签外加内容1---之(是该元素节点的兄弟元素)</p>")
+		</script>
+	</body>
+	
+</html>

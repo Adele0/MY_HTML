@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用jQuery创建table样式</title>
+		
+	</head>
+	<body>
+		
+		<table id="myTable"></table>
+		
+		<script type="text/javascript" src="../practise/js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			
+			//1.创建第一行th append
+			$("#myTable").append("<tr><th>姓名</th><th>性别</th><th>年龄</th></tr>");
+			
+			//2.创建第二行tr append
+			$("#myTable").append("<tr><td>张三</td><td><input type='radio' name='gender1' checked/>男<input type='radio' name='gender1' />女</td><td><input type='checkbox' name='hobby1'/>乒乓球<input type='checkbox' name='hobby1'/>篮球<input type='checkbox' name='hobby1'/>足球<input type='checkbox' name='hobby1'/>羽毛球</td></tr>");
+			
+			//3.创建第三行tr clone
+//			var tr3 = $("#myTable tr").eq(1);		找到要clone的tr
+//			console.log(tr3)						测试
+			$("#myTable").append($("#myTable tr").eq(1).clone());
+			
+			//4.更改第三行的属性值
+				//4.1更改姓名 text
+			$("#myTable tr:last-child td:first-child").text("李四");
+				//4.2更改单选框的name属性
+			$("#myTable tr:last-child input:lt(2)").prop("name","gender2");
+				//4.3更改单选框的name属性
+			$("#myTable tr:last-child input:gt(1)").prop("name","hobby2");
+			
+			//5.设置边框
+			$("#myTable").css({"border-collapse":"collapse","width":"400px","text-align":"center"});
+			$("#myTable th, #myTable tr, #myTable td").css("border","1px solid black");
+		</script>
+	</body>
+</html>
