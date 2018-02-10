@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分类菜单导航icon</title>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#menuWrap {
+				width: 250px;
+				margin: 20px auto auto 200px;
+				border: 1px solid gainsboro;
+			}
+			
+			.menu span {
+				float: right;
+			}
+			
+			dt {
+				text-indent: 20px;
+				font-weight: bold;
+				
+				padding-right: 5px;
+				height: 30px;
+				line-height: 30px;
+				background-color: lightblue;
+				
+				cursor: pointer;
+			}
+			
+			dt:after {
+				content: "";
+				width: 0;
+				height: 0;
+				display: block;
+				clear: both;
+			}
+			
+			dd p {
+				text-indent: 25px;
+				height: 30px;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="menuWrap">
+			<dl>
+				<dt class="menu">哲学<span><img src="../images/2.png"/></span></dt>
+					<dd>
+						<p>马克思主义哲学</p>
+						<p>宗教学</p>
+						<p>逻辑学</p>
+						<p>社会学</p>
+					</dd>
+				<dt class="menu">经济学<span><img src="../images/2.png"/></span></dt>
+					<dd>
+						<p>政治经济学</p>
+						<p>西方经济学</p>
+						<p>国际经济学</p>
+						<p>统计学</p>
+						<p>货币银行学</p>
+						<p>财政学</p>
+						<p>经济学说史</p>
+						<p>发展经济学</p>
+					</dd>
+				<dt class="menu">法学<span><img src="../images/2.png"/></span></dt>
+					<dd>
+						<p>法理学</p>
+						<p>逻辑学</p>
+						<p>宪法</p>
+						<p>行政法与行政诉讼法</p>
+						<p>民法总论</p>
+						<p>知识产权法</p>
+						<p>经济法</p>
+						<p>刑法总论</p>
+					</dd>
+				<dt class="menu">教育学<span><img src="../images/2.png"/></span></dt>
+					<dd>
+						<p>中国教育史</p>
+						<p>教育通论</p>
+						<p>教育心理学</p>
+						<p>课程论</p>
+						<p>教学论</p>
+						<p>教育社会学</p>
+						<p>教育哲学</p>
+						<p>德育原理</p>
+					</dd>
+				<dt class="menu">工学<span><img src="../images/2.png"/></span></dt>
+					<dd>
+						<p>力学</p>
+						<p>机械工程</p>
+						<p>光学工程</p>
+						<p>仪器科学与技术</p>
+						<p>材料科学与工程</p>
+						<p>材料物理与化学</p>
+						<p>电子信息工程</p>
+						<p>动力工程及工程热物理</p>
+					</dd>
+			</dl>
+		</div>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+	
+			//1.默认样式放在点击事件外面 .eq(0)
+			$(".menu~dd").hide();
+			$(".menu~dd").eq(0).show();
+			
+			$(".menu").click(function () {
+				$(".menu~dd").slideUp();	//全部隐藏方法应该放在点击事件中，再做this单独样式 dl和dd是兄弟
+				$(this).next().slideDown();	//点击当前dt，下面的所有dd显示
+				
+				$(".menu span img").prop("src","../images/2.png");  //所有的img都是+号字体
+				$(this).find("img").prop("src","../images/1.png");	//更改img地址
+			});
+		</script>
+		
+	</body>
+</html>

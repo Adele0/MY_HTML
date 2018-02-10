@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点击隐藏，展开分享按钮</title>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#shareDiv {
+				width: 244px;
+				margin-top: 100px;
+				
+				position: relative;
+				left:-219px;
+			}
+			
+			#sharePic {
+				float: left;
+			}
+			
+			.clear {
+				clear: both;
+			}
+			
+			#shareBtn {
+				padding-top: 90px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="shareDiv">
+			<div id="sharePic">
+				<img src="../images/conShare.gif"/>
+			</div>
+			<div id="shareBtn">
+				<img src="../images/btnShare.gif"/>
+			</div>
+			<p class="clear"></p>
+		</div>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+//			鼠标移动到按钮上展开分享图片。移开隐藏
+
+			//默认隐藏
+			
+			
+			//绑定移入移出事件，应该绑定在外部div上而不是button上-----如果绑定在button上，无法展开
+			$("#shareDiv").hover(function (){
+				//移入,用自定义动画事件来改变位置
+				$(this).stop(true,true).animate({"left":0},20);  //为了防止快速多次晃动绑定事件的盒子，导致动画累积，使用stop（true，true）
+			},function(){
+				//移出
+				$(this).stop(true,true).delay(20).animate({"left":-219},20);	//也可以在stop()后加上delay()
+			});
+		</script>
+		
+	</body>
+</html>

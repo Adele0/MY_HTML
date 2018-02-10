@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动画stop,isAnimated,delay</title>
+		
+		<style type="text/css">
+			#box {
+				width: 300px;
+				height: 150px;
+				background-color: lightblue;
+				margin-bottom: 10px;
+				
+				position: relative;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box"></div>
+		<button id="end">点击立即结束动画</button>
+		<button id="moving">判断是否在动</button>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			//delay延迟ms执行动画
+			
+			//动画移动首先需要设置position的css样式
+			$("#box").delay(2000).animate({"left":1000},2000).animate({"top":500},2000).animate({"left":0},2000).animate({"top":0},2000);
+			
+			//stop(true,true)
+			$("#end").click(function() {
+				//参数均为Boolean值，应用于
+				$("#box").stop(true,true);
+			})
+			
+			//is(":animated")
+			$("#moving").click(function() {
+				//控制台打印是否在运动中
+				console.log($("#box").is(":animated"));
+			})
+			
+		</script>
+		
+	</body>
+</html>

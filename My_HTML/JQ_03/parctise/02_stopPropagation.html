@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>阻止冒泡行为stopPropagation，需要参数e</title>
+		
+		<style type="text/css">
+			div {
+				padding: 50px;
+			}
+			#outer {
+				background-color: lightblue;
+			}
+			
+			#middle {
+				background-color: lightgreen;
+			}
+			
+			#inner {
+				background-color: lightgray;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="outer">
+			<div id="middle">
+				<div id="inner"></div>
+			</div>
+		</div>
+	
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			//外层点击事件
+			$("#outer").click(function (e) {
+				alert("outer div");
+				e.stopPropagation();
+			})
+			
+			//中层点击事件
+			$("#middle").click(function (e) {
+				alert("middle div");
+				e.stopPropagation();
+			})
+			
+			//里层点击事件
+			$("#inner").click(function (e) {
+				alert("inner div");
+				e.stopPropagation()
+			})
+			
+			//不阻止事件冒泡行为的话，点击最里层也会触发点击事件，需要给每个点击事件都加上 阻止冒泡行为,阻止冒泡需要传入参数	
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动画slideUp,slideDown</title>
+		
+		<style type="text/css">
+			#box {
+				width: 300px;
+				height: 150px;
+				background-color: lightblue;
+				margin-bottom: 10px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box"></div>
+		<button id="slideUp">点击slideUp隐藏</button>
+		<button id="slideDown">点击slideDown显示</button>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			//点击显示
+			$("#slideDown").click(function() {
+				//添加参数 毫秒
+				$("#box").slideDown(1000);
+			})
+			//点击隐藏
+			$("#slideUp").click(function() {
+				$("#box").slideUp("2000", function(){
+					alert("怕了吧");
+				});
+			})
+		</script>
+		
+	</body>
+</html>

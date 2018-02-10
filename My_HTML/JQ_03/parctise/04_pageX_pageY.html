@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>pageX,pageY获得鼠标位置,需要参数e</title>
+		
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			
+			//获取pageX，pageY，在document中获得，并且需要传入参数
+			$(document).mousemove(function(e){
+				console.log("鼠标X坐标：",e.pageX,"鼠标Y坐标：",e.pageY);
+			})
+			
+		</script>
+		
+	</body>
+</html>

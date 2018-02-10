@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件委派(添加删除事件)</title>
+		
+		<style type="text/css">
+			table {
+				border-collapse: collapse;
+			}
+			
+			tr td {
+				border: 1px solid gray;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<table>
+			<tr>
+				<td>文件序号</td>
+				<td><input type="file" /></td>
+				<td><button id="addBtn">添加</button></td>
+			</tr>
+		</table>
+		
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			
+			//点击添加按钮，在table的末尾增加一行（append），添加的一行使用字符串拼接
+			$("#addBtn").click(function() {
+				//单独用变量接收字符串拼接
+				var newtr = '<tr>'+
+							'<td>文件序号</td>'+
+							'<td><input type="file" /></td>'+
+							'<td><a>删除</a></td>'+
+							'</tr>';
+				//新增一行
+				$("table").append(newtr);
+			})
+			
+			//点击删除文字所在的标签，删除一整行closest()或parent().parent()
+			
+//			$("tr td a").click(function() {由于一开始并不存在的标签，所以不能直接使用click，需要借助使用delegate()
+//			$("existedParentElemet").delegate("newElement","type",function(){})
+			$("table").delegate("a","click",function() {
+				$(this).parent().parent().remove();
+			})
+		</script>
+		
+	</body>
+</html>

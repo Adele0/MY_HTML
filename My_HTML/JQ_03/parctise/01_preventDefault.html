@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>preventDefault,需要参数e</title>
+	</head>
+	<body>
+		
+		<!--这里没有地址，需要将method改为get-->
+		<form action="" method="get" id="submitBth">
+			<input type="submit" value="点击提交"/>
+		</form>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			//阻止浏览器默认行为，需要传入参数
+			$("form").submit(function(e) {
+				e.preventDefault;
+			})
+		</script>
+		
+	</body>
+</html>

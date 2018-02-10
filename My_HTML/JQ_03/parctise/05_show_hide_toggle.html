@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动画show，hide,toggle</title>
+		
+		<style type="text/css">
+			#box {
+				width: 300px;
+				height: 150px;
+				background-color: lightblue;
+				margin-bottom: 10px;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box"></div>
+		<button id="show">点击show显示</button>
+		<button id="hide">点击hide隐藏</button>
+		<button id="toggle">点击toggle切换</button>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.0.js" ></script>
+		
+		<script>
+			//点击显示
+			$("#show").click(function() {
+				//添加参数 毫秒
+				$("#box").show(1000);
+			})
+			//点击隐藏
+			$("#hide").click(function() {
+				$("#box").hide("2000", function(){
+					alert("怕了吧");
+				});
+			})
+			//点击切换
+			$("#toggle").click(function() {
+				$("#box").toggle("fast");
+			})
+			
+		</script>
+		
+	</body>
+</html>
