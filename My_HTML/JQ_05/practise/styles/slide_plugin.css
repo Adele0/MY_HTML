@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.divWrapper {
+	height: 400px;
+	margin-bottom: 10px;
+	background-color: lightcyan;
+}
+
+.divWrapper>p {
+	float: left;
+}

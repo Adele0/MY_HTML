@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>放大镜插件</title>
+		
+		<!--引入样式-->
+		<link rel="stylesheet" type="text/css" href="styles/slide_plugin.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/magnifier.css"/>
+		
+		<!--引入js文档-->
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<!--引入外部js-->
+		<script type="text/javascript" src="js/magnifier.js" ></script>
+		
+		
+		<!--如果在此处引入script样式，需要添加function，以触发页面加载后调用-->
+		<script type="text/javascript">
+		  $(document).ready(function(){
+			  var showproduct = {
+				  "boxid":"showbox",
+				  "sumid":"showsum",
+				  "boxw":400,//宽度,该版本中请把宽高填写成一样
+				  "boxh":400,//高度,该版本中请把宽高填写成一样
+				  "sumw":60,//列表每个宽度,该版本中请把宽高填写成一样
+				  "sumh":60,//列表每个高度,该版本中请把宽高填写成一样
+				  "sumi":7,//列表间隔
+				  "sums":5,//列表显示个数
+				  "sumsel":"sel",
+				  "sumborder":1,//列表边框，没有边框填写0，边框在css中修改
+				  "lastid":"showlast",
+				  "nextid":"shownext"
+				  };//参数定义	  
+			 $.ljsGlasses.pcGlasses(showproduct);//方法调用，务必在加载完后执行
+		  });
+</script>
+	</head>
+	<body>
+		
+		<div class="divWrapper">
+			header
+		</div>
+		<div class="divWrapper">
+			navigate
+		</div>
+		<div class="divWrapper">
+			<p>content</p>
+			<p>
+				<div id="showbox">
+				  <img src="img/img01.png" width="270" height="180" />
+				  <img src="img/img02.png" width="320" height="735" />
+				  <img src="img/img03.png" width="430" height="430" />
+				  <img src="img/img04.png" width="290" height="290" />
+				  <img src="img/img05.png" width="786" height="525" />
+				  <img src="img/img06.png" width="300" height="300" />
+				  <img src="img/img07.png" width="200" height="200" />
+				  <img src="img/img08.png" width="810" height="582" />
+				  <img src="img/img09.png" width="1920" height="900" />
+				</div><!--展示图片盒子-->
+				<div id="showsum"></div><!--展示图片里边-->
+				<p class="showpage">
+				  <a href="javascript:void(0);" id="showlast"> < </a>
+				  <a href="javascript:void(0);" id="shownext"> > </a>
+				</p>
+			</p>
+		</div>	
+		<div class="divWrapper">
+			footer
+		</div>
+		
+	</body>
+</html>

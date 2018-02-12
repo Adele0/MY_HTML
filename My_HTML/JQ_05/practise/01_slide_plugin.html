@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播插件</title>
+		
+		<!--引入样式-->
+		<link rel="stylesheet" type="text/css" href="styles/slide_plugin.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/slide.css"/>
+		
+		<!--引入js文档-->
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<!--引入外部js-->
+		<script type="text/javascript" src="js/tyslide.js" ></script>
+		
+		
+		<!--如果在此处引入script样式，需要添加function，以触发页面加载后调用-->
+	</head>
+	<body>
+		<div class="divWrapper">
+			header
+		</div>
+		<div class="divWrapper">
+			navigate
+		</div>
+		<div class="divWrapper">
+			<p>content</p>
+			<p>
+				<div class="pptbox" id="boxAnimate">
+				<ul class="innerwrapper">
+					<li><a href="#"><img src="img/1.jpg"/></a></li>
+					<li><a href="#"><img src="img/2.jpg"/></a></li>
+					<li><a href="#"><img src="img/3.jpg"/></a></li>
+					<li><a href="#"><img src="img/4.jpg"/></a></li>
+					<li><a href="#"><img src="img/5.jpg"/></a></li>
+				</ul>
+				<ul class="controls">
+					<li class="current">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>			
+				<span class="btnleft"></span>
+				<span class="btnright"></span>
+			</div>
+			</p>
+		</div>
+		<div class="divWrapper">
+			footer
+		</div>
+		
+		<script>
+			$("#boxAnimate").tyslide({
+				boxh:400,//盒子的高度
+				w:800,//盒子的宽度
+				h:400,//图片的高度
+				isShow:true,//是否显示控制器
+				isShowBtn:true,//是否显示左右按钮
+				controltop:5,//控制按钮上下偏移的位置,要将按钮向下移动   首先保证boxh 高度>图片 h
+				controlsW:20,//控制按钮宽度
+				controlsH:8,//控制按钮高度
+				radius:5,//控制按钮圆角度数
+				controlsColor:"#fff",//普通控制按钮的颜色
+				controlsCurrentColor:"#ffff00",//当前控制按钮的颜色
+				isNumber:false //是否需要数字
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>旋转的木马插件</title>
+		
+		<!--引入样式-->
+		<link rel="stylesheet" type="text/css" href="styles/slide_plugin.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/carousel.css"/>
+		
+		<!--引入js文档-->
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<!--引入外部js-->
+		<script type="text/javascript" src="js/carousel.js" ></script>
+		
+		
+		<!--如果在此处引入script样式，需要添加function，以触发页面加载后调用-->
+	</head>
+	<body>
+		
+		<div class="divWrapper">
+			header
+		</div>
+		<div class="divWrapper">
+			navigate
+		</div>
+		<div class="divWrapper">
+			<p>content</p>
+			<p>
+				<div class="J_Poster poster-main" data-setting='{
+					"width":1000,
+					"height":270,
+					"posterWidth":640,
+					"posterHeight":270,
+					"scale":0.8,
+					"autoPlay":true,
+					"delay":2000,
+					"speed":300
+				}'>
+				<div class="poster-btn poster-prev-btn"></div>
+			<ul class="poster-list">
+				<li class="poster-item">
+					<a href="#"><img src="img/1.jpg" width="100%" height="100%"></a>
+				</li>
+				
+				<li class="poster-item">
+					<a href="#"><img src="img/3.jpg" width="100%" height="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/4.jpg" width="100%" height="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/5.jpg" width="100%" height="100%"></a>
+				</li>
+				
+				<li class="poster-item">
+					<a href="#"><img src="img/3.jpg" width="100%" height="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/4.jpg" width="100%" height="100%"></a>
+				</li>
+				<li class="poster-item">
+					<a href="#"><img src="img/5.jpg" width="100%" height="100%"></a>
+				</li>
+			</ul>
+			<div class="poster-btn poster-next-btn"></div>
+		</div>
+		<div class="divWrapper">
+			footer
+		</div>
+		
+		<script>
+			Carousel.init($(".J_Poster"));
+		</script>
+	</body>
+</html>
