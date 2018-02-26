@@ -1,0 +1,87 @@
+/*通篇整体设置*/
+body {
+	font-size: 12px;
+}
+
+/*浮动和清除浮动的设置*/
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clear:after {
+	content: "";
+	height: 0;
+	width: 0;
+	display: block;
+	clear: both;
+}
+
+.move26 {
+	position: relative;
+	top: -26px;
+}
+
+/*宽度与字体*/
+.width1200 {
+	margin:0 auto;
+	width: 1200px;
+}
+
+.widthAuto {
+	width: 100%;
+}
+
+.width904 {
+	width: 904px;
+	margin: 0;
+}
+
+.colorF60 {
+	color: #f60;
+}
+
+.colorFff {
+	color: #fff;
+}
+
+.color80 {
+	color: #808080;
+}
+
+.fontBold {
+	font-weight: bold;
+}
+
+.margin20 {
+	margin-top: 20px;
+}
+
+.margin30 {
+	margin-top: 30px;
+}
+
+.marginL20 {
+	margin-left: 20px;
+}
+
+.linethrough {
+	text-decoration: line-through;
+}
+
+.font15 {
+	font-size: 15px;
+}
+
+.font18 {
+	font-size: 18px;
+}
+
+.mainColor {
+	color: #fff;
+	background-color: #f60;
+	text-align: center;
+}

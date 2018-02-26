@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*var foo = 1;
+			var test = function () {
+			     console.log(foo);	// not defined
+			     var foo = 2;
+			     console.log(foo);	// 2
+			 }
+			
+			test();*/
+			
+			
+			/*var a;
+ 			alert(typeof a);	//undefined
+ 			alert(b);		//not defined
+ 			
+ 			*/
+ 			/*
+// 			---------------自己写的方法-----------------
+ 			function concatArr(a,b){
+ 				var newArr = a.concat(b);
+   				newArr.splice(1,1);
+ 				return newArr;
+ 			}
+ 			
+ 			var arr1 = [1,5,9,56,7,2];
+ 			var arr2 = [0,5,7];
+ 			console.log(concatArr(arr1,arr2));
+ 			*/
+ 			
+ 			/*
+// 			--------------别人写的----------------
+			var arr = ['a','b','c','d'];
+			arr.splice(1,1);
+			console.log(arr);
+			
+// 			--------------把自己写的方法改造----------------
+			var a = [1,5,9,56,7,2];
+			var a1 = [1,5,9,56,7,2];
+			console.log("单独使用a的splice方法: ", a1.splice(1,1));
+ 			var b = [0,5,7];
+			var c = a.concat(b);
+			console.log("合并的数组c: ", c);
+			c.splice(1,1);
+
+			console.log("删除后的数组c: ", c);
+			*/
+			
+			/*function getRandomInt(min, max) {
+			    return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			
+			function sortNumber(a,b) {
+				return a-b;
+			}
+			
+			var myArray = [];
+			for (var i = 0; i < 10; i++) {
+				myArray.push(getRandomInt(10,100));
+			}
+			myArray.sort(sortNumber);
+			alert(myArray);*/
+/*			
+			var str = "qwertyuilo.,mnbvcsarrrrrrrrtyuiop;l,mhgfdqrtyuio;.cvxsrtyiuo";
+			var unique = {};
+			for (var i = 0; i < str.length; i++) {
+				if (!unique[str.charAt(i)]) {
+					unique[str.charAt(i)]=1;
+				} else{
+					unique[str.charAt(i)]++;
+				}
+			}
+			console.log(unique);
+			var count = 0;
+			var val = "";
+			for (var i in unique) {
+				console.log(i);
+				if (unique[i]>count) {
+					count = unique[i];
+					val = i;
+				}
+			}
+			alert("出现最多的值是："+val+"，出现的次数是："+count);
+			*/
+			
+		</script>
+		
+	
+	</body>
+</html>

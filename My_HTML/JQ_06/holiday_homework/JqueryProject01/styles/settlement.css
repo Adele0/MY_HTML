@@ -1,0 +1,162 @@
+
+#consigneeMsg{
+	padding-left: 40px;
+}
+#consigneeMsg #nowAddr{
+	height: 80px;
+}
+
+/*收货地址*/
+.addr{
+	font-size: 16px;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.addr .province{
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	width: 124px;
+	height: 30px;
+	border: 1px solid #CCCCCC;
+	margin-right: 35px;
+	position: relative;
+	cursor: pointer;
+}
+.nike{
+	text-align: center;
+	line-height: 14px;
+	width: 14px;
+	height: 14px;
+	background: #FF6600;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+.nike.current{
+	display: block;
+}
+.addr .province.current{
+	border: 1px solid #FF6600;
+}
+.addr .city,.addr .area{
+	margin-right: 20px;
+}
+
+/*默认收货地址图标*/
+#consigneeMsg #nowAddr #nowAddrIcon{
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	background: #999999;
+	float: right;
+	margin-top: 20px;
+	margin-right: 500px;
+	cursor: pointer;
+}
+/*支付方式*/
+	
+#payWay .payWayCon{
+	height: 80px;
+	margin: 20px 20px auto 40px;
+}
+#payWay .payWayCon li{
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	line-height: 30px;
+	width: 124px;
+	height: 30px;
+	border: 1px solid #CCCCCC;
+	position: relative;
+	cursor: pointer;
+}
+#payWay .payWayCon li.current{
+	border: 1px solid #FF6600;
+}
+/*配送方式*/
+#sendWay{
+	padding: 10px 0;
+	border-bottom: 1px solid #CCCCCC;
+}
+#sendWay li{
+	margin-top: 5px;
+}
+#sendWay li .sendWayLeft{
+	width: 460px;
+	height: 260px;
+	float: left;
+}
+#sendWay li .sendWayRight{
+	width: 740px;
+	height: 260px;
+	float: right;
+	background: #f2f2f2;
+}
+#sendWay li .sendWayLeft .sendWayLeftPic{
+	text-align: center;
+	line-height: 30px;
+	width: 124px;
+	height: 30px;
+	border: 1px solid #FF6600;
+	position: relative;
+	cursor: pointer;
+	margin-left: 35px;
+	margin-top: 16px;
+	font-size: 14px;
+}
+#sendWay li .sendWayLeft p .amend{
+	float: right;
+	color: #1081eb;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.sendWayLeft p .black{
+	color: #4e4e4e;
+}
+
+#sendWay li .sendWayRight img{
+	display: inline-block;
+	width: 110px;
+	height: 110px;
+	float: left;
+	margin: 20px 50px 0 30px;
+}
+#sendWay li .sendWayRight span{
+	font-size: 14px;
+	margin-top: 40px;
+	float: left;
+}
+#sendWay li .sendWayRight .singlePrice{
+	margin-left: 110px;
+	margin-right: 90px;
+	color: #FF0000;
+}
+#sendWay li .sendWayRight .stock{
+	margin-right: 50px;
+	float: right;
+}
+/*发票信息*/
+#invoice p{
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	
+}
+#invoice .invPerson{
+	margin-left: 30px;
+}
+#invoice .invDetails{
+	margin: 0 30px;
+}
+/*发票修改*/
+#invoiceAmend{
+	margin-left: 30px;
+	color: #1081eb;
+	cursor: pointer;
+}

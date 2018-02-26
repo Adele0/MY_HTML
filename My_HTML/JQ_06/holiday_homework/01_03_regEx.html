@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组去重</title>
+	</head>
+	<body>
+	
+		
+		<script type="text/javascript">
+			function camel(str){
+				return str.replace(/(?!^)\-(\w)(\w+)/g,function(a,b,c){
+					return b.toUpperCase() + c.toLowerCase();	
+				}).replace(/^\-/,"");
+			}
+			foo = "get-element-by-id";
+			console.log(camel(foo));
+		</script>
+		
+	</body>
+</html>

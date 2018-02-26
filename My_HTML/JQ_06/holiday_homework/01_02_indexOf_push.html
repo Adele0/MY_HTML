@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组去重</title>
+	</head>
+	<body>
+	
+		
+		<script type="text/javascript">
+			function deRemove(arr){
+				var newArr = [arr[0]];
+				for (var i = 0; i < arr.length; i++) {
+					if (newArr.indexOf(arr[i])==-1) {
+						newArr.push(arr[i]);
+					}
+				}
+				return newArr;
+			}
+			
+			console.log(deRemove([1,4,1,4,4,47,1,48,3,5,7,75,52,1,18,7,48]));
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>假期倒计时</title>
+	</head>
+	<body>
+		<div>
+			距离2018-2-26假期结束,还剩下<span id="timeDiv"></span>
+		</div>
+		
+		<script type="text/javascript">
+			var timeDiv = document.getElementById("timeDiv");
+			var datenow = new Date();
+			var nowDate = datenow.getDate();
+			var nowHours = datenow.getHours();
+			var nowMinutes = datenow.getMinutes();
+			var nowSeconds = datenow.getSeconds();
+			
+			var newdate = (26-nowDate)+"天"+(24-nowHours)+"小时"+(60-nowMinutes)+"分"+(60-nowSeconds)+"秒";
+//			document.write(newdate);
+			timeDiv.innerText = newdate;
+			var timeId = setInterval(function(){
+				
+				location.reload();
+				
+				if (nowDate==0 && nowHours==0 && nowMinutes==0 && nowSeconds==0) {
+					clearInterval(timeId);
+				}
+			},1000);
+		</script>
+		
+	</body>
+</html>
