@@ -1,0 +1,307 @@
+/*浮动和清除浮动的设置*/
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.clear:after {
+	content: "";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+/*宽度*/
+.width1200 {
+	margin:0 auto;
+	width: 1200px;
+}
+
+.widthAuto {
+	width: 100%;
+}
+
+.width904 {
+	width: 904px;
+	margin: 0;
+}
+
+.width410 {
+	width: 410px;
+	margin: 0 auto;
+}
+
+/*字体颜色*/
+.colorF60 {
+	color: #f60;
+}
+
+.colorFff {
+	color: #fff;
+}
+
+.color80 {
+	color: #808080;
+}
+
+.color32 {
+	color: #323232;
+}
+
+.colorF4290d {
+	color: #f4290d;
+}
+
+.colorb2 {
+	color: #b2b2b2;
+}
+
+.colorE5 {
+	color: #e5e5e5;
+}
+
+.color1a {
+	color: #1a1a1a;
+}
+
+.color333 {
+	color: #333;
+}
+
+.color666 {
+	color: #666;
+}
+
+.color999 {
+	color: #999;
+}
+
+.color1080e9 {
+	color: #1080e9;
+}
+
+.color4c {
+	color: #4c4c4c;
+}
+
+/*背景颜色*/
+.bgcolor666 {
+	background-color: #666;
+}
+
+/*边距*/
+.margin20 {
+	margin-top: 20px;
+}
+
+.margin30 {
+	margin-top: 30px;
+}
+
+.margin40 {
+	margin-top: 40px;
+}
+
+.margin50 {
+	margin-top: 50px;
+}
+
+.margin60 {
+	margin-top: 60px;
+}
+
+.margin90 {
+	margin-top: 90px;
+}
+
+.marginL20 {
+	margin-left: 20px;
+}
+
+.marginL30 {
+	margin-left: 30px;
+}
+
+/*字体样式及大小*/
+.linethrough {
+	text-decoration: line-through;
+}
+
+.delPrice {
+	color: #ccc;
+	text-decoration: line-through;
+}
+
+.borderbf {
+	border: 1px solid #bfbfbf;
+}
+
+.borderBf60 {
+	border-bottom: 6px solid #f60;
+}
+
+.fontBold {
+	font-weight: bold;
+}
+
+.font12 {
+	font-size: 12px;
+}
+
+.font14 {
+	font-size: 14px;
+}
+
+.font15 {
+	font-size: 15px;
+}
+
+.font16 {
+	font-size: 16px;
+}
+
+.font18 {
+	font-size: 18px;
+}
+
+.font20 {
+	font-size: 20px;
+}
+
+.font22 {
+	font-size: 22px;
+}
+
+.font24 {
+	font-size: 24px;
+}
+
+.font28 {
+	font-size: 28px;
+}
+
+
+/*通用白字红底居中样式*/
+.mainColor {
+	color: #fff;
+	background-color: #f60;
+	text-align: center;
+}
+
+/*隐藏*/
+.display_none {
+	display: none;
+}
+
+/*移动*/
+.move26 {
+	position: relative;
+	top: -26px;
+}
+
+/*边框有√的统一样式*/
+
+.payWayCon li {
+	float: left;
+	margin-right: 20px;
+	
+	width: 124px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	
+	border: 1px solid #ccc;
+	position: relative;
+	cursor: pointer;
+}
+
+.payWayCon li.current {
+	border: 1px solid #f60;
+}
+
+.nike {
+	text-align: center;
+	line-height: 14px;
+	width: 14px;
+	height: 14px;
+	background: #f60;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+
+.nike.current {
+	display: block;
+}
+
+/*公共标题盒子 尺寸*/
+.publicTitleBox {
+	width: 120px;
+	height: 52px;
+	line-height: 48px;
+}
+
+/*人气单品、猜你喜欢、*/
+.recommondTop {
+	width: 210px;
+	height: 256px;
+	margin-right: 20px;
+	font-size: 14px;
+	
+	float: left;
+}
+
+.recommondTop li {
+	padding-left: 8px;
+}
+
+.recommondTop.current {
+	background-color: #F2F2F2;
+}
+
+/*图书右侧-排行榜--通用样式*/
+.topSales {
+	width: 270px;
+	height: 442px;
+	border: 2px solid #e6e6e6;
+}
+
+.topSales>p {
+	color: #808080;
+	text-align: center;
+}
+
+.tsDetails {
+	padding: 0 5px 3px 5px;
+}
+
+.tsDetails>li {
+	line-height: 32px;
+	border-bottom: 1px solid #e6e6e6;
+	clear: both;
+}
+
+.tsDetails>li>span {
+	font-size: 16px;
+}
+
+.bookTitle {
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.bookImg {
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.bookImg>img {
+	float: left;
+}
+

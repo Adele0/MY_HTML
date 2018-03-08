@@ -1,0 +1,163 @@
+/*覆盖表头的样式---因为浮动logo大小有改变*/
+#headerCon {
+	height: 131px;
+}
+
+#headerRight {
+	height: 105px;
+}
+
+#navForm {
+	margin-top:5px ;
+}
+
+#navMenu {
+	margin-top: -5px;
+}
+
+/*热卖畅销*/
+#products_bestseller {
+	width: 200px;
+}
+
+#products_bestseller>p {
+	height: 30px;
+	line-height: 30px;
+	
+	color: #fff;
+	background-color: #93d56f;
+	text-indent: 10px;
+	font-size: 18px;
+}
+
+.bestseller_list li img {
+	width: 90px;
+	height: 100px;
+	display: inline-block;
+	margin-top: 25px;
+}
+
+.bestseller_list li.current {
+	width: 190px;
+	height: 142px;
+	padding: 10px 5px 10px 5px;
+}
+
+.bestseller_list li {
+	border-bottom: 1px solid #ccc;
+	height: 38px;
+	width: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+.bestseller_list li p {
+	width: 84px;
+	font-size: 12px;
+	float: right;
+	margin-top: 25px;	
+}
+
+.bestseller_list li div{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 0px;
+	right:0px;
+}
+
+/*折扣区*/
+#discount {
+	width: 220px;
+	height: 48px;
+	line-height: 48px;
+}
+
+/*新书上架,标题提取公共类*/
+.product_title {
+	margin-top: 30px;
+	height: 40px;
+	border-bottom: 6px solid #f60;
+}
+
+.product_title p {
+	height: 40px;
+    line-height: 46px;
+	font-size: 22px;
+	color: #333;
+}
+
+.product_title p span {
+	display: inline-block;
+	width: 46px;
+}
+
+.product_title ul li {
+	float: left;
+	height: 40px;
+	width: 90px;
+	
+	text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product_title ul li.current {
+	color: #fff;
+	background-color: #f60;
+}
+
+/*新书上架左侧*/
+.newbookL{
+	width: 900px;
+	border: 2px solid #e6e6e6;
+	border-top: none;
+	height: 444px;
+}
+
+.newbookL ul {
+	width: 180px;
+	height: 221px;
+	float: left;
+}
+
+/*公用列表200*250*/
+.product_con {
+	height: 530px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.product_con ul {
+	width: 200px;
+	height: 250px;
+	float: left;
+}
+
+.dot {
+	font-size: 28px;
+	width: 200px;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.dot span {
+	margin-right: 20px;
+}
+
+/*箭头定位*/
+.solo {
+	position: relative;
+}
+
+#like_l {
+	position: absolute;
+	top: 210px;
+    left: -40px;
+}
+
+#like_r {
+	position: absolute;
+	top: 200px;
+    right: -20px;
+}

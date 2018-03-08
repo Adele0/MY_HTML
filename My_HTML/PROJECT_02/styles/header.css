@@ -1,0 +1,93 @@
+/*第一行内容*/
+#headerBG {
+	height: 26px;
+	background-color: #000;
+}
+
+/*第二行内容*/
+#headerCon {
+	position: relative;
+	top: -26px;
+}
+	/*第二行右侧*/
+	#headerRight {
+		width: 1000px;
+		height: 130px;
+	}
+	
+	/*登陆*/
+	#login {
+		height: 26px;
+		line-height: 26px;
+	}
+	
+	#navForm {
+		height: 34px;
+		margin: 14px 0px 22px 0px;
+	}
+	
+	/*搜索框*/
+	#search {
+		width: 436px;
+		height: 30px;
+		line-height: 30px;
+		margin-right: 36px;
+		
+		background-color: #f60;
+		border: 2px solid #f60;
+	}
+		
+		#keyWords {
+			height: 30px;
+			width: 388px;
+			
+			font-size: 16px;
+			text-indent: 8px;
+		}
+		
+		#searchBtn {
+			width: 48px;
+			height: 30px;
+			
+			color: #fff;
+			background: url(../images/bgicon.png) no-repeat 1px -3px;
+		}
+
+	/*购物车&订单*/
+	#trolley {
+		width: 204px;
+	}
+	
+	
+	#trolley li {
+		width: 100px;
+		height: 34px;
+		line-height: 34px;
+		background-color: #ebebeb;
+		text-align: center;
+		
+		float: left;
+	}
+	
+	#trolley li:first-of-type {
+		background: url(../images/bgicon.png) no-repeat -4px -43px;
+		text-indent: 20px;
+		background-color: #f60;
+		color: #fff;
+	}
+	
+	#trolley li:last-of-type {
+		height: 32px;
+		border: 1px solid #ccc;
+	} 
+	
+	/*导航菜单*/
+#navMenu {
+	margin-top: 30px;
+	padding-left: 36px;
+}
+	
+#navMenu>li {
+	float: left;
+	margin-right: 32px;
+}	

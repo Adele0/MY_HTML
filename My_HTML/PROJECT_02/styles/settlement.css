@@ -1,0 +1,236 @@
+/*覆盖表头的样式---因为浮动logo大小有改变*/
+#headerRight {
+	width: 942px;
+}
+
+#headerRight {
+	height: 105px;
+}
+
+/*logo上的字体---子绝父相*/
+#logo {
+	position: relative;
+}
+
+#logo>p {
+	position: absolute;
+	top: 32px;
+    right: 11px;
+	
+	color: #fff;
+	font-size: 30px;
+}
+
+/*收货人信息*/
+.order_title {
+	width: 1180px;
+	padding: 0 10px;
+	
+	height: 60px;
+	line-height: 60px;
+	
+	color: #4c4c4c;
+	background-color: #f2f2f2;
+}
+
+.order_title_noBg {
+	padding: 0 10px;
+	color: #4c4c4c;
+}
+
+.order_title_l {
+	color: #1080e9;
+	margin-left: 20px;
+}
+
+/*收货人地址信息*/
+#consigneeMsg {
+	padding-left: 40px;
+}
+
+/*配送地址*/
+#consigneeMsg #nowAddr {
+	height: 80px;
+}
+
+/*收货地址*/
+.addr {
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.addr .province {
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	width: 124px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-right: 35px;
+	position: relative;
+	cursor: pointer;
+}
+
+.addr .province.current {
+	border: 1px solid #f60;
+}
+
+.addr .city,.addr .area {
+	margin-right: 20px;
+}
+
+/*默认收货地址图标*/
+#consigneeMsg #nowAddr #nowAddrIcon {
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	background: #999999;
+	float: right;
+	margin-top: 20px;
+	margin-right: 500px;
+	cursor: pointer;
+}
+
+/*选择支付方式*/	
+#select_pay_way {
+	height: 80px;
+	margin: 20px 20px auto 40px;
+}
+
+/*配送方式*/
+#sendWay {
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#sendWay li {
+	margin-top: 5px;
+}
+
+#sendWay li .sendWayLeft {
+	width: 440px;
+	height: 260px;
+	float: left;
+}
+
+#sendWay li .sendWayLeft p:nth-of-type(3) {
+	margin: 40px 0 10px 0;
+}
+
+#sendWay li .sendWayRight {
+	width: 740px;
+	height: 260px;
+	float: right;
+	background: #f2f2f2;
+}
+
+#sendWay li .sendWayLeft .sendWayLeftPic {
+	color: #4c4c4c;
+	text-align: center;
+	line-height: 30px;
+	
+	width: 124px;
+	height: 30px;
+	border: 1px solid #f60;
+	
+	position: relative;
+	cursor: pointer;
+	margin-left: 35px;
+	margin-top: 16px;
+}
+
+#sendWay li .sendWayLeft p .amend {
+	float: right;
+	color: #1081eb;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.sendWayLeft p .black {
+	color: #4e4e4e;
+}
+
+#sendWay li .sendWayRight img {
+	display: inline-block;
+	width: 110px;
+	height: 110px;
+	float: left;
+	margin: 20px 50px 0 30px;
+}
+
+#sendWay li .sendWayRight span {
+	font-size: 16px;
+	margin-top: 40px;
+	float: left;
+}
+
+#sendWay li .sendWayRight .singlePrice {
+	margin-left: 110px;
+	margin-right: 90px;
+	color: #FF0000;
+}
+
+#sendWay li .sendWayRight .stock {
+	margin-right: 50px;
+	float: right;
+}
+
+/*发票信息*/
+#invoice_details {
+	height: 58px;
+	line-height: 58px;
+	border: 1px solid #ccc;
+	padding: 0 70px 0 20px;
+}
+
+#invoice_details li:not(:last-of-type) {
+	float: left;
+	margin-right: 90px;
+}
+
+#invoice_details li:last-of-type {
+	font-size: 20px;
+}
+
+#invoice_details li label {
+	font-size: 26px;
+	color: #f60;
+}
+
+#invoice_details li span {
+	font-size: 22px;
+	color: #f60;
+}
+
+/*配送地址*/
+/*#delivery_confirm {
+	height: 60px;
+}*/
+
+#delivery_confirm li {
+	height: 60px;
+	line-height: 60px;
+	margin-left: 10px;
+}
+
+#sendTo {
+	width: 300px;
+	color: #4c4c4c;
+	border: 1px solid #ccc;
+}
+
+#delivery_confirm li:first-of-type {
+	width: 1040px;
+}
+
+#order_confirm {
+	width: 140px;
+	height: 60px;
+	
+	font-size: 26px;
+	color: #fff;
+	background-color: #f60;
+}

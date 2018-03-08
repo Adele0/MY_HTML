@@ -1,0 +1,320 @@
+/*覆盖表头的样式---因为浮动logo大小有改变*/
+#headerCon {
+	height: 131px;
+}
+
+#headerRight {
+	height: 105px;
+}
+
+#navForm {
+	margin-top:5px ;
+}
+
+#navMenu {
+	margin-top: -5px;
+}
+
+/*图书外层样式*/
+#booksWrapper {
+	background-color: #f2f2f2;
+	padding-bottom: 30px;
+}
+
+/*图书标题*/
+#booksTitle {
+	line-height: 50px;
+}
+
+#booksTitle>span {
+	font-size: 15px;
+	color: #646464;
+}
+
+/*图书购物详情*/
+#booksDetails {
+	width: 1160px;
+	padding: 12px 20px;
+	background-color: #fff;
+}
+
+#detailsLeft {
+	width: 350px;
+	height: 486px;
+}
+
+#detailsRight {
+	width: 810px;
+	height: 486px;
+	
+	font-size: 14px;
+}
+
+#bookIntroduce {
+	margin: 20px 5px;
+	color: red;
+}
+
+#booksPrice {
+	width: 760px;
+	height: 112px;
+	padding: 16px 12px 14px 18px;
+	
+	color: #808080;
+	background-color: #f5f5f5;
+}
+
+/*优惠券*/
+.groupon {
+	display: inline-block;
+	
+	width: 88px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	
+	color: #fff;
+	background-color: #f60;
+	border-radius: 5px;
+}
+
+/*平装精装*/
+#bookEdition {
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	padding-left: 10px;
+}
+
+#bookEdition li {
+	width: 98px;
+	margin-left: 10px;
+	border: 1px solid #c9c9c9;
+	
+	float: left;
+}
+
+#bookEdition li:hover {
+	border: 2px solid #f60;
+}
+
+/*加入购物车*/
+#buy {
+	width: 270px;
+	height: 60px;
+	text-align: center;
+	margin: 50px auto 20px 20px;
+}
+
+#counter {
+	width: 40px;
+	height: 40px;
+	margin: 9px 24px auto 5px;
+	border: 1px solid #c9c9c9;
+}
+
+#counter h3, #counter ul {
+	width: 20px;
+	line-height: 40px;
+}
+
+#counter li img {
+	display: block;
+}
+
+#putIn {
+	width: 190px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	
+	color: #fff;
+	background-color: #f60
+}
+
+
+/*人气单品图书推荐*/
+#booksRecommend {
+	background-color: #fff;
+	height: 3200px;
+}
+
+/*看了又看*/
+#compare {
+	width: 308px;
+	height: 2760px;
+	border: 1px solid #e6e6e6;
+	margin-right: 10px;
+}
+
+#compare>p {
+	height: 40px;
+	line-height: 40px;
+	
+	padding-left: 10px;
+	background-color: #f4f4f4;
+}
+
+/*覆盖人气单品*/
+#compare .recommondTop {
+	/*width: 250px;*/	
+	margin: 0;
+	padding-top: 25px;
+}
+
+.compareProduct {
+	width: 250px;
+    height: 300px;
+    border-bottom: 1px solid #e6e6e6;;
+}
+/*评价*/
+#reviews {
+	width: 870px;
+	height: 40px;
+	line-height: 40px;
+	
+	color: #4c4c4c;
+}
+
+#reviewsList li {
+	width: 154px;
+	height: 41px;
+	float: left;
+	text-align: center;
+}
+
+#reviewsList li.current {
+	color: #fff;
+	background-color: #f60;
+}
+
+/*评价表格图形*/
+#viewChart {
+	height: 130px;
+    padding: 20px 0;
+}
+
+#viewChart ul {
+	float: left;
+	margin-left: 30px;
+}
+
+/*评价表格图形·左侧*/
+#viewChartL li:first-child{
+	font-size: 72px;
+	color: #f8380c;
+}
+
+#viewChartL li:last-child{
+	font-size: 20px;
+	color: #999;
+	text-align: right;
+}
+
+/*评价表格图形·中部*/
+#viewChartM>li, #viewChartR>li {
+	margin-top: 19px;
+}
+
+#viewChartM .reviewBar {
+	width: 152px;
+	height: 21px;
+	margin-left: 5px;
+	
+	background-color: #e5e5e5;
+	float: right;
+}
+
+#viewChartM .reviewBar span {
+	display: inline-block;
+	height: 21px;
+}
+
+#viewChartM .reviewBar .reviewBarL {
+	background-color: #f60;
+}
+
+#reviewBar1 {
+	width: 149px;
+}
+
+#reviewBar2 {
+	width: 3px;
+}
+
+/*评价表格图形·右侧*/
+#viewChartR {
+	width: 400px;
+}
+
+#viewChartR li {
+	float: left;
+}
+
+/*评价统计*/
+#review_statistics {
+	height: 30px;
+	line-height: 30px;
+	background-color: #f5f5f5;
+	text-indent: 20px;
+}
+
+/*评价详情*/
+.review_details {
+	height: 126px;
+	border-bottom: 1px solid #f5f5f5;
+	
+	padding-top: 20px;
+}
+
+.review_time {
+	color: #a6a6a6;
+	width: 120px;
+	margin-right: 30px;
+	margin-left: 20px;
+}
+
+.review_recommend {
+	color: #666;
+	width: 464px;
+	margin-right: 66px;
+}
+
+.review_member {
+	color: #808080;
+}
+
+.review_member li:nth-of-type(2){
+	color: #f4b212
+}
+
+/*分页*/
+#review_pager {
+	
+}
+
+#review_pager li {
+	width: 30px;
+	height: 30px;
+	margin-right: 6px;
+	
+	line-height: 30px;
+	text-align: center;
+	
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	float: left;	
+}
+
+#review_pager li:nth-of-type(7) {
+	border: none;
+}
+
+#review_pager li:nth-of-type(8) {
+	width: 60px;
+}
+
+#review_pager li.current {
+	color: #f8380c;
+	border: none;
+}

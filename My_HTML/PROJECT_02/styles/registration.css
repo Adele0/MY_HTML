@@ -1,0 +1,56 @@
+/*覆盖表头的样式---因为浮动logo大小有改变*/
+#headerRight {
+	width: 942px;
+}
+
+#headerRight {
+	height: 105px;
+}
+
+/*logo上的字体---子绝父相*/
+#logo {
+	position: relative;
+}
+
+#logo>p {
+	position: absolute;
+	top: 32px;
+    right: 42px;
+	
+	color: #fff;
+	font-size: 30px;
+}
+
+/*注册主体页面*/
+.one_common {
+	border: 1px solid #d9d9d9;
+	width: 400px;
+	height: 44px;
+	line-height: 44px;
+}
+
+.one_common span {
+	color: #666;
+	font-size: 22px;
+	display: inline-block;
+	width: 140px;
+	height: 44px;
+	text-indent: 5px;
+}
+
+.one_common input{
+	font-size: 17px;
+	width: 259px;
+	height: 43px;
+	border: none;
+	margin-top: 1px;
+}
+
+.content {
+	margin-top: 30px;
+}
+
+
+#regNow {
+	border: none;
+}

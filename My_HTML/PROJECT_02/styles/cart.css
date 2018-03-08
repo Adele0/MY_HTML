@@ -1,0 +1,127 @@
+/*覆盖表头的样式---因为浮动logo大小有改变*/
+#headerRight {
+	width: 942px;
+}
+
+#headerRight {
+	height: 105px;
+}
+
+/*logo上的字体---子绝父相*/
+#logo {
+	position: relative;
+}
+
+#logo>p {
+	position: absolute;
+	top: 32px;
+    right: 24px;
+	
+	color: #fff;
+	font-size: 30px;
+}
+
+#navForm {
+	margin-bottom: 0;
+}
+/*页头·配送*/
+#header_delivery {
+	margin:10px 85px 0 0;
+}
+
+/*购物车内容*/
+#cart_title {
+	height: 60px;
+	line-height: 60px;
+	padding-left: 10px;
+	
+	color: #808080;
+	font-size: 16px;
+	background-color: #f2f2f2; 
+}
+/*购物车标题*/
+#cart_title ul li, #cart_confirm li {
+	float: left;
+}
+
+#cart_title ul li:nth-of-type(3) {
+	margin: 0 350px 0 190px;
+}
+
+#cart_title ul li:nth-of-type(5) {
+	margin: 0 122px 0 112px;
+}
+
+#cart_title ul li:nth-of-type(6) {
+	margin-right: 92px;
+}
+
+/*从当背景的空盒子*/
+.bg {
+	background-color: #dfdfdf;
+	height: 6px;
+	margin-top: 20px;
+}
+
+/*选中项目详情*/
+.select_book {
+	height: 180px;
+	padding-top: 20px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.select_book>li, .item_num>li {
+	float: left;
+}
+
+.select_book>li:nth-of-type(2) {
+	margin: 0 30px;
+}
+
+.select_book>li:nth-of-type(4) {
+	margin: 0 100px 0 270px;
+}
+
+.select_book>li:nth-of-type(6) {
+	margin: 0 80px 0 120px
+}
+
+.increase, .decrease {
+	cursor: pointer;
+}
+
+.num {
+	color: #f62f22;
+}
+
+/*确认购物车，提交*/
+#cart_confirm {
+	height: 60px;
+	line-height: 62px;
+	margin: 36px 0;
+	
+	border-right: none;
+}
+
+#cart_confirm li:first-of-type {
+	margin: 0 10px 0 20px;
+}
+
+#cart_confirm li:nth-of-type(3) {
+	margin: 0 514px 0 38px;
+}
+
+#cart_confirm li:nth-of-type(5) {
+	margin: 0 0 0 50px;
+}
+
+#cart_confirm li:last-of-type {
+	float: right;
+}
+
+#cart_confirm li:last-of-type a {
+	width: 128px;
+	height: 60px;
+	font-size: 26px;
+	display: inline-block;
+}

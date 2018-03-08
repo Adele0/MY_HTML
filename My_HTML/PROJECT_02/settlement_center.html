@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>订单中心</title>
+		
+		<!--引入css样式-->
+		<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/public.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/header.css"/>
+			<!--外部样式-->
+			<link rel="stylesheet" type="text/css" href=""/>
+			<!--正在使用模板增加的样式-->
+			<link rel="stylesheet" type="text/css" href="styles/settlement.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/footer.css"/>
+		
+		<!--shour cut-->
+		<link rel="shortcut icon" type="images/x-icon" href="tamaki.png" />
+		
+	</head>
+	
+	<body>
+		<!--页头-->
+		<!--黑色背景-->
+		<div class="widthAuto fl" id="headerBG"></div>
+		<!--页头wrapper-->
+		<div class="width1200 clear" id="headerCon">
+			<!--logo图片-->
+			<div class="fl" id="logo">
+				<img src="images/LogoBG.gif"/>
+					<!--logo的字体-->
+				<p>订单中心</p>
+			</div>
+			
+			<!--页头内容-->
+			<div class="fr" id="headerRight">
+				<!--第一行内容:欢迎-->
+				<p class="colorE5 clear" id="login">
+					<span class="font18 fl">legochina.cn</span>
+					<span class="font14 fr">欢迎光临
+						<a class="colorF60 fontBold" href="index.html">乐购</a>
+						，请&nbsp;&nbsp;&nbsp&nbsp;
+						<a href="login.html" class="colorE5">登陆</a>
+						\<a class="colorF60 fontBold" href="registration.html">注册</a>
+					</span>
+				</p>
+				
+				<!--第二行内容-->
+				<div id="navForm" class="clear">
+					<form action="" method="post" id="search" class="fr">
+						<input type="text" class="fl" id="keyWords" value="" placeholder="设计中的设计 原研哉"/>
+						<input type="submit" class="fr" id="searchBtn" value=""/>
+					</form>	
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<!--订单中心.主体-->
+		<div class="width1200 font18 move26">
+			<p class="font20 color666 margin20">填写并核对结算信息</p>
+			<!--收货人信息-->
+			<div class="order_title">
+				<ul class="clear">
+					<li class="fl">收货人信息</li>
+					<li class="order_title_l fr">新增收货地址</li>
+				</ul>
+			</div>
+			
+			<!--收货人地址-->
+			<div id="consigneeMsg">
+				<!--配送地址-->
+				<div class="clear" id="nowAddr">
+					<p class="addr"><span class="province current">运送&emsp;四川<span class="nike current">✔</span></span><span class="city">成都市</span><span class="area">高新区</span><span class="street">天府新谷11号楼1101</span></p>
+					<p id="nowAddrIcon">默认收货地址</p>
+				</div>
+				<!--更多地址-->
+				<div class="clear" id="moreAddr">
+					<p class="font16">更多收货地址:</p>
+					<p class="addr"><span class="province">运送&emsp;四川<span class="nike">✔</span></span><span class="city">成都市</span><span class="area">高新区</span><span class="street">天府新谷11号楼1101</span></p>
+				</div>
+			</div>
+			
+			<!--支付方式-->
+			<div id="payWay">
+				<!--标题-->
+				<div class="order_title">
+					<p>支付方式</p>
+				</div>
+				<ul class="clear payWayCon" id="select_pay_way">
+					<li class="current">货到付款<span class="nike current">✔</span></li>
+					<li>微信支付<span class="nike">✔</span></li>
+					<li>信用卡<span class="nike">✔</span></li>
+					<li>银行卡<span class="nike">✔</span></li>
+				</ul>
+			</div>
+			
+			<!--送货清单-->
+			<div>
+				<!--标题-->
+				<div class="order_title">
+					<ul class="clear">
+						<li class="fl">送货清单</li>
+						<li class="fr"><a href="shoping_cart.html" class="order_title_l">返回购物车修改</a></li>
+						<li class="order_title_l fr">价格说明</li>		
+					</ul>
+				</div>
+				
+				<!--配送方式-->
+				<div id="sendWay">
+					<ul>
+						<li class="clear">
+							<!--左边-->
+							<div class="sendWayLeft order_title_noBg">
+								<p class="">配送方式 :</p>
+								<p class="sendWayLeftPic">顺丰快递<span class="nike current">✔</span></p>
+								<p><span class="color999">付款方式: </span>&nbsp;现金<span class="amend">修改</span></p>
+								<p><span class="color999">配送时间: </span>&nbsp;预计8月30日12:00 - 16:00 送达</span> <span class="amend">修改</span></p>
+							</div>
+							
+							<!--右边-->
+							<div class="sendWayRight clear">
+								<img src="images/demo-book3.jpg"/>
+								<span>你不晓得的JS的表特否</span>
+								<span class="singlePrice">41.00</span>
+								<span>1</span>
+								<span class="stock">有货</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</div>	
+				
+			<!--发票信息-->
+			<div class="font18 order_title_noBg margin20">
+				<p>发票信息:</p>
+				<p class="color999">普通发票 ( 电子 )&emsp;&emsp;个人&emsp;&emsp;明细&emsp;&emsp;<span class="color1080e9">修改</span></p>
+			</div>
+			<!--发票数字-->
+			<ul class="font16 color80 margin40 clear" id="invoice_details">
+				<li><span>1</span>件商品</li>
+				<li>总商品金额：<span>41.00</span></li>
+				<li>运费：<span>6.00</span></li>
+				<li class="fr">应付总额：<label>47.00</label></li>
+			</ul>
+				
+			<!--配送·提交按钮-->
+			<ul class="font14 color999 margin20 clear" id="delivery_confirm">
+				<!--<li class="fl"></li>--> 
+				<li class="fl">配送至：<input type="text" name="sendTo" id="sendTo" value="成都高新区三环内天府新谷11号1101"/></li>
+				<li class="fr">
+					<form action="payment_center.html" method="post" class="clear">
+						<input type="submit" name="order_confirm" id="order_confirm" value="提交订单" />
+					</form>
+				</li>
+			</ul>
+			
+		</div>
+		
+
+		<!--海报-->
+		<div class="width1200 margin20 move26">
+			<img src="images/post.jpg" alt="" />
+		</div>
+		
+		<!--页脚 -->
+		<!--第一行：slogan-->
+		<div class="widthAuto move26" id="footer">
+			<ul class="width1200 clear">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<!--第二行：指南链接-->
+		<div class="width1200 clear" id="footerList">
+			<ul class="footerCon fl">
+				<h2>购物指南</h2>
+				<li><a href="">购物流程</a></li>
+				<li><a href="">发票制度</a></li>
+				<li><a href="">账户管理</a></li>
+				<li><a href="">会员优惠</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>支付方式</h2>
+				<li><a href="">货到付款</a></li>
+				<li><a href="">网上支付</a></li>
+				<li><a href="">礼品卡支付</a></li>
+				<li><a href="">银行转账</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>订单服务</h2>
+				<li><a href="">订单配送查询</a></li>
+				<li><a href="">订单状态说明</a></li>
+				<li><a href="">自动取消订单</a></li>
+				<li><a href="">自动修改订单     </a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>退换货</h2>
+				<li><a href="">退换货政策</a></li>
+				<li><a href="">自动申请退换货</a></li>
+				<li><a href="">退换货进度查询</a></li>
+				<li><a href="">退款方式和时间</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>商家服务</h2>
+				<li><a href="">商家中心</a></li>
+				<li><a href="">运营服务</a></li>
+				<li><a href="">加入尾品汇</a></li>
+			</ul>
+			
+			<img src="images/logo_00.png" class="fl"/>
+		</div>
+		
+		<!--公司链接-->
+		<p class="width1200" id="footerLinks">
+			<a href="">公司简介&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbspInvestor Relations&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp网站联盟&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp乐购招商&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp机构销售&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp手机乐购&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp官方Blog&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp热词搜索&nbsp;&nbsp;&nbsp</a>
+		</p>
+		
+		<!--copyright-->
+		<p class="width1200" id="copyright">
+			Copyright&nbsp;&nbsp;(c)&nbsp;&nbsp;乐购网&nbsp;&nbsp;2004-2018,&nbsp;&nbsp;All Rights Reserved.
+		</p>
+		
+		
+		<!--引入js文档-->
+		<script type="text/javascript" src="scripts/jquery.min.js" ></script>
+		<!--引入外部js-->
+		<script type="text/javascript" src="" ></script>
+		<!--引入内部js-->
+		<script type="text/javascript" src="" ></script>
+	</body>
+</html>

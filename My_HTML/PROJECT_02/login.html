@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆</title>
+		
+		<!--引入css样式-->
+		<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/public.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/header.css"/>
+			<!--外部样式-->
+			<link rel="stylesheet" type="text/css" href=""/>
+			<!--正在使用模板增加的样式-->
+			<link rel="stylesheet" type="text/css" href="styles/login.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/footer.css"/>
+		
+		<!--shour cut-->
+		<link rel="shortcut icon" type="images/x-icon" href="tamaki.png" />
+		
+	</head>
+	
+	<body>
+		<!--页头-->
+		<!--黑色背景-->
+		<div class="widthAuto fl" id="headerBG"></div>
+		<!--页头wrapper-->
+		<div class="width1200 clear" id="headerCon">
+			<!--logo图片-->
+			<div class="fl" id="logo">
+				<img src="images/LogoBG.gif"/>
+					<!--logo的字体-->
+				<p>登陆</p>
+			</div>
+			
+			<!--页头内容-->
+			<div class="fr" id="headerRight">
+				<!--第一行内容:欢迎-->
+				<p class="colorE5 clear" id="login">
+					<span class="font18 fl">legochina.cn</span>
+					<span class="font14 fr">欢迎光临
+						<a class="colorF60 fontBold" href="index.html">乐购</a>
+						，请&nbsp;&nbsp;&nbsp&nbsp;
+						<a href="#" class="colorE5">登陆</a>
+						\<a class="colorF60 fontBold" href="registration.html">注册</a>
+					</span>
+				</p>
+				
+				<p class="font28 color666 marginL20">欢迎登陆</p>
+			</div>
+		</div>
+
+		
+		<!--登陆.主体-->
+		<div class="move26 widthAuto" id="login_wrapper">
+			
+			<!--版心盒子-->
+			<div class="width1200"id="login_box">
+				<form action="" method="post">
+					<!--登录框-->
+					<div id="loginBar">
+						<!--登录方式标题-->
+						<ul class="clear" id="loginTitle">
+							<li>扫码登录</li>
+							<li class="current">帐户登录</li>
+						</ul>
+							
+						<!--扫码登录页面-->
+						<div class="loginMode" style="display: none;">
+							<!--图片盒子-->
+							<div class="clear" id="imgBox">
+								<!--二维码-->
+								<img class="fl" id="QRcode" src="images/show-QRcode.png"/>
+								<!--手机-->
+								<img class="fr mt20" id="phone" src="images/show-phone.png"/>
+							</div>
+							<!--文字-->
+							<p class="textCenter">&emsp;&emsp;&emsp;&emsp;打开手机版&emsp;乐购APP&emsp;扫一扫</p>	
+						</div>
+						
+						<!--账户登录页面-->
+						<div class="loginMode">
+							<p class="wrapIcon">
+								<span><img src="images/icon_head.png"/></span>
+								<input type="text" id="username" placeholder="邮箱/用户名/已验证手机"/>
+								<img src="images/delIcon.png"/ id="delIcon">
+							</p>
+							<p class="wrapIcon">
+								<span><img src="images/icon_lock.png"/></span>
+								<input type="password" id="pwd" placeholder="密码"/>
+							</p>
+							<p id="txt">
+								<input class="fl" type="checkbox" name="autoLogin" id="autoLogin" value="" />
+								<label class="fl" for="autoLogin">&nbsp;自动登录</label>
+								<a href="#" class="fr">忘记密码</a>
+							</p>
+							<p><input type="submit" id="btn" value="登&emsp;录" /></p>
+							<p id="reg"><span>&nbsp;&gt;</span> <a href="#">立即注册</a></p>	
+						</div>
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	
+		
+		<!--页脚 -->
+		<!--第一行：slogan-->
+		<div class="widthAuto move26" id="footer">
+			<ul class="width1200 clear">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<!--第二行：指南链接-->
+		<div class="width1200 clear" id="footerList">
+			<ul class="footerCon fl">
+				<h2>购物指南</h2>
+				<li><a href="">购物流程</a></li>
+				<li><a href="">发票制度</a></li>
+				<li><a href="">账户管理</a></li>
+				<li><a href="">会员优惠</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>支付方式</h2>
+				<li><a href="">货到付款</a></li>
+				<li><a href="">网上支付</a></li>
+				<li><a href="">礼品卡支付</a></li>
+				<li><a href="">银行转账</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>订单服务</h2>
+				<li><a href="">订单配送查询</a></li>
+				<li><a href="">订单状态说明</a></li>
+				<li><a href="">自动取消订单</a></li>
+				<li><a href="">自动修改订单     </a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>退换货</h2>
+				<li><a href="">退换货政策</a></li>
+				<li><a href="">自动申请退换货</a></li>
+				<li><a href="">退换货进度查询</a></li>
+				<li><a href="">退款方式和时间</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>商家服务</h2>
+				<li><a href="">商家中心</a></li>
+				<li><a href="">运营服务</a></li>
+				<li><a href="">加入尾品汇</a></li>
+			</ul>
+			
+			<img src="images/logo_00.png" class="fl"/>
+		</div>
+		
+		<!--公司链接-->
+		<p class="width1200" id="footerLinks">
+			<a href="">公司简介&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbspInvestor Relations&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp网站联盟&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp乐购招商&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp机构销售&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp手机乐购&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp官方Blog&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp热词搜索&nbsp;&nbsp;&nbsp</a>
+		</p>
+		
+		<!--copyright-->
+		<p class="width1200" id="copyright">
+			Copyright&nbsp;&nbsp;(c)&nbsp;&nbsp;乐购网&nbsp;&nbsp;2004-2018,&nbsp;&nbsp;All Rights Reserved.
+		</p>
+		
+		
+		<!--引入js文档-->
+		<script type="text/javascript" src="scripts/jquery.min.js" ></script>
+		<!--引入外部js-->
+		<script type="text/javascript" src="" ></script>
+		<!--引入内部js-->
+		<script type="text/javascript" src="scripts/login.js" ></script>
+	</body>
+</html>

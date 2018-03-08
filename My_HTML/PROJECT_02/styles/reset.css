@@ -1,0 +1,22 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+} 
+
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+input, button {
+	border: none;
+	outline: none;
+}

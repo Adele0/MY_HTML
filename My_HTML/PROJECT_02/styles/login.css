@@ -1,0 +1,176 @@
+/*覆盖表头的样式---因为浮动logo大小有改变*/
+#headerRight {
+	width: 942px;
+}
+
+#headerRight {
+	height: 105px;
+}
+
+/*logo上的字体---子绝父相*/
+#logo {
+	position: relative;
+}
+
+#logo>p {
+	position: absolute;
+	top: 32px;
+    right: 42px;
+	
+	color: #fff;
+	font-size: 30px;
+}
+
+/*登陆主体页面*/
+#login {
+	margin-bottom: 10px;
+}
+
+#login_wrapper {
+	height: 500px;
+	background-color: #e93854;
+}
+
+#login_box {
+	height: 500px;
+	background: url(../images/loginBG.jpg) no-repeat;
+}
+
+/*登录框*/
+#loginBar{
+	width: 350px;
+	height: 370px;
+	background: #FFFFFF;
+	position: relative;
+	top: 70px;
+	left: 400px;
+}
+
+/*登录方式标题*/
+#loginBar #loginTitle{
+	height: 20px;
+	padding: 15px 0;
+	border-bottom: 1px solid #f6f6f6;
+	margin-bottom: 26px;
+}
+
+#loginBar #loginTitle li{
+	width: 174px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	float: left;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 20px;
+	color: #959595;
+	border-right: 1px solid #f6f6f6;
+}
+
+#loginBar  #loginTitle li.current{
+	color: #f60;
+}
+
+#loginBar  #loginTitle li:nth-child(2){
+	border-right: none;
+	border-left: 1px solid #f6f6f6;	
+}
+
+/*账户登录页面*/
+.loginMode .wrapIcon {
+	width: 290px;
+	height: 38px;
+	margin-bottom: 16px;
+	border: 1px solid #bfbfbf;
+	
+	position: relative;
+}
+
+/*头像，锁，删除图标定位*/	
+.loginMode .wrapIcon span {
+	width: 40px;
+	height: 38px;
+	background-color: #ccc;
+	
+	text-align: center;
+	line-height: 30px;
+	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#delIcon {
+	position: absolute;
+	top: 10px;
+    right: 10px;
+	
+	cursor: pointer;
+}
+
+#username,#pwd,#btn,#txt {
+	display: block;
+	width: 290px;
+	height: 38px;
+	margin: 0 auto 14px;
+}
+#username,#pwd {
+	text-indent: 50px;
+}
+
+#txt #autoLogin {
+	width: 14px;
+	height: 14px;
+	margin-top: 2px;
+}
+#txt a:hover {
+	color: #e93854;
+}
+
+#loginBar #btn {
+	background: #FF6600;
+	font-size: 20px;
+	color: #FFFFFF;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#reg {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FF6600;
+	font-size: 20px;
+	border-top: 1px solid #CCCCCC;
+	margin-top: 24px;
+}
+
+#reg span {
+	color: #FFFFFF;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 18px;
+	background: #e93854;
+	border-radius: 10px;
+}
+
+#reg a {
+	color: #FF6600;
+}
+/*二维码页面*/
+#imgBox {
+	position: relative;
+	height: 250px;
+}
+
+#QRcode {
+	position: absolute;
+	top: 30px;
+	right: 100px;
+}
+
+#phone{
+	display: none;
+}

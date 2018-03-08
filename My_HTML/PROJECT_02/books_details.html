@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>产品详细页面</title>
+		
+		<!--引入css样式-->
+		<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/public.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/header.css"/>
+			<!--外部样式-->
+			<link rel="stylesheet" type="text/css" href="styles/magnifier.css"/>
+			<!--正在使用模板增加的样式-->
+			<link rel="stylesheet" type="text/css" href="styles/books_details.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/footer.css"/>
+		
+		<!--shour cut-->
+		<link rel="shortcut icon" type="images/x-icon" href="tamaki.png" />
+	</head>
+	
+	<body>
+		<!--页头-->
+		<!--黑色背景-->
+		<div class="widthAuto fl" id="headerBG"></div>
+		<!--页头wrapper-->
+		<div class="width1200 clear" id="headerCon">
+			<!--logo图片-->
+			<div class="fl"><img src="images/productLogo.jpg"/></div>
+			
+			<!--页头内容-->
+			<div class="fr" id="headerRight">
+				<!--第一行内容:欢迎-->
+				<p class="colorE5 clear" id="login">
+					<span class="font18 fl">legochina.cn</span>
+					<span class="font14 fr">欢迎光临
+						<a class="colorF60 fontBold" href="index.html">乐购</a>
+						，请&nbsp;&nbsp;&nbsp&nbsp;
+						<a href="" class="colorE5">登陆</a>
+						\<a class="colorF60 fontBold" href="">注册</a>
+					</span>
+				</p>
+				
+				<!--第二行内容-->
+				<div id="navForm" class="clear">
+					<!--搜索框-->
+					<ul class="fr clear" id="trolley">
+						<li ><a href="shoping_cart.html" class="colorFff font14">&nbsp;购物车</a><span>&nbsp;&nbsp;3</span></li>
+						<li class="font16"><a href="settlement_center.html">我的订单</a></li>
+					</ul>
+					
+					<form action="" method="post" id="search" class="fr">
+						<input type="text" class="fl" id="keyWords" value="" placeholder="设计中的设计 原研哉"/>
+						<input type="submit" class="fr" id="searchBtn" value=""/>
+					</form>	
+					
+				</div>
+				
+				<!--导航菜单-->
+				<ul class="font16 color32" id="navMenu">
+					<li><a href="">图书</a></li>
+					<li><a href="">电子书</a></li>
+					<li><a href="">原创文学</a></li>
+					<li><a href="">服装</a></li>
+					<li><a href="">运动户外</a></li>
+					<li><a href="">孕婴童</a></li>
+					<li><a href="">家居</a></li>
+					<li><a href="">创意文具</a></li>
+					<li><a href="">地方特产 </a></li>
+					<li><a href="">海外购</a></li>
+					<li><a href="">电器城</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<!--图书产品详情主体内容-->
+		<div class="widthAuto move26" id="booksWrapper">
+			<div class="width1200" id="">
+				<!--图书标题-->
+				<p id="booksTitle"><label class="fontBold font22">图书</label>&nbsp;<span class="font14"> &gt; 小说  &gt; 感情/家庭/婚姻  &gt; 薄卷天书  &gt; 他和他</span></p>
+			</div>	
+				
+			<!--图书购物详情-->
+			<div class="width1200 clear" id="booksDetails">
+					<!--左侧-->
+					<div class="fl margin60" id="detailsLeft">
+							<!--放大镜插件-->
+							<div id="showbox">
+							  <img src="images/demo-book10.jpg" width="150" height="150" />
+							  <img src="images/demo-book11.jpg" width="150" height="150" />
+							  <img src="images/demo-book12.jpg" width="150" height="150" />
+							  <img src="images/demo-book13.jpg" width="150" height="150" />
+							  <img src="images/demo-book14.jpg" width="150" height="150" />
+							  <img src="images/demo-book15.jpg" width="150" height="150" />
+							  <img src="images/demo-book16.jpg" width="150" height="150" />
+							  <img src="images/demo-book17.jpg" width="150" height="150" />
+							  <img src="images/demo-book18.jpg" width="150" height="150" />
+							</div><!--展示图片盒子-->
+							
+							<div id="showsum"></div><!--展示图片里边-->
+							
+							<p class="showpage">
+							  <a href="javascript:void(0);" id="showlast"> < </a>
+							  <a href="javascript:void(0);" id="shownext"> > </a>
+							</p>
+							
+							<p class="margin20 color999">产品编号：1005002085</p>
+					</div>
+					
+					<!--右侧-->
+					<div class="fl" id="detailsRight">
+						<h2>&nbsp;&nbsp;他和他</h2>
+						<p id="bookIntroduce">《偷影子的人》作者马克 李维重磅新作 法国连续60周在榜，销量突破120万册</p>
+						<p>&nbsp;&nbsp;【法】马克·李维 (著), 杨亦雨(译)</p>
+						<div class="margin20" id="booksPrice">
+							<div class="clear" >
+								<p class="fl">乐 购 价：<span class="colorF60 font18">&yen;26.20 </span> [6.9折] [定价：<span class="linethrough"> &yen;38.00</span>] (降价通知)</p>
+								<ul class="fr">
+									<li>累积评价</li>
+									<li class="colorF60">9999</li>
+								</p>
+							</div>
+							<p>促销信息： <span class="colorF60">满减 每满150.00元，可减现金50.00元 </span> &nbsp;&nbsp;&nbsp;详情&gt;&gt;</p>
+							<p class="margin30">领券: &nbsp;&nbsp;&nbsp;<span class="groupon">100-6</span>&nbsp;&nbsp;&nbsp;<span class="groupon">100-6</span></p>
+						</div>
+						
+						<div class="margin20 clear" id="bookEdition">
+							<h3 class="fl">种类选择:</h3>
+							<ul class="fl clear">
+								<li>平装版</li>
+								<li>精装版</li>
+							</ul>
+						</div>
+						
+						<div class="clear" id="buy">
+							<div class="fl clear" id="counter">
+								<h3 class="fl">1</h3>
+								<ul class="fr">
+									<li><img src="images/icon1.png"/></li>
+									<li><img src="images/icon2.png"/></li>
+								</ul>
+							</div>
+							<div class="fl" id="putIn">加入购物车</div>
+						</div>
+						
+						<p class="color80 marginL20">温馨提示：支持7天无理由退款</p>
+					</div>
+			</div>
+		</div>
+		
+		<!--全屏·白背景-->
+		<div class="widthAuto move26" id="booksRecommend">
+			<!--版心内容-->
+			<div class="width1200">
+				
+				<!--人气单品标题-->
+				<div class="productTitle clear">
+					<p class="mainColor font24 publicTitleBox fl" id="recommendTitle">人气单品</p>
+				</div>
+			
+				<!--人气单品列表-->
+				<div class="clear">
+					<div class="recommondTop marginL30 current"> 
+						<ul>
+							<center><img src="images/demo-book2.jpg" /></center>
+							<img src="images/qianggouICON.jpg"/>
+							<li>白夜行·东野圭吾</li>
+							<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+							<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+						</ul>
+					</div>
+					<div class="recommondTop">
+						<ul>
+							<center><img src="images/demo-book2.jpg" /></center>
+							<img src="images/qianggouICON.jpg"/>
+							<li>白夜行·东野圭吾</li>
+							<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+							<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+						</ul>
+					</div>
+					<div class="recommondTop">
+						<ul>
+							<center><img src="images/demo-book2.jpg" /></center>
+							<img src="images/qianggouICON.jpg"/>
+							<li>白夜行·东野圭吾</li>
+							<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+							<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+						</ul>
+					</div>
+					<div class="recommondTop">
+						<ul>
+							<center><img src="images/demo-book2.jpg" /></center>
+							<img src="images/qianggouICON.jpg"/>
+							<li>白夜行·东野圭吾</li>
+							<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+							<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+						</ul>
+					</div>
+					<div class="recommondTop">
+						<ul>
+							<center><img src="images/demo-book2.jpg" /></center>
+							<img src="images/qianggouICON.jpg"/>
+							<li>白夜行·东野圭吾</li>
+							<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+							<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+						</ul>
+					</div>
+				
+				</div>
+				
+				<!--看了又看，商品评价-->
+				<div class="clear margin50">
+					<!--看了又看-->
+					<div class="fl" id="compare">
+						<p class="font22 color666">看了又看</p>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						<div class="compareProduct">
+							<ul class="recommondTop">
+								<center><img src="images/demo-book2.jpg" /></center>
+								<img src="images/qianggouICON.jpg"/>
+								<li>白夜行·东野圭吾</li>
+								<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+								<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+							</ul>
+						</div>
+						
+						
+					</div>
+					
+					<!--商品评价-->
+					<div class="fl clear">
+						<!--标题-->
+						<div class="productTitle" id="reviews">
+							<ul class="font24 clear" id="reviewsList">
+								<li>商品介绍</li>
+								<li class="current">评价(9999)</li>
+							</ul>
+						</div>
+						
+						<!--评价图表-->
+						<div id="viewChart">
+							<!--评价·左-->
+							<ul id="viewChartL">
+								<li>98%</li>
+								<li>好评度</li>
+							</ul>
+								
+							<!--评价·中-->
+							<ul class="color999 font16" id="viewChartM">
+								<li class="clear">
+									<p class="fl">好评(98%)</p>
+									<p class="fr clear reviewBar">
+										<span class="reviewBarL" id="reviewBar1"></span>
+										<span class="reviewBarR"></span>
+									</p>
+								</li>
+								<li class="clear">
+									<p class="fl">中评(2%)</p>
+									<p class="fr clear reviewBar">
+										<span class="reviewBarL" id="reviewBar2"></span>
+										<span class="reviewBarR"></span>
+									</p>
+								</li>
+								<li class="clear">
+									<p class="fl">差评(0%)</p>
+									<p class="fr clear reviewBar">
+										<span class="reviewBarL" id="reviewBar3"></span>
+										<span class="reviewBarR"></span>
+									</p>
+								</li>
+							</ul>
+								
+							<!--评价·右-->
+							<ul class="clear color666 font16" id="viewChartR">
+								<li>1.洲**子&emsp;&emsp;&emsp;+0&emsp;&emsp;&emsp;</li>
+								<li>2.洲**子&emsp;&emsp;&emsp;+0&emsp;&emsp;&emsp;</li>
+								<li>3.洲**子&emsp;&emsp;&emsp;+10&emsp;&emsp;&emsp;</li>
+								<li>4.洲**子&emsp;&emsp;&emsp;+10&emsp;&emsp;&emsp;</li>
+							</ul>
+						</div>
+					
+						
+						<!--评价统计-->
+						<p class="font16 color666" id="review_statistics"><span class="colorF4290d">全部评价（9999）</span>&emsp;好评（888）&emsp;中评（888）&emsp;差评（888）</p>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+									
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+										
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<div class="review_details clear">
+							<ul class="review_time fl">
+								<li><img src="images/star1.jpg"/></li>
+								<li>下单后5天评论</li>
+								<li>2018.2.30</li>
+							</ul>
+							
+							<p class="review_recommend fl">书的质量不错，很新，一点放久的潮味或臭味都没有，内容也值得一看，关 键是价格真给力</p>
+							
+							<ul class="review_member fl">
+								<li>洲**子</li>
+								<li>金牌会员</li>
+								<li>来自iPhone客户端</li>
+							</ul>
+						</div>
+						
+						<!--分页-->
+						<ul class="margin30 color999 fr clear" id="review_pager">
+							<li class="current">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>......</li>
+							<li>下一页</li>
+						</ul>
+						
+					</div>
+					
+				</div>
+			
+			</div>
+			
+		</div>
+
+		
+		<!--海报-->
+		<div class="width1200 move26">
+			<img src="images/post.jpg" alt="" />
+		</div>
+		
+		<!--页脚 -->
+		<!--第一行：slogan-->
+		<div class="widthAuto" id="footer">
+			<ul class="width1200 clear">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<!--第二行：指南链接-->
+		<div class="width1200 clear" id="footerList">
+			<ul class="footerCon fl">
+				<h2>购物指南</h2>
+				<li><a href="">购物流程</a></li>
+				<li><a href="">发票制度</a></li>
+				<li><a href="">账户管理</a></li>
+				<li><a href="">会员优惠</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>支付方式</h2>
+				<li><a href="">货到付款</a></li>
+				<li><a href="">网上支付</a></li>
+				<li><a href="">礼品卡支付</a></li>
+				<li><a href="">银行转账</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>订单服务</h2>
+				<li><a href="">订单配送查询</a></li>
+				<li><a href="">订单状态说明</a></li>
+				<li><a href="">自动取消订单</a></li>
+				<li><a href="">自动修改订单     </a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>退换货</h2>
+				<li><a href="">退换货政策</a></li>
+				<li><a href="">自动申请退换货</a></li>
+				<li><a href="">退换货进度查询</a></li>
+				<li><a href="">退款方式和时间</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>商家服务</h2>
+				<li><a href="">商家中心</a></li>
+				<li><a href="">运营服务</a></li>
+				<li><a href="">加入尾品汇</a></li>
+			</ul>
+			
+			<img src="images/logo_00.png" class="fl"/>
+		</div>
+		
+		<!--公司链接-->
+		<p class="width1200" id="footerLinks">
+			<a href="">公司简介&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbspInvestor Relations&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp网站联盟&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp乐购招商&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp机构销售&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp手机乐购&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp官方Blog&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp热词搜索&nbsp;&nbsp;&nbsp</a>
+		</p>
+		
+		<!--copyright-->
+		<p class="width1200" id="copyright">
+			Copyright&nbsp;&nbsp;(c)&nbsp;&nbsp;乐购网&nbsp;&nbsp;2004-2018,&nbsp;&nbsp;All Rights Reserved.
+		</p>
+		
+		
+		<!--引入js文档-->
+		<script type="text/javascript" src="scripts/jquery.min.js" ></script>
+		<!--引入外部js-->
+		<script type="text/javascript" src="scripts/magnifier.js" ></script>
+		<!--引入内部js-->
+		<script type="text/javascript" src="scripts/books_details.js"></script>
+	</body>
+</html>

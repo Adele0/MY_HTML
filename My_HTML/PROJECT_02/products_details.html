@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>产品列表</title>
+		
+		<!--引入css样式-->
+		<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/public.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/header.css"/>
+			<!--外部样式-->
+			<link rel="stylesheet" type="text/css" href="styles/slide.css"/>
+			<!--正在使用模板增加的样式-->
+			<link rel="stylesheet" type="text/css" href="styles/products_details.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/footer.css"/>
+		
+		<!--shour cut-->
+		<link rel="shortcut icon" type="images/x-icon" href="tamaki.png" />
+		
+	</head>
+	
+	<body>
+		<!--页头-->
+		<!--黑色背景-->
+		<div class="widthAuto fl" id="headerBG"></div>
+		<!--页头wrapper-->
+		<div class="width1200 clear" id="headerCon">
+			<!--logo图片-->
+			<div class="fl"><img src="images/productLogo.jpg"/></div>
+			
+			<!--页头内容-->
+			<div class="fr" id="headerRight">
+				<!--第一行内容:欢迎-->
+				<p class="colorE5 clear" id="login">
+					<span class="font18 fl">legochina.cn</span>
+					<span class="font14 fr">欢迎光临
+						<a class="colorF60 fontBold" href="index.html">乐购</a>
+						，请&nbsp;&nbsp;&nbsp&nbsp;
+						<a href="login.html" class="colorE5">登陆</a>
+						\<a class="colorF60 fontBold" href="registration.html">注册</a>
+					</span>
+				</p>
+				
+				<!--第二行内容-->
+				<div id="navForm" class="clear">
+					<!--搜索框-->
+					<ul class="fr clear" id="trolley">
+						<li ><a href="shoping_cart.html" class="colorFff font14">&nbsp;购物车</a><span>&nbsp;&nbsp;3</span></li>
+						<li class="font16"><a href="settlement_center.html">我的订单</a></li>
+					</ul>
+					
+					<form action="" method="post" id="search" class="fr">
+						<input type="text" class="fl" id="keyWords" value="" placeholder="设计中的设计 原研哉"/>
+						<input type="submit" class="fr" id="searchBtn" value=""/>
+					</form>	
+					
+				</div>
+				
+				<!--导航菜单-->
+				<ul class="font16 color32" id="navMenu">
+					<li><a href="">图书</a></li>
+					<li><a href="">电子书</a></li>
+					<li><a href="">原创文学</a></li>
+					<li><a href="">服装</a></li>
+					<li><a href="">运动户外</a></li>
+					<li><a href="">孕婴童</a></li>
+					<li><a href="">家居</a></li>
+					<li><a href="">创意文具</a></li>
+					<li><a href="">地方特产 </a></li>
+					<li><a href="">海外购</a></li>
+					<li><a href="">电器城</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		<!--产品列表·主体内容-->
+		<div class="width1200 move26" id="">
+			
+			<!--产品列表banner & 热卖畅销-->
+			<p class="clear" id="products">
+				<!--产品列表banner-->
+				<div class="pptbox fl" id="products_banner">
+					<ul class="innerwrapper">
+						<li><a href="#"><img src="images/banner1.jpg"/></a></li>
+						<li><a href="#"><img src="images/banner2.jpg"/></a></li>
+						<li><a href="#"><img src="images/banner3.jpg"/></a></li>
+						<li><a href="#"><img src="images/banner4.jpg"/></a></li>
+						<li><a href="#"><img src="images/banner5.jpg"/></a></li>
+						<li><a href="#"><img src="images/banner6.jpg"/></a></li>
+					</ul>
+					<ul class="controls">
+						<li class="current">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>4</li>
+						<li>5</li>
+						<li>6</li>
+					</ul>			
+					<span class="btnleft"></span>
+					<span class="btnright"></span>
+				</div>
+				
+				<!--热卖畅销-->
+				<div class="fr" id="products_bestseller">
+					<p>热卖畅销</p>
+					<ul class="bestseller_list">
+						<li class="current">
+							<img src="images/demo-book23.jpg"/>
+							<p>从你世界路过，入选央视2014中国好书。从你世界路过，入选央视2014中国好书</p>
+							<div class="mainColor">1</div>
+						</li>
+						
+						<li>
+							<img src="images/demo-book23.jpg"/>
+							<p>从你世界路过，入选央视2014中国好书。从你世界路过，入选央视2014中国好书</p>
+							<div class="mainColor">2</div>
+						</li>
+						
+						<li>
+							<img src="images/demo-book23.jpg"/>
+							<p>从你世界路过，入选央视2014中国好书。从你世界路过，入选央视2014中国好书</p>
+							<div class="mainColor">3</div>
+						</li>
+						
+						<li>
+							<img src="images/demo-book23.jpg"/>
+							<p>从你世界路过，入选央视2014中国好书。从你世界路过，入选央视2014中国好书</p>
+							<div class="mainColor">4</div>
+						</li>
+						
+						<li>
+							<img src="images/demo-book23.jpg"/>
+							<p>从你世界路过，入选央视2014中国好书。从你世界路过，入选央视2014中国好书</p>
+							<div class="mainColor">5</div>
+						</li>
+						
+						<li>
+							<img src="images/demo-book23.jpg"/>
+							<p>从你世界路过，入选央视2014中国好书。从你世界路过，入选央视2014中国好书</p>
+							<div class="mainColor">6</div>
+						</li>
+					</ul>
+				</div>
+			
+			</p>
+			
+			<!--海报-->
+			<div>
+				<img src="images/post.jpg" alt="" />
+			</div>
+			
+			<!--折扣区·标题-->
+			<div class="borderBf60 margin30 clear">
+				<p class="mainColor font24 fl" id="discount">乐购·图书折扣区</p>
+			</div>
+			<!--折扣区·列表-->
+			<div class="clear">
+				<div class="recommondTop marginL30 current"> 
+					<ul>
+						<center><img src="images/demo-book2.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book2.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book2.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book2.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book2.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				
+				<div class="recommondTop marginL30"> 
+					<ul>
+						<center><img src="images/demo-book4.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book4.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book4.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book4.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				<div class="recommondTop">
+					<ul>
+						<center><img src="images/demo-book4.jpg" /></center>
+						<img src="images/qianggouICON.jpg"/>
+						<li>白夜行·东野圭吾</li>
+						<li><span class="colorF4290d">推荐：</span><img src="images/star2.png"/></li>
+						<li class="colorF4290d font24">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--新书上架-->
+			<!--新书标题-->
+			<div class="width904 product_title">
+				<p><span class="mainColor font28">新</span>书上架</p>
+			</div>
+			<!--新书内容-->
+			<div class="clear">
+				<!--新书上架·左-->
+				<div class="fl newbookL clear">
+					<ul>
+						<center><img src="images/demo-book14.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+					<ul>
+						<center><img src="images/demo-book14.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>				
+					<ul>
+						<center><img src="images/demo-book14.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>	
+					<ul>
+						<center><img src="images/demo-book14.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+					<ul>
+						<center><img src="images/demo-book14.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+					
+					<ul>
+						<center><img src="images/demo-book15.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+					<ul>
+						<center><img src="images/demo-book15.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+					<ul>
+						<center><img src="images/demo-book15.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+					<ul>
+						<center><img src="images/demo-book15.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>					
+					<ul>
+						<center><img src="images/demo-book15.jpg" /></center>
+						<li>查理·斯密斯</li>
+						<li>中国邮电出版社</li>
+						<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+					</ul>
+				</div>
+				
+				<!--新书上架·右-->
+				<div class="topSales fr">
+						<p class="font24">新书畅销榜</p>
+						<ul class="tsDetails">
+							<li>
+								<span>1</span>
+								<p class="fr bookTitle"><a href="">人间失格（太宰治的自传体小说）</a></p>
+								<p class="bookImg"><img src="images/ebcon.jpg"/>“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售5w+册的奇迹！收录作者绝笔之作《Good bye》。一个“丧失为人资格”少年的心灵独白，一个对村上春树影响至深的绝望凄美故事。</p>
+							</li>
+							
+							<li>
+								<span>2</span>
+								<p class="fr bookTitle"><a href="">人间失格（太宰治的自传体小说）</a></p>
+								<p class="bookImg"><img src="images/ebcon.jpg"/>“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售5w+册的奇迹！收录作者绝笔之作《Good bye》。一个“丧失为人资格”少年的心灵独白，一个对村上春树影响至深的绝望凄美故事。</p>
+							</li>
+							
+							<li>
+								<span>3</span>
+								<p class="fr bookTitle"><a href="">人间失格（太宰治的自传体小说）</a></p>
+								<p class="bookImg"><img src="images/ebcon.jpg"/>“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售5w+册的奇迹！收录作者绝笔之作《Good bye》。一个“丧失为人资格”少年的心灵独白，一个对村上春树影响至深的绝望凄美故事。</p>
+							</li>
+							
+							<li>
+								<span>4</span>
+								<p class="fr bookTitle"><a href="">人间失格（太宰治的自传体小说）</a></p>
+								<p class="bookImg"><img src="images/ebcon.jpg"/>“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售5w+册的奇迹！收录作者绝笔之作《Good bye》。一个“丧失为人资格”少年的心灵独白，一个对村上春树影响至深的绝望凄美故事。</p>
+							</li>
+							
+							<li>
+								<span>5</span>
+								<p class="fr bookTitle"><a href="">人间失格（太宰治的自传体小说）</a></p>
+								<p class="bookImg"><img src="images/ebcon.jpg"/>“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售5w+册的奇迹！收录作者绝笔之作《Good bye》。一个“丧失为人资格”少年的心灵独白，一个对村上春树影响至深的绝望凄美故事。</p>
+							</li>
+							
+							<li>
+								<span>6</span>
+								<p class="fr bookTitle"><a href="">人间失格（太宰治的自传体小说）</a></p>
+								<p class="bookImg"><img src="images/ebcon.jpg"/>“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售5w+册的奇迹！收录作者绝笔之作《Good bye》。一个“丧失为人资格”少年的心灵独白，一个对村上春树影响至深的绝望凄美故事。</p>
+							</li>
+							
+							<li>
+								<span>7</span>
+								<p class="fr bookTitle"><a href="">人间失格（太宰治的自传体小说）</a></p>
+								<p class="bookImg"><img src="images/ebcon.jpg"/>“丧文化”流行，《人间失格》成了现象级畅销书，创当当3天销售5w+册的奇迹！收录作者绝笔之作《Good bye》。一个“丧失为人资格”少年的心灵独白，一个对村上春树影响至深的绝望凄美故事。</p>
+							</li>
+							
+						</ul>
+					</div>
+			
+			</div>
+
+			<!--独家提供-->
+			<!--标题-->
+			<div class="product_title clear">
+				<p class="fl"><span class="mainColor font28">独</span>家提供</p>
+				<ul class="fr">
+					<li class="current">货币金融</li>
+					<li>社会文学</li>
+					<li>科学技术</li>
+					<li>儿童文学</li>
+					<li>教学参辅</li>
+					<li>生活热点</li>
+					<li>小说情感</li>
+				</ul>
+			</div>
+			<!--内容-->
+			<div class="product_con clear solo">
+				<ul>
+					<center><img src="images/demo-book16.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book16.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book16.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book16.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>	
+				<ul>
+					<center><img src="images/demo-book16.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book16.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				
+				<ul>
+					<center><img src="images/demo-book17.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book17.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book17.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book17.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book17.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book17.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+					
+				<!--左右箭头-->
+				<p id="like_l"><img src="images/btn_l.png"/></p>
+				<p id="like_r"><img src="images/btn_r.png"/></p>
+				
+				<p class="dot"><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span><span>●</span></p>
+			</div>
+			
+			
+			<!--猜你喜欢-->
+			<!--标题-->
+			<div class="product_title clear">
+				<p class="fl"><span class="mainColor font28">猜</span>你喜欢</p>
+				<ul class="fr">
+					<li>换一批</li>
+				</ul>
+			</div>
+			<!--内容-->
+			<div class="product_con clear">
+				<ul>
+					<center><img src="images/demo-book18.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book18.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book18.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book18.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>	
+				<ul>
+					<center><img src="images/demo-book18.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book18.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				
+				<ul>
+					<center><img src="images/demo-book19.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book19.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book19.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book19.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book19.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+				<ul>
+					<center><img src="images/demo-book19.jpg" /></center>
+					<li>查理·斯密斯</li>
+					<li>中国邮电出版社</li>
+					<li class="colorF4290d">&yen;49&nbsp;&nbsp;&nbsp;&nbsp;<span class="delPrice">&yen;79</span></li>
+				</ul>
+			</div>
+			
+			<p class="margin20">
+				<img src="images/2016080314240628345.jpg" width="190px"/>
+				<img src="images/2016080314240628345.jpg" width="190px"/>
+				<img src="images/2016080314240628345.jpg" width="190px"/>
+				<img src="images/2016080314240628345.jpg" width="190px"/>
+				<img src="images/2016080314240628345.jpg" width="190px"/>
+				<img src="images/2016080314240628345.jpg" width="190px"/>
+			</p>
+			
+			<!--海报-->
+			<div class="margin20">
+				<img src="images/post.jpg" alt="" />
+			</div>
+			
+		</div>
+		
+		
+		
+		<!--页脚 -->
+		<!--第一行：slogan-->
+		<div class="widthAuto" id="footer">
+			<ul class="width1200 clear">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<!--第二行：指南链接-->
+		<div class="width1200 clear" id="footerList">
+			<ul class="footerCon fl">
+				<h2>购物指南</h2>
+				<li><a href="">购物流程</a></li>
+				<li><a href="">发票制度</a></li>
+				<li><a href="">账户管理</a></li>
+				<li><a href="">会员优惠</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>支付方式</h2>
+				<li><a href="">货到付款</a></li>
+				<li><a href="">网上支付</a></li>
+				<li><a href="">礼品卡支付</a></li>
+				<li><a href="">银行转账</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>订单服务</h2>
+				<li><a href="">订单配送查询</a></li>
+				<li><a href="">订单状态说明</a></li>
+				<li><a href="">自动取消订单</a></li>
+				<li><a href="">自动修改订单     </a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>退换货</h2>
+				<li><a href="">退换货政策</a></li>
+				<li><a href="">自动申请退换货</a></li>
+				<li><a href="">退换货进度查询</a></li>
+				<li><a href="">退款方式和时间</a></li>
+			</ul>
+			
+			<ul class="footerCon fl">
+				<h2>商家服务</h2>
+				<li><a href="">商家中心</a></li>
+				<li><a href="">运营服务</a></li>
+				<li><a href="">加入尾品汇</a></li>
+			</ul>
+			
+			<img src="images/logo_00.png" class="fl"/>
+		</div>
+		
+		<!--公司链接-->
+		<p class="width1200" id="footerLinks">
+			<a href="">公司简介&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbspInvestor Relations&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp网站联盟&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp乐购招商&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp机构销售&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp手机乐购&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp官方Blog&nbsp;&nbsp;&nbsp</a>
+			<a href="">|&nbsp;&nbsp;&nbsp热词搜索&nbsp;&nbsp;&nbsp</a>
+		</p>
+		
+		<!--copyright-->
+		<p class="width1200" id="copyright">
+			Copyright&nbsp;&nbsp;(c)&nbsp;&nbsp;乐购网&nbsp;&nbsp;2004-2018,&nbsp;&nbsp;All Rights Reserved.
+		</p>
+		
+		
+		<!--引入js文档-->
+		<script type="text/javascript" src="scripts/jquery.min.js" ></script>
+		<!--引入外部js-->
+		<script type="text/javascript" src="scripts/tyslide.js" ></script>
+		<!--引入内部js-->
+		<script type="text/javascript" src="scripts/lego_productsDetails.js"></script>
+	</body>
+</html>
