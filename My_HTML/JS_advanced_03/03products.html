@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--使用封装的方式定义一个商品类型(属性不少于5个)-->
+		
+		
+		<script>
+			
+			function Products(name,costPrice,dealer,profit,id) {
+				var _name = name;	//私有化名字
+				var _costPrice = costPrice;		//私有化价格
+				var _dealer = dealer;		//私有化经销商
+				var _profit = profit;		//私有化利润
+				var _id = id;		//私有化id号
+				
+				//获得品名
+				this.getName = function () {
+					return _name;
+				}
+				
+				//获得成本价
+				this.getSalePrice = function () {
+					return _costPrice*8;
+				}
+				
+				//获得经销商
+				this.getDealer = function () {
+					return _dealer;
+				}
+				//设置经销商
+				this.setDealer = function (newDealer) {
+					_dealer = newDealer;
+				}
+				
+				//获得利润
+				this.getProfit = function () {
+					return _profit;
+				}
+				
+				//获得id
+				this.getID = function () {
+					return _id;
+				}
+			}
+			
+			Products.prototype.claim = function () {
+				alert(this.getDealer()+"承诺，售价："+this.getSalePrice()+"元的"+this.getName()+"利润仅有："+this.getProfit())
+			}
+			
+			var p = new Products("iphone",1000,"中华区",500,002)
+			p.claim();
+			
+			debugger;
+		</script>
+		
+	</body>
+</html>

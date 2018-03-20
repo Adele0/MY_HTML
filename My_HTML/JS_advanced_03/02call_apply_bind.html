@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--call,apply,bind方法的区别-->
+		call，apply，bind都是函数对象上的方法。它们都是用来修改this指向问题的。
+		它们都可以传递参数，并且，第一个参数是用来绑定作用域，修改this指向的。
+		
+		区别在于：
+		call()立即调用，可以接受多个参数，每个参数都依次罗列在第一个参数之后。
+		apply()立即调用，接受两个参数，其中第二个参数是数组，所有的参数都需要放在数组中。
+		bind()不会立即执行，返回一个this指向修改后的函数对象。
+	</body>
+</html>

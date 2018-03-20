@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--继承·练习1-->
+		<!--
+			让子类拥有父类的一切特征
+			类的定义：构造函数 原型
+		-->
+		
+		<script>
+			
+			function Parent(name) {
+				this.name = name;	//this是Parent的实例
+			}
+			
+			Parent.prototype.jogging = function () {
+				console.log(this.name + "在慢跑");
+			}
+			
+			function Son(name,age) {
+				Parent.apply(this,arguments); //先让子类拥有父类的构造器方法
+				//再定义子类自己的属性
+				this.age = age;	//this是Son的实例，
+			}
+			
+			Son.prototype.read = function () {
+				console.log(this.name + "在"+this.age+"岁开始读书");
+			}
+			
+			//用for in 结构让子类拥有父类所有原型上的资源
+			for (var i in Parent.prototype) {
+				Son.prototype[i] = Parent.prototype[i];
+			}
+			
+			var s1 = new Son("guagua",10);
+			s1.read();
+			console.log('s1 instanceof Parent:',s1 instanceof Parent);//false
+			
+			//通过循环 让子类拥有父类原型上的资源，不能使Son的新实例继承Parent，这只是对象伪造
+			debugger
+		</script>
+	</body>
+</html>

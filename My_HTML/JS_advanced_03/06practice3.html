@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--继承·练习3-->
+		<!--
+
+			让子类拥有父类的一切特征
+			类的定义：构造函数 原型
+			
+			ES6继承：
+			class ...extends ...
+		-->
+		
+		<script>
+			
+			class Parent {
+				constructor(name){
+					this.name = name;	//this是Parent的实例
+				}
+				
+				jogging() {
+					console.log(this.name + "在慢跑");
+				}
+			}
+			
+			
+			class Son extends Parent {
+				constructor(name,age){
+					 //先父类
+					 super(name);
+					//再定义子类自己的属性
+					this.age = age;	//this是Son的实例，
+				}	
+				read(){
+					console.log(this.name + "在"+this.age+"岁开始读书");
+				}	
+			}
+			
+			
+			var s3 = new Son("zhuzhu",5);
+			s3.read();
+			console.log('s3 instanceof Parent:',s3 instanceof Parent);//true
+			
+			debugger
+		</script>
+	</body>
+</html>

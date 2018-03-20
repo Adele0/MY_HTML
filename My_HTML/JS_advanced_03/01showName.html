@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--1.写出以下程序运行的结果，并想一想为什么-->
+		控制台打印为 张三。
+		问题在于this的指向发生改变。在方法中this指向调用该方法调用者。showName的第一个字面量匿名函数的调用者是obj
+		字面量匿名函数返回了另一个匿名函数，这个匿名函数的调用者则是字面量匿名函数。该函数没有一个名叫name的属性，所以此时的this指向全局。全局中恰好有名为name的属性，所以返回全局中该属性的值，即张三。
+		
+		
+		<script>
+			var name="张三";
+			var obj={};
+			obj.name="李四";
+			obj.showName=function(){
+				return function(){
+					return this.name;
+				}
+			}
+			console.log(obj.showName()());
+			debugger;
+		</script>
+		
+	</body>
+</html>
