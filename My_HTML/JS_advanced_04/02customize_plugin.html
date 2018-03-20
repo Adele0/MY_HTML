@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			body {
+				height: 1500px;
+				position: relative;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<ul id="customize">
+			<li>自定义插件：</li>
+			<li>1） 基于原型扩展的方法 （最常用）----2） 静态扩展----3） 选择器</li>
+			<li>命名规范----普通版： jquery.插件名称.js----压缩版:  jquery.插件名称.min.js</li>
+			<li>插件中的闭包---(function($){此处编写jQuery插件代码 })(jQuery)</li>
+		</ul>
+		<!--1.完成一个自定义事件-->
+		
+		<script src="../../20180311/teacher/resource/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="jquery.current.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			$(function () {
+				$('#customize').current();
+			})
+		</script>
+		
+	</body>
+</html>

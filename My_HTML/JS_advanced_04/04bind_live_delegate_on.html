@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis debitis nihil rerum deleniti voluptatibus itaque explicabo placeat modi recusandae soluta ullam nam. Laboriosam commodi ut quia odio accusantium dignissimos veritatis!
+		
+		  说说bind() ,live() ,delegate() ,on() 的区别
+		  
+		  bind()只能绑定单个事件
+		  live()所有的事件都绑定在body上，效率低下，该方法已经被摒弃
+		  delegate()事件委派，可以绑定多个事件
+		  on() 通用
+		  
+		 用.bind()的代价是非常大的，它会把相同的一个事件处理程序hook到所有匹配的DOM元素上。
+		不要再用.live()了[1,8+销毁]，它已经不再被推荐了，而且还有许多问题。
+		delegate()会提供很好的方法来提高效率，同时我们可以添加一事件处理方法到动态添加的元素上。
+		我们可以用.on()来代替上述的3种方法，在1.9+版本，只有一种方式添加监听，就是on方法。
+		
+		<script>
+			var str = "hello world";
+			
+
+			
+			alert(str.slice(-3));
+			
+			debugger
+		</script>
+		
+	</body>
+</html>

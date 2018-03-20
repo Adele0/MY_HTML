@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			body {
+				height: 1500px;
+				position: relative;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<!--1.完成一个自定义事件-->
+		
+		<script src="../../20180311/teacher/resource/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			$(function () {
+				$('body').on('mousewheel',function(e) {
+//					获得滚轮两次滚动的距离？？
+//					var old_y = $(this).position().top;
+//					var new_y =
+//					
+					 if (e.offsetY) > 400) {
+					 	$(this).trigger('scrollMore');
+					 }
+					 
+					 debugger
+				});
+				
+				$('body').on('scrollMore', function () {
+					alert('滚多了,向上滚回去');
+				});
+			})
+			
+			
+		</script>
+		
+	</body>
+</html>
