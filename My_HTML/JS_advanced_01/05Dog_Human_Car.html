@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--创建一个“人”类
+        创建一个“狗”类
+        创建一个“车”类创建一个“人”类
+        创建一个“狗”类
+        创建一个“车”类
+       -->
+</head>
+<body>
+
+    <script>
+
+       // 狗
+       function Dog (name,breed) {
+           this.name = name;
+           this.breed = breed;
+       }
+
+       Dog_Human_Car.prototype.eat = function () {
+           alert(this.name + "是纯种的" + this.breed +"，它喜欢吃骨头");
+       }
+
+       Dog_Human_Car.prototype.bark = function () {
+           alert(this.name +"，会咬人");
+       }
+
+       var dog1 = new Dog_Human_Car("xiaohei","中华田园犬");
+       dog1.bark();
+       dog1.eat();
+
+       // 人
+       function Human (name,age) {
+           this.name = name;
+           this.age = age;
+       }
+
+       Dog_Human_Car.prototype.travel = function () {
+           alert(this.name + "今年" + this.age +"，喜欢旅行");
+       }
+
+       var human1 = new Dog_Human_Car("xiaoming","18");
+        human1.travel();
+
+        // 车
+        function Car (brand,color) {
+            this.brand = brand;
+            this.color = color;
+        }
+
+       Car.prototype.drive = function () {
+            alert(this.color + this.brand +"可以开10年");
+        }
+
+        var car1 = new Dog_Human_Car("bmw","red");
+        car1.drive();
+
+    </script>
+
+</body>
+</html>

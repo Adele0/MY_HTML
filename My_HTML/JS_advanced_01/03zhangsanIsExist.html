@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <!--扩展Array类型，提供inArray方法用来检查数组中是否包含”张三”-->
+
+    <script>
+/*
+        Array.prototype.inArray = function () {
+            if (this.indexOf("张三") == -1) {
+               alert("张三bu存在");
+            }else{
+                alert("张三存在");
+            }
+        }
+
+        var names = ["张娃娃","李四","周丽","张三"];
+        names.inArray();
+        debugger
+
+        */
+    //    思路正确，但是没有做到通用性，限定死了“张三”！！！
+        Array.prototype.inArray = function (search) {
+            if (this.indexOf(search) > -1) {
+               return true;
+            }
+            return false;
+        }
+
+        var names = ["张娃娃","李四","周丽","张三"];
+        var isExist = names.inArray("baby");
+        debugger
+
+    </script>
+
+</body>
+</html>

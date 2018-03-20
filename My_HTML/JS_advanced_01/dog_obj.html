@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			/*
+			 var dog = {name:"小黑", type:"柴犬"}
+			 */
+			var dog = new Object;
+			dog.name = "旺财";
+			dog.type ="中华田园犬";
+			var newDog = {};
+			for (var i in dog) {
+				newDog[i] = dog[i];
+				
+			}
+			debugger;	//需要在watch中输入newDog
+//			console.log(newDog);
+			
+		</script>
+		
+	</body>
+</html>
