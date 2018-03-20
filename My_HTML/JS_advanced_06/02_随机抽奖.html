@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#ul1{
+				width: 428px;
+				height: 428px;
+				margin: 30px auto;
+			}
+			#ul1 li{
+				list-style: none;
+				float: left;
+				margin-left: 5px;
+				margin-top: 5px;
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				line-height: 100px;
+				text-align: center;
+				font-size: 30px;
+			}
+			.active{
+				background-color: red;
+			}
+		</style>
+		
+		<!--引入require-->
+		<script src="js/require.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--实现require-->
+		<script type="text/javascript">
+		 
+			require(['js/jqurey.choujiang'], function(){
+				
+				$("input").choujiang();
+		
+			})
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" value="抽奖" />
+		<ul id="ul1">
+			<li>一等奖</li>
+			<li>二等奖</li>
+			<li>三等奖</li>
+			<li>如花</li>
+			<li>凤姐</li>
+			<li>貂蝉</li>
+			<li>西施</li>
+			<li>大乔</li>
+			<li>小乔</li>
+			<li>去死</li>
+			<li>赵州桥</li>
+			<li>王大锤</li>
+			<li>芙蓉</li>
+			<li>梅超风</li>
+			<li>左冷禅</li>
+			<li>右冷禅</li>
+		</ul>
+	</body>
+</html>

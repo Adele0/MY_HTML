@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul,li{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			li{
+				background:url(img/star_hollow_hover@2x.png) no-repeat;
+				width: 32px;
+				height: 32px;
+				float: left;
+				
+			}
+			span{
+				display: inline-block;
+				height: 32px;
+				line-height: 32px;
+				margin-left: 5px;
+				display: none;
+			}
+		</style>
+	
+		<!--引入require-->
+		<script src="js/require.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--实现require-->
+		<script type="text/javascript">
+		 
+			require(['js/jqurey.rank'], function(rank){
+				rank.pingfen();
+			})
+			
+		</script>
+
+
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<span>很差</span>
+		<span>较差</span>
+		<span>还行</span>
+		<span>推荐</span>
+		<span>力荐</span>
+	</body>
+</html>

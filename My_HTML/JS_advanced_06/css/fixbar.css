@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.banner{
+    height: 200px;
+    background: blue;
+}
+.searchBar{
+    height:100px;
+    background-image: url("../img/searchBar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}

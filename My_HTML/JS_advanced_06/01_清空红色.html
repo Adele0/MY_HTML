@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box div{
+				float: left;
+				width: 200px;
+				height: 200px;
+				border: 1px solid black;
+				margin-left: 10px;
+			}
+		</style>
+		
+		<!--引入require-->
+		<script src="js/require.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--实现require-->
+		<script type="text/javascript">
+		 
+			require(['js/jqurey.clearRed'], function(cl){
+				cl.color();
+			})
+			
+		</script>
+		
+	</head>
+	<body>
+		请选择颜色: <input type="button" value="red" /> <input type="button" value="yellow" />
+		<input type="button" value="blue" /><input type="button" value="black" /> 
+		<input type="button" value="清空红色" />
+		<div id="box">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		
+	</body>
+</html>

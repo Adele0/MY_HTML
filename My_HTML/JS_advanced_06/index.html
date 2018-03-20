@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <!-- 引入外部CSS样式 -->
+    <link rel="stylesheet" href="css/fixbar.css">
+    <script type="text/javascript" src="js/require.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $.fn.fixBar = function(){
+            var $target = this;
+            // 获取目标元素，到顶部的原始距离
+            var offT = $target.offset().top;
+
+            // 对整个窗口的滚动添加事件监听
+            $(window).on("scroll",function(){
+                // 当前窗口，距离内容顶部的距离
+                var scrollT = $(this).scrollTop();
+
+                // 判断窗口距顶部的偏移值 和 目标元素的初始值
+                if(scrollT > offT){
+                    // 修改样式为固定定位
+                    $target.css({
+                        position : "fixed",
+                        top:0,
+                        width:"100%"
+                    });
+                }else{
+                    $target.css({
+                        position : "static"
+                    });
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="searchBar"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script type="text/javascript">
+        $(".searchBar").fixBar();
+    </script>
+</body>
+</html>
