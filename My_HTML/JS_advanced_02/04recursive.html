@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--4.使用递归来完成一个阶加函数-->
+		
+		<script type="text/javascript">
+			function recursive (n) {
+				if (n == 1 ) {
+					return 1;
+				}
+				
+//				return n + recursive(n-1);	// 函数名和执行函数高度耦合,使用arguments.callee断开耦合
+				return n + arguments.callee(n-1);
+			}
+			
+			console.log(recursive(15));
+
+		</script>
+	</body>
+</html>

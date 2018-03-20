@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--下面代码为什么输出为undefined，有没办法让他输出100?? (可尝试多种方法) -->
+		<!--1.因为在立即执行的局部作用中，a变量在预编译阶段，变量声明被提升到函数开始部分，由于赋值操作在执行操作之前，所以为undefined-->
+		<script>
+
+			var a = 100;
+			(function(){
+				console.log(a);
+				var a = 10;
+			})();
+			
+			//尝试输出100
+			var a = 100;
+			(function(){
+				console.log(a);
+				a = 10;	//删除var，没有var就不会进行变量提升
+			})();
+		</script>
+		
+		
+	</body>
+</html>
