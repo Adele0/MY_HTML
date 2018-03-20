@@ -1,0 +1,42 @@
+[
+  {
+  	"id":1,
+    "name":"张三",
+    "gender":"女",
+    "hobby":"无",
+    "state":"正常",
+    "age":18
+  },
+
+  {
+  	"id":2,
+    "age":20,
+    "hobby":"吃",
+    "state":"正常"
+  },
+
+  {
+  	"id":3,
+    "name":"王五",
+    "age":29,
+     "gender":"男",
+    "hobby":"说话",
+    "state":"不正常"
+  },
+  
+  {
+  	"id":3,
+    "name":"王五",
+    "age":29,
+    "gender":"男",
+    "hobby":"说话"
+  },
+  
+  {
+  	"id":4,
+    "name":"按实际",
+    "gender":"男",
+    "hobby":"时候",
+    "state":"不正常"
+  }
+]

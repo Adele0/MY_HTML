@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style type="text/css">
+			
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			table {
+				width: 800px;
+				margin:100px auto;
+				text-align: center;
+				border-collapse: collapse;
+			}
+			
+			th, td {
+				border: 1px solid lightseagreen;
+				height: 50px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<!--1.HTML-->
+		<table>
+			<thead>
+				<tr>
+					<th field="name">名字</th>
+					<th field="gender">性别</th>
+					<th field="age">年龄</th>
+					<th field="hobby">爱好</th>
+					<th field="state">国籍</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>张三</td>
+					<td>女</td>
+					<td>2</td>
+					<td>无</td>
+					<td>CN</td>
+				</tr>
+			</tbody>
+			
+			<!--2.CSS-->
+		</table>
+		
+		
+		<!--3.JS引入和调用-->
+			<script src="../../jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/jquery.getRemoteData.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/jquery.datagrid.js"></script>
+			
+			
+			<script type="text/javascript">
+/*				数据来自后台，要传入URL来确定数据源
+				在datagrid第一个参数中传入调用应用已有的getRemoteData插件来获得远程数据
+				在getRemoteData中传入第二个参数：回调函数，其中包含遍历得到的数据数组。
+*/
+				$('table').datagrid({
+					url: 'server/employee.json'
+				});
+			</script>
+		
+	</body>
+</html>
