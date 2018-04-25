@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板引擎</title>
+</head>
+<body>
+模板引擎的运行原理？
+    模板引擎实现数据和内容合并。
+        提供模板内容html文件,提供一个json数据
+        使用ejs模板引擎，首先引入ejs,
+        模板语法：
+        <%if(true){%>
+        <%=value变化%>
+        <%}%>
+        使用ejs模板提供的方法渲染模块文件
+        ejs.renderFile("path","soureFile",callback(err,destFile){});
+</body>
+</html>
