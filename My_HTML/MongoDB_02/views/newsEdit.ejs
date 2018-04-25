@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style type="text/css">
+    div{
+      width: 80%;
+      margin: auto;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    table td{
+      border: solid 1px #aaa;
+      height: 30px;
+      font-family: "微软雅黑";
+      padding: 5px;
+    }
+
+    table td.leftlable{
+      width: 100px;
+      text-align: right;
+    }
+
+    table td input{
+      border: solid 1px #999;
+      height:20px;
+    }
+
+    table td textarea{
+      width: 500px;
+      height:200px;
+      border: solid 1px #999;
+    }
+
+    #btnsave{
+      width: 80px;
+      background-color: darkorange;
+      color: white;
+      border:solid 1px #FF8C00;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <form action="/topnews/edit" method="post">
+    <input type="hidden" name="newsID" value="<%=newsData._id%>" />
+    <table cellpadding="0" cellspacing="0">
+      <tr><td class="leftlable">标题</td><td><input value="<%=newsData.title%>" type="text" name="title" id="title" size="50"/></td></tr>
+      <tr>
+        <td class="leftlable">分类</td>
+        <td>
+          <select name="category">
+            <option <%if(newsData.category=='公司新闻'){%>selected="selected"<%}%>>公司新闻</option>
+            <option <%if(newsData.category=='行业新闻'){%>selected="selected"<%}%>>行业新闻</option>
+            <option <%if(newsData.category=='八卦新闻'){%>selected="selected"<%}%>>八卦新闻</option>
+            <option <%if(newsData.category=='娱乐新闻'){%>selected="selected"<%}%>>娱乐新闻</option>
+          </select>
+        </td>
+      </tr>
+      <tr><td class="leftlable">作者</td><td><input value="<%=newsData.author%>" type="text" name="author" id="author"/></td></tr>
+      <tr><td class="leftlable">来源</td><td><input value="<%=newsData.source%>" type="text" name="source" id="source"/></td></tr>
+      <tr><td class="leftlable">内容</td><td><textarea name="content" id="content" rows="5" cols="20"><%=newsData.content%></textarea></td></tr>
+      <tr><td class="leftlable">&nbsp;</td><td><input type="submit" id="btnsave" value="修改"/></td></tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%=webTitle%></title>
+  <style type="text/css">
+    div{
+      width: 80%;
+      margin: auto;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    table td,table th{
+      border: solid 1px #999;
+      padding-right: 5px;
+      height: 30px;
+      font-family: "微软雅黑";
+    }
+
+    table td a{
+      text-decoration: none;
+      color: black;
+      margin-left: 10px;
+    }
+
+    .tdcenter{
+      text-align: center;
+    }
+
+    .td100{
+      width: 100px;
+    }
+
+    #btnsave{
+      width: 80px;
+      background-color: darkorange;
+      color: white;
+      border:solid 1px #FF8C00;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <a href="/index.html">新增</a>
+  <table cellpadding="0" cellspacing="0">
+    <!--标题行-->
+    <tr><th class="tdcenter">标题</th><th class="tdcenter td100">分类</th><th class="tdcenter td100">来源</th><th class="tdcenter td100">作者</th><th class="tdcenter">时间</th><th class="tdcenter td100">操作</th></tr>
+    <!--数据是一个数组，所有要循环数组，数组里的每一个元素就是一个json对象-->
+      <%for(var i=0;i<newsDataAll.length;i++){%>
+    <tr><td><a href="/topnews/show/<%=newsDataAll[i]._id%>" target="_blank"> <%=newsDataAll[i].title%></a></td><td><%=newsDataAll[i].category%></td><td class="tdcenter"><%=newsDataAll[i].source%></td><td class="tdcenter"><%=newsDataAll[i].author%></td><td class="tdcenter"><%=newsDataAll[i].publishTime.toLocaleString()%></td><td><a href="/topnews/edit/<%=newsDataAll[i]._id%>">修改</a><a onclick="return confirm('确认删除吗？')" href="/topnews/delete/<%=newsDataAll[i]._id%>">删除</a></td></tr>
+      <%}%>
+  </table>
+</div>
+</body>
+</html>
