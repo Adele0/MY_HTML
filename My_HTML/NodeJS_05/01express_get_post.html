@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get & post</title>
+</head>
+<body>
+
+2、获取GET和POST方式传值，分别使用什么方法
+    get:
+    router.get('path',function(req,res){
+        req.query.paraName;
+    });
+
+    post:
+    router.post('path',function(req,res){
+        req.body.paraName;
+    });
+</body>
+</html>
