@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册表单</title>
+		
+		<style type="text/css">
+			input, select {
+				margin-bottom: 10px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<!--登陆名（文本框）、密码（密码框）、性别（单选框）、爱好（复选框）、
+所在城市（下拉框）、个人介绍（文本域）-->
+
+<form action="show.php" method="post">
+	登录名<input type="text" id="username" name="username" value="" /><br />
+	密码<input type="password" id="pwd" name="pwd" value="" /><br />
+	性别<input type="radio" name="gender" value="female" />女<input type="radio" name="gender" value="male" />男<br />
+	爱好<input type="checkbox" name="hobby" value="eat" />吃<input type="checkbox" name="hobby" value="drink" />喝<input type="checkbox" name="hobby" value="play" />玩<input type="checkbox" name="hobby" value="fun" />乐<br />
+	所在城市<select name="city"><br />
+		<option value="-1" >--请选择--</option><br />
+		<option value="beijing" >北</option><br />
+		<option value="shanghai" >上</option><br />
+		<option value="guangzhou" >广</option><br />
+		<option value="shenzhen" >深</option><br />
+	</select><br />
+	个人介绍<textarea name="introduct" rows="30" cols="100"></textarea>
+	
+</form>
+
+	</body>
+</html>
