@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证邮箱</title>
+    <script src="javascripts/createXHR.js"></script>
+</head>
+<body>
+   <form>
+       <p>用户名 <input type="text" name="username" placeholder="请输入用户名"></p>
+       <p>密&emsp;码 <input type="password" name="pwd" ></p>
+       <p>邮&emsp;箱<input type="text" name="email" id="email" ><span id="errMsg"></span></p>
+       <p><input type="button" id="btnReg" value="用户注册" ></p>
+   </form>
+
+   <script>
+        //储存需要的DOM id
+        var email = document.getElementById('email');     //需要验证
+        var errMsg = document.getElementById('errMsg');     //需要提示
+
+        //在验证邮箱时，失去焦点+值不为空时发起ajax请求
+        email.onblur = function () {
+
+               //ajax的标准四步骤：
+               var xhr = createXHR();   //1. 创建对象
+
+               //由于在验证的时候，需要得到前台的数据，url地址应该拼接属性值，一并传给后台
+               xhr.open('GET','/json/email.json',true);    //2. 发送请求，此处为get请求
+
+               xhr.onreadystatechange = function () {   //3. Ajax引擎对象状态改变事件
+                   if (xhr.readyState == 4 && xhr.status == 200) {
+
+                       var result = JSON.parse(xhr.responseText);   //从后台接收到的是字符串，需要转为json对象，方便后续判断操作
+                        // console.log(result);(得到的是数组，数组下是对象)
+
+                       var isExit = false;  //设置判断json表中是否存在的变量，默认不存在，方便后续输出判断
+
+                       for (var i in result) {  //遍历得到的json对象
+                           if (result[i].email==email.value) {  //若后台json中的邮箱 == 前台传来的email值
+                               isExit = true;
+                               break;
+                           }
+                       }
+
+                       if (isExit) {    //对有的数据进行返回，提示
+                           email.style.border = 'solid 2px red';
+                           errMsg.innerHTML= '该邮箱已经被注册';
+                           errMsg.style.color = 'red';
+
+                       }else {           //对无的数据进行返回，提示
+                           errMsg.innerHTML= '√';
+                           errMsg.style.color = 'green';
+                       }
+                   }
+               }
+            xhr.send();  //4.发送请求到服务器并接收响应
+       };
+   </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="javascripts/createXHR.js"></script>
+</head>
+<body>
+   <form>
+       <p>用户名 <input type="text" name="username" placeholder="请输入用户名"></p>
+       <p>密&emsp;码 <input type="password" name="pwd" ></p>
+       <p>邮&emsp;箱<input type="email" name="email" id="email" ><span id="errMsg"></span></p>
+       <p><input type="button" id="btnReg" value="用户注册" ></p>
+   </form>
+
+   <script>
+        //储存需要的DOM id
+        var email = document.getElementById('email');     //需要验证
+        var errMsg = document.getElementById('errMsg');     //需要提示
+
+        //在验证邮箱时，失去焦点+值不为空时发起ajax请求
+        email.onblur = function () {
+           if (email.value.length > 0) {
+               //ajax的标准四步骤：
+               var xhr = createXHR();   //1. 创建对象
+
+               //由于在验证的时候，需要得到前台的数据，url地址应该拼接属性值，一并传给后台
+               xhr.open('get','/users/verify/'+email.value,true);    //2. 发送请求，此处为get请求
+
+               xhr.onreadystatechange = function () {   //3. Ajax引擎对象状态改变事件
+                   if (xhr.readyState==4 && xhr.status==200) {
+                       var result = JSON.parse(xhr.responseText);   //从后台接收到的是字符串，需要转为json对象，方便后续判断操作
+                       if (result.success == -1) {
+                           errMsg.innerHTML= '<span style="color: red">'+result.message+'</span>';
+                           email.style.border = 'solid 2px red';
+                       }else {
+                           errMsg.innerHTML= '<span style="color: green">'+result.message+'</span>';
+                       }
+                   }
+               }
+
+               xhr.send();  //4.发送请求到服务器并接收响应
+           }
+       };
+   </script>
+</body>
+</html>

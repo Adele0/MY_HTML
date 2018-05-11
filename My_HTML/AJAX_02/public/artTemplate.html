@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>artTemplate练习</title>
+
+    <!--1.下载并解压artTemplate，将它的template.js库文件引入-->
+    <script src="javascripts/template.js" type="text/javascript"></script>
+
+    <!--2.定义模块结构，一定是script 的类型为 text/html-->
+    <script type="text/html" id="newsTemplate">
+        <!--之所以需要json对象是为了，通过·点·获得值-->
+        {{each newLists as value index}}
+            <li>{{value.title}} · {{value.publishTime.toLocaleString()}}</li>
+        {{/each}}
+    </script>
+
+</head>
+<body>
+
+    <ul id="news"></ul>
+
+    <script src="javascripts/jquery-2.1.0.js"></script>
+    <script type="text/javascript">
+        //3. 发起ajax请求
+        $.get('news/list',function (newsData) {
+            console.log(newsData);       //拿到的数据是数据库里的所有的数据de数！组！形式！
+            var dataJSON = {"newLists": newsData}       //将得到的数组数据，赋给需要循环渲染的id，再转为json数据，
+            //4. 使用模板引擎渲染前端页面，对应需要被渲染的id位置
+            var newsHTML = template('newsTemplate',dataJSON);
+            //5. 使用DOM操作把渲染后的结果更新到页面
+            $('#news').append(newsHTML);
+        })
+    </script>
+</body>
+</html>

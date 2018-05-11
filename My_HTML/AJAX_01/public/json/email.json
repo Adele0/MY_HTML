@@ -1,0 +1,22 @@
+[
+  {
+    "firstName" : "Bill",
+    "lastName" : "Gates",
+    "email" : "admin@163.com"
+  },
+  {
+    "firstName" : "George",
+    "lastName" : "Bush",
+    "email" : "gb@qq.com"
+  },
+  {
+    "firstName" : "Thomas",
+    "lastName" : "Carter",
+    "email" : "tc@gmail.com"
+  },
+  {
+    "firstName" : "Tamaki",
+    "lastName" : "Ouran",
+    "email" : "daisiki@163.com"
+  }
+]

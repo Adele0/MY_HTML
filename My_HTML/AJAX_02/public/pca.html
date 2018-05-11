@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三级联动</title>
+		
+		<script src="javascripts/jquery-2.1.0.js"></script>
+		<script src="javascripts/jquery.tmpl.js"></script>
+		
+	</head>
+
+	<body>
+		<script id="optionTmpl" type="text/html">
+			<option value="${code}">${name}</option>
+		</script> 
+		
+		<select id="province">
+			<option value="-1">--请选择--</option>
+		</select>
+		<select id="city">
+			<option value="-1">--请选择--</option>
+		</select>
+		<select id="area">
+			<option value="-1">--请选择--</option>
+		</select>
+		
+		<script type="text/javascript">
+            <!--重新选择的时候，需要恢复到：默认的空白状态-->
+            var opStr='<option value="-1" selected="selected">--请选择--</option>';
+
+            <!--省级-->
+			$.get('/pca',{parentcode:0},function(provinceData) {
+				//console.log(provinceData);  //获得参数parentcode=0的数组
+                var phtml = $('#optionTmpl').tmpl(provinceData);    //将得到的数组添加到模板引擎里（数组不需要循环）
+                $('#province').append(phtml);
+			});
+
+            //当省份，下拉框onchange的时候，获得onchange的parentcode，传递给后台路由
+            $('#province').on('change',function () {
+
+                var parentcode = $(this).val();   //当前change时的value值
+
+                console.log(parentcode);
+
+                $.get('/pca',{parentcode:parentcode},function(cityData) {
+                    //console.log(cityData);  //获得参数宣点击parentcode=0的数组
+                    var chtml = $('#optionTmpl').tmpl(cityData);    //将得到的数组添加到模板引擎里（数组不需要循环）
+                    $('#city').html(chtml); //由于需要在更改change的时候，数据恢复到默认状态，这里需要html而不是append
+                    $('#city').prepend(opStr);  //将默认放在最前面
+                });
+            });
+
+            //当市，下拉框onchange的时候，获得onchange的parentcode，传递给后台路由
+            $('#city').on('change',function () {
+
+                var parentcode = $(this).val();   //当前change时的value值
+
+                //console.log(parentcode);
+
+                $.get('/pca',{parentcode:parentcode},function(areaData) {
+                    console.log(areaData);  //获得参数宣点击parentcode=0的数组
+                    var ahtml = $('#optionTmpl').tmpl(areaData);    //将得到的数组添加到模板引擎里（数组不需要循环）
+                    $('#area').html(ahtml); //由于需要在更改change的时候，数据恢复到默认状态，这里需要html而不是append
+                    $('#area').prepend(opStr);  //将默认放在最前面
+                });
+            });
+
+		</script>
+		
+	</body>
+</html>

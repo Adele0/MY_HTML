@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="javascripts/createXHR.js"></script>
+</head>
+<body>
+   <form>
+       <p>用户名 <input type="text" name="username" id="username" placeholder="请输入用户名"><span id="errMsg"></span></p>
+       <p>密&emsp;码 <input type="password" name="pwd" ></p>
+       <p><input type="button" id="btnLogin" value="用户登录" ></p>
+   </form>
+   
+   <script>
+        //储存需要的DOM id
+        var username = document.getElementById('username');     //需要验证
+        var errMsg = document.getElementById('errMsg');     //需要提示
+
+        //在验证用户名时，失去焦点+值不为空时发起ajax请求
+       username.onblur = function () {
+           if (username.value.length > 0) {
+               //ajax的标准四步骤：
+               var xhr = createXHR();   //1. 创建对象
+
+               //由于在验证的时候，需要得到前台的数据，url地址应该拼接属性值，一并传给后台
+               xhr.open('post','/users/checkpost',true);    //2. 发送请求，此处为get请求
+
+               xhr.onreadystatechange = function () {   //3. Ajax引擎对象状态改变事件
+                   if (xhr.readyState==4 && xhr.status==200) {
+                       var result = JSON.parse(xhr.responseText);   //从后台接收到的是字符串，需要转为json对象，方便后续判断操作
+                       if (result.success == -1) {
+                           errMsg.innerHTML= '<span style="color: red">'+result.message+'</span>';
+                           username.style.border = 'solid 2px red';
+                       }else {
+                           errMsg.innerHTML= '<span style="color: green">'+result.message+'</span>';
+                       }
+                   }else {
+                       console.error('请求失败');
+                   }
+               }
+
+               // 设置响应头信息（post方式必须设置）
+               xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
+               xhr.send("username="+username.value);  //4.发送请求到服务器并接收响应
+           }
+       };
+   </script>
+</body>
+</html>
