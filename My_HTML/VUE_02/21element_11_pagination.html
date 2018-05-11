@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习element·pagination</title>
+		
+		<!--引入element的index.CSS样式-->
+		<link rel="stylesheet" type="text/css" href="element/index.css"/>
+		<!--引入element的icon.css样式-->
+		<link rel="stylesheet" type="text/css" href="element/icon.css"/>
+		<!--引入vue.js----import Vue before Element, 内容多的时候，全部放到body结尾前-->
+		<script src="../practice/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入element的脚本-->
+		<script src="element/index.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			 <div class="block">
+			    <span class="demonstration">完整功能</span>
+			    <el-pagination
+			      @size-change="handleSizeChange"
+			      @current-change="handleCurrentChange"
+			      :current-page="currentPage4"
+			      :page-sizes="[100, 200, 300, 400]"
+			      :page-size="100"
+			      layout="total, sizes, prev, pager, next, jumper"
+			      :total="400">
+			    </el-pagination>
+  			</div>
+		</div>
+	</body>
+	
+	<script>
+		
+		new Vue({
+	      el: '#app',
+	      
+	       methods: {
+		      handleSizeChange(val) {
+		        console.log(`每页 ${val} 条`);
+		      },
+		      handleCurrentChange(val) {
+		        console.log(`当前页: ${val}`);
+		      }
+		    },
+		    
+	       data() {
+     		 return {
+		         currentPage4: 4
+		      }
+		    }
+	    })
+		
+	</script>
+</html>

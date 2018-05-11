@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue基础操作6</title>
+		
+		<script src="lib/vue.js" type="text/javascript"></script>
+	</head>
+		
+	<body>
+		<div id="app">
+			
+			<h1>这是v-model对象指令方式</h1>
+			<p>v-model是在表单控件或者组件上创建双向绑定</p>
+			<h2>-------------------------------</h2>
+			
+			<p>data中的message默认初始值是“”，输入框的内容改变，会直接反应到下面。</p>
+			<input type="text" v-model="message" />
+			<p>{{message}}</p>
+			<h2>-------------------------------</h2>
+			
+			<p>通过给CheckBox定义同样的v-model的data名称，值为空数组，数组里得到的值是value的值</p>
+			<input type="checkbox" id="jack" value="Jack" v-model="checkedNames">jack
+		  	<input type="checkbox" id="john" value="John" v-model="checkedNames">john
+		 	<input type="checkbox" id="mike" value="Mike" v-model="checkedNames">mike
+		 	<br>
+		  	<span>选中的名字有: {{ checkedNames }}</span>
+			<h2>-------------------------------</h2>
+			
+			<p>通过给radio定义同样的v-model的data名称，值为空字符串,点击得到的值是value的值</p>
+			<input type="radio" value="上" v-model="place">top
+		  	<input type="radio" value="中" v-model="place">middle
+		 	<input type="radio" value="下" v-model="place">bottom
+		 	<br>
+		  	<span>选的位置是: {{ place }}</span>
+			<h2>-------------------------------</h2>
+			
+			<p>下拉框的v-model需要设置在select元素上，v-model在data的值为空字符串,点击得到的值是option的值</p>
+			<select v-model="fruit">
+				<option>苹果</option>
+				<option>香蕉</option>
+				<option>栗子</option>
+				<option>西瓜</option>
+				<option>草莓</option>
+			</select>
+			<p>你选中的水果是：{{fruit}}</p>
+			<h2>-------------------------------</h2>
+		
+		</div>	
+		
+		<script>
+
+		var app = new Vue({	//实例化vue
+			el:'#app',		//挂载视图元素----两种方式{{message}}  v-text=‘message’
+			
+			data:{		//挂载的数据
+				message:"",
+				checkedNames:[],
+				place:"",
+				fruit:""
+			}
+		});
+		</script>
+	</body>
+</html>

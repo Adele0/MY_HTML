@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>父子组件</title>
+		
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>父子component组件，其实就是global和local的混用</h1>
+			<h2>-------------------------------</h2>
+			
+			<p>定义子：var child={template:'....'}<br />
+			
+			定义父：var parent={template:'..&lt;inside_component&gt;&lt;/inside_component&gt;..'}<br />
+			在parent中继续定义<br />
+			components:{'inside_component':child}<br />
+			
+			
+			定义全局：Vue.component('componentName',parent)</p>
+			<h2>-------------------------------</h2>
+			
+			<p>直接使用componentName作为自定义元素,这里是global-component：如下</p>
+			<h2>-------------------------------</h2>
+			
+			<global-component></global-component>
+			<h2>-------------------------------</h2>
+			
+			
+		</div>
+		
+		<script>
+			var child = {
+				template:"<p>定义子：var child={template:'....'}定义父：var parent={template:'..这里包含components里的组件名..',component:{name:child}};Vue.comonent(在HTML中的定义元素，parent)，再new Vue</p>"
+			};
+			
+			var parent = {
+				template: `<div>
+								<h3>parent组件外面一定要有一层wrapper，在子元素中在引用包含child的自定义元素,反引号不用拼接</h3>
+								<my_div></my_div>
+							</div>`,
+				components: {
+					'my_div':child
+				}
+			};
+			
+			Vue.component('global-component',parent);
+			
+			new Vue({
+				el: '#app'
+			});
+		</script>
+	</body>
+</html>

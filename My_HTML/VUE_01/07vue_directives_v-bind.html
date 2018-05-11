@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue基础操作5</title>
+		
+		<style type="text/css">
+			.bg {
+				font-size: 18px;
+				color: #fff;
+				background-color: #f60;
+			}
+			.bgm {
+				font-size: 20px;
+				color: #fff;
+				background-color: mediumslateblue;
+			}
+		</style>
+		
+		<script src="lib/vue.js" type="text/javascript"></script>
+	</head>
+		
+	<body>
+		<div id="app">
+			
+			<p>这是v-bind对象指令方式</p>
+			<p v-bind:class="{bg:t}">v-bind:class="{类样式:是否显示}" 的完整形式，class是CSS中的类样式, :是否显示来自于data</p>
+			<h2>-------------------------------</h2>
+			
+			<p :class="{bgm:t}">简写:class="{类样式:是否显示}" 的完整形式，class是CSS中的类样式, :是否显示来自于data</p>
+			<h2>-------------------------------</h2>
+			
+			<p :class="{bgm:f}">简写:class="{类样式:是否显示}" :是否显示来自于data,当为false就不显示，和上面true对比。和下面有style对比</p>
+			<h2>-------------------------------</h2>
+			
+			<p :class="{bgm:f}" :style="{border:border}">：class="{类样式:是否显示}为false就不显示，但通过操作:style="{样式名称:在data中定义的具体样式}"</p>
+			<h2>-------------------------------</h2>
+			
+			<span>:src="url在data中定义的路径"</span>
+			<img :src="Url" alt="打折" />
+			<h2>-------------------------------</h2>
+		</div>	
+		
+		<script>
+
+		var app = new Vue({	//实例化vue
+			el:'#app',		//挂载视图元素----两种方式{{message}}  v-text=‘message’
+			
+			data:{		//挂载的数据
+				f: false,
+				t: true,
+				Url: "img/222_11.png",
+				border: "2px dotted lightblue"
+			}
+		});
+		</script>
+	</body>
+</html>

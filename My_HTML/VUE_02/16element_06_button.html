@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习element·button</title>
+		
+		<!--引入element的index.CSS样式-->
+		<link rel="stylesheet" type="text/css" href="element/index.css"/>
+		<!--引入element的icon.css样式-->
+		<link rel="stylesheet" type="text/css" href="element/icon.css"/>
+		<!--引入vue.js----import Vue before Element, 内容多的时候，全部放到body结尾前-->
+		<script src="../practice/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入element的脚本-->
+		<script src="element/index.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			
+			#app > .el-row {
+				width: 1200px;
+				margin: 30px auto;
+				text-align: center;
+			}
+			
+			#app > .el-row:last-of-type > button {
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<el-row>
+			  <el-button>默认按钮</el-button>
+			  <el-button type="primary"  size="medium">主要按钮</el-button>
+			  <el-button type="success" size="small">成功按钮</el-button>
+			  <el-button type="info" size="mini">信息按钮</el-button>
+			  <el-button type="warning">警告按钮</el-button>
+			  <el-button type="danger">危险按钮</el-button>
+			</el-row>
+			
+			<el-row>
+			  <el-button plain>朴素按钮</el-button>
+			  <el-button type="primary" plain  size="medium">主要按钮</el-button>
+			  <el-button type="success" plain size="small">成功按钮</el-button>
+			  <el-button type="info" plain size="mini">信息按钮</el-button>
+			  <el-button type="warning" plain>警告按钮</el-button>
+			  <el-button type="danger" plain>危险按钮</el-button>
+			</el-row>
+			
+			<el-row>
+			  <el-button round>圆角按钮</el-button>
+			  <el-button type="primary" round  size="medium">主要按钮</el-button>
+			  <el-button type="success" round size="small">成功按钮</el-button>
+			  <el-button type="info" round size="mini">信息按钮</el-button>
+			  <el-button type="warning" round>警告按钮</el-button>
+			  <el-button type="danger" round>危险按钮</el-button>
+			</el-row>
+			
+			<el-row>
+			  <el-button icon="el-icon-search" circle></el-button>
+			  <el-button type="primary" icon="el-icon-edit" circle></el-button>
+			  <el-button type="success" icon="el-icon-check" circle></el-button>
+			  <el-button type="info" icon="el-icon-message" circle></el-button>
+			  <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+			  <el-button type="danger" icon="el-icon-delete" circle></el-button>
+			</el-row>
+		</div>
+	</body>
+	
+	<script>
+		
+		new Vue({
+	      el: '#app',
+	    })
+		
+	</script>
+</html>

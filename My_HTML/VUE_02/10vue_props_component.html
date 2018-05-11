@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>props在父子组件中的应用</title>
+		
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<parent-component title='maomao' url='img/1.jpg'></parent-component>
+			<parent-component title='gougou' url='img/2.jpg'></parent-component>
+			<parent-component title='xiangxiang' url='img/3.jpg'></parent-component>
+		</div>
+		
+		
+		
+		<script>
+			var child = {
+				template: '<img src="url"/>'
+			};
+			
+			var parent = {
+				props: ['title','url'],
+				template:`
+					<div>
+						<h1>{{title}}</h1>
+						<myimg :src='url'></myimg>
+					</div>
+				`,
+				components: {
+					'myimg':child
+				}
+			};
+			
+			Vue.component('parent-component',parent);
+			
+			new Vue({
+				el:'#app',
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue基础操作4</title>
+		<script src="lib/vue.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		<div id="app">
+			
+			<p>这是v-on对象指令方式</p>
+			<button v-on:click="fn">在on:click=fn，()可要可不要,但是有computed属性在的时候必须有</button>
+			
+			<h2>-------------------------------</h2>
+			<button @click="fn1()">简写形式@click=fn1，()可要可不要，但是有computed属性在的时候必须有</button>
+			<h2>-------------------------------</h2>
+			
+			<span>keyup事件，具体到放开k这个键的监听</span>
+			<input type="text" v-on:keyup.k="k" />
+			<h2>-------------------------------</h2>
+			
+		</div>	
+		
+		<script>
+
+		var app = new Vue({	//实例化vue
+			el:'#app',		//挂载视图元素----两种方式{{message}}  v-text=‘message’
+			
+			methods:{		//挂载的函数---不能使用箭头函数，会改变this的指向
+				fn(){
+					alert(1);
+				},
+				fn1(){
+					alert(2);
+				},
+				k(){
+					alert('刚刚按下了k');
+				}
+			}
+		});
+		</script>
+	</body>
+</html>

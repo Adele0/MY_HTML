@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习element·progress</title>
+		
+		<!--引入element的index.CSS样式-->
+		<link rel="stylesheet" type="text/css" href="element/index.css"/>
+		<!--引入element的icon.css样式-->
+		<link rel="stylesheet" type="text/css" href="element/icon.css"/>
+		<!--引入vue.js----import Vue before Element, 内容多的时候，全部放到body结尾前-->
+		<script src="../practice/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入element的脚本-->
+		<script src="element/index.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.el-progress {
+				margin-bottom: 50PX;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			<el-progress :percentage="0"></el-progress>
+			<el-progress :percentage="70"></el-progress>
+			<el-progress :percentage="80" color="#8e71c7"></el-progress>
+			<el-progress :percentage="100" status="success"></el-progress>
+			<el-progress :percentage="50" status="exception"></el-progress>
+			
+			<el-progress type="circle" :percentage="0"></el-progress>
+			<el-progress type="circle" :percentage="25"></el-progress>
+			<el-progress type="circle" :percentage="80" color="#8e71c7"></el-progress>
+			<el-progress type="circle" :percentage="100" status="success"></el-progress>
+			<el-progress type="circle" :percentage="50" status="exception"></el-progress>
+		</div>
+	</body>
+	
+	<script>
+		
+		new Vue({
+	      el: '#app',
+	      
+	       data() {
+     		 return {
+		        value3: null
+		      }
+		    }
+	    })
+		
+	</script>
+</html>

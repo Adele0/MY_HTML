@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue基础操作2</title>
+		
+		<script src="lib/vue.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<div id="app">
+			<span>这是v-show的指令方式</span>
+			<p v-show='t'>true相当于display：block</p>
+			<p v-show='f'>false相当于display：none,但是在DOM节点中看得见</p>
+			<h2>-------------------------------</h2>
+		
+			<span>这是v-if的指令方式</span>
+			<p v-if='t'>true相当于display：block</p>
+			<p v-if='f'>false相当于在DOM中删掉节点</p>
+			<h2>-------------------------------</h2>
+			
+			<h2>总结：v-show和v-if的异同，都是现实元素隐藏和显示，它们的值都是布尔值；但是show的隐藏是display为none，有安全问题，主要运用于特效类型。而if的隐藏是删除节点，，适合后台管理</h2>
+			<h2>-------------------------------</h2>
+			
+			<span>这是v-for的数组指令方式</span>
+			<ul v-for='(name,index) in arr'>
+				<li>{{name+'的排名是：'+(index+1)}}</li>
+			</ul>
+			<h2>-------------------------------</h2>
+			
+			<span>这是v-for和v-if的综合练习指令方式</span>
+			<p>排名前三的人：</p>
+			<ul v-for='(name,index) in arr' v-if='index<3'>
+				<li>{{name+'的排名是：'+(index+1)}}</li>
+			</ul>
+			
+			<h2>-------------------------------</h2>
+			<h2>总结：v-for和v-if的同时使用的时候，不分先后顺序，index只要其中一个申明了，就可以使用</h2>
+			<h2>-------------------------------</h2>
+			
+			<span>这是v-for对象指令方式</span>
+			<p v-for='(value,key,index) in obj'>{{'第一参数是对象的值'+value+' 第二参数是对象的键名称'+key+' 第三参数是对象索引'+index}}</p>
+			
+			<h2>-------------------------------</h2>
+			<h2>总结：v-for的参数value，一直是第一个，其他的可选</h2>
+		</div>	
+		
+		<script>
+
+		var app = new Vue({	//实例化vue
+			el:'#app',		//挂载视图元素----两种方式{{message}}  v-text=‘message’
+			data:{			//挂载的数据---json,键值对
+				t: true,
+				f: false,
+				arr: ['李一','钱二','张三','李四','王五','赵六'],
+				obj: {
+					name:'Adele',
+					age:18,
+					gender:'Female',
+					phone:'18788888888'
+				}
+			}
+		});
+		</script>
+	</body>
+</html>

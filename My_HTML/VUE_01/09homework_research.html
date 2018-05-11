@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #app{
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        fieldset{
+            width: 800px;
+            border: 1px solid  #676863;
+
+        }
+
+        input,select{
+            height: 30px;
+            width: 300px;
+            margin: 10px 0;
+            outline: none;
+        }
+
+        button{
+            border:none;
+            background-color: #676863;
+            color: #fff;
+            height: 36px;
+            outline: none;
+            border-radius: 7px;
+        }
+
+        table{
+            margin-top: 20px;
+            border: 1px solid  #676863;
+            width: 830px;
+            text-align: center;
+        }
+
+        thead{
+            background-color:  #676863;
+            color: #fff;
+        }
+        
+        [v-cloak] {
+        	display: none;
+        }
+    </style>
+</head>
+<body>
+   <div id="app" v-cloak>
+       <fieldset>
+           <legend>户籍管理系统</legend>
+           <div>
+               <label>姓名:</label>
+               <input type="text" placeholder="请输入用户名" v-model="newPerson.name" >
+             </div>
+             <div>
+               <label>年龄:</label>
+               <input type="number" placeholder="请输入年龄"  v-model="newPerson.age" >
+           </div>
+           <div>
+               <label>性别:</label>
+               <select  v-model="newPerson.sex">
+                   <option value="男">男</option>
+                   <option value="女">女</option>
+               </select>
+             </div>
+             <div>
+               <label>手机:</label>
+               <input type="text" placeholder="请输入手机号"  v-model="newPerson.phone" >
+           </div>
+           <div>
+               <button @click='create'>创建新用户</button>
+           </div>
+       </fieldset>
+
+       <!--数据系统-->
+       <table>
+           <thead>
+              <tr>
+                  <td>姓名</td>
+                  <td>性别</td>
+                  <td>年龄</td>
+                  <td>手机</td>
+                  <td>删除</td>
+              </tr>
+           </thead>
+           <tbody >
+             <tr v-for="(person,index) in persons">
+             	<td>{{person.name}}</td>
+             	<td>{{person.sex}}</td>
+             	<td>{{person.age}}</td>
+             	<td>{{person.phone}}</td>
+             	<td><button @click="del(index)">删除</button></td>
+             </tr>
+           </tbody>
+       </table>
+   </div>
+
+<script src="lib/vue.js"></script>
+<script>
+    var vm = new Vue({
+       el: '#app',
+       
+       data: {
+           // 数据数组
+           persons: [
+               {name: '张三', age: 16, sex:'女', phone:'15688888811'},
+               {name: '李四', age: 26, sex:'男', phone:'14566666622'},
+               {name: '王麻子', age: 36, sex:'女', phone:'18666666666'}
+           ],
+           // 单个对象
+           newPerson:{name: '', age: 0, sex:'男', phone:''}
+       },
+       
+       methods: {
+       		create(){
+       			if (this.newPerson.name == "") {
+       				alert("姓名不能为空");
+       				return;
+       			}
+       			
+       			if (this.newPerson.age < 0) {
+       				alert("年龄输入有误");
+       				return;
+       			}
+       			
+       			if (this.newPerson.phone == "") {
+       				alert("手机不能为空");
+       				return;
+       			}
+       			
+       			this.persons.unshift(this.newPerson);
+       			this.newPerson={name: '', age: 0, sex:'男', phone:''};
+       		},
+       		
+       		del(index){
+       			this.persons.splice(index,1);
+       		}
+       }
+    });
+</script>
+</body>
+</html>

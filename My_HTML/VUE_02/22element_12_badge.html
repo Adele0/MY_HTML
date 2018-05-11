@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习element·badge</title>
+		
+		<!--引入element的index.CSS样式-->
+		<link rel="stylesheet" type="text/css" href="element/index.css"/>
+		<!--引入element的icon.css样式-->
+		<link rel="stylesheet" type="text/css" href="element/icon.css"/>
+		<!--引入vue.js----import Vue before Element, 内容多的时候，全部放到body结尾前-->
+		<script src="../practice/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入element的脚本-->
+		<script src="element/index.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.item {
+			  margin-top: 10px;
+			  margin-right: 40px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			 <div class="block">
+			    <el-badge :value="12" class="item">
+				  <el-button size="small">评论</el-button>
+				</el-badge>
+				<el-badge :value="200" :max="99" class="item">
+				  <el-button size="small">回复</el-button>
+				</el-badge>
+				
+				<el-dropdown trigger="click">
+				  <span class="el-dropdown-link">
+				    点我查看<i class="el-icon-caret-bottom el-icon--right"></i>
+				  </span>
+				  <el-dropdown-menu slot="dropdown">
+				    <el-dropdown-item class="clearfix">
+				      评论
+				      <el-badge class="mark" :value="12" />
+				    </el-dropdown-item>
+				    <el-dropdown-item class="clearfix">
+				      回复
+				      <el-badge class="mark" :value="200" :max="99"/>
+				    </el-dropdown-item>
+				  </el-dropdown-menu>
+				</el-dropdown>
+  			</div>
+		</div>
+	</body>
+	
+	<script>
+		
+		new Vue({
+	      el: '#app',
+	    })
+		
+	</script>
+</html>

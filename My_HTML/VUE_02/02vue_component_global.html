@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>组件component：global</title>
+		
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>这是全局component组件</h1>
+			<p>全局注册：组件</p>
+			<h2>-------------------------------</h2>
+			
+			<p>语法Vue.component('componentName',{template:'....'})</p>
+			<h2>-------------------------------</h2>
+			
+			<p>直接使用componentName作为自定义元素，这里是global-component</p>
+			<p>这里{template:'&lt;h2&gt;在注册组件的时候，通过实例出来的Vue.component(componentName,{template:跟上实际展示在DOM中的元素和内容})&lt;/h2&gt;'}</p>
+			<h2>-------------------------------</h2>
+			
+			直接在挂载的元素中使用全局组件&lt;global-component&gt;&lt;/global-component&gt;
+			<global-component></global-component>
+			<h2>-------------------------------</h2>
+			
+			<p>总结！先有组件！！！再new Vue!!!</p>
+			<h2>-------------------------------</h2>
+		</div>
+		
+		<script>
+			
+			Vue.component('global-component',{
+				template: '<h2>在注册组件的时候，通过实例出来的Vue.component(componentName,{template:跟上实际展示在DOM中的元素和内容})</h2>'
+			});
+			
+			new Vue({
+				el: '#app'
+			})
+		</script>
+	</body>
+</html>

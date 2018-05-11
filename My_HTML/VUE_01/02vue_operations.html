@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue基础</title>
+		
+		<script src="lib/vue.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<div id="app">
+			<p>{{message}}</p>
+			<h3>{{'算术运算：'+num_1*num_2}}</h3>
+			<h2>-------------------------------</h2>
+			<h3>{{'字符串长度：'+str_1.length}}</h3>
+			<h3>{{'字符串拼接：'+str_1+'·'+str_2}}</h3>
+			<h3>{{'字符串转大写：'+str_2.toUpperCase()}}</h3>
+			<h3>{{'字符串截取：'+str_3.substring(3,15)}}</h3>
+			<h3>{{'字符串截取：'+str_3.substring(3,15)}}</h3>
+			<h2>-------------------------------</h2>
+			<h3>{{'对象操作：'+obj.name+'的年龄是：'+obj.age+'的职位是：'+obj.title}}</h3>
+			<h2>-------------------------------</h2>
+			<h3>{{'数组操作：'+arr[0]+'是数组第一个下标值'}}</h3>
+		</div>	
+			
+		<script>
+//			alert(Vue);		测试vue.js是否引用成功。注意：Vue,首字母大写
+		
+		var jsonObj = {
+			name: 'yui',
+			age: 18,
+			title: 'manager'
+		}
+		
+		var arrObj = [23,34,45];
+		
+		var app = new Vue({	//实例化vue
+			el:'#app',		//挂载视图元素----两种方式{{message}}  v-text=‘message’
+			data:{			//挂载的数据---json,键值对
+				message: '当没有data这一个属性的时候，直接在HTML中的{{直接输入内容，是可是在页面显示的}}',
+				num_1:15,
+				num_2:56,
+				
+				str_1:'Adele',
+				str_2:'White',
+				str_3:'Eslomejorparadiomasaunquemegustaríaqueyaviniera aplic',
+				
+				obj: jsonObj,
+				
+				arr: arrObj
+			}
+		});
+		</script>
+	</body>
+</html>

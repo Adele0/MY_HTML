@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习element·carousel</title>
+		
+		<!--引入element的index.CSS样式-->
+		<link rel="stylesheet" type="text/css" href="element/index.css"/>
+		<!--引入element的icon.css样式-->
+		<link rel="stylesheet" type="text/css" href="element/icon.css"/>
+		<!--引入vue.js----import Vue before Element, 内容多的时候，全部放到body结尾前-->
+		<script src="../practice/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入element的脚本-->
+		<script src="element/index.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.el-carousel__item h3 {
+			    color: #475669;
+			    font-size: 30px;
+			    opacity: 0.75;
+			    line-height: 200px;
+			    margin: 0;
+			    text-align: center;
+			  }
+			  
+			  .el-carousel__item:nth-child(2n) {
+			    background-color: #99a9bf;
+			  }
+			  
+			  .el-carousel__item:nth-child(2n+1) {
+			    background-color: #d3dce6;
+			  }
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			 <el-carousel :interval="4000" type="card" height="200px">
+			    <el-carousel-item v-for="item in 6" :key="item">
+			      <h3>{{ item }}</h3>
+			    </el-carousel-item>
+			  </el-carousel>
+		</div>
+	</body>
+	
+	<script>
+		
+		new Vue({
+	      el: '#app',
+	    })
+		
+	</script>
+</html>

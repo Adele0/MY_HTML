@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>data</title>
+		
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h3>data在组件中只能为function，实现点击事件的数字累加</h3>
+			<dynamic_data></dynamic_data>
+			<dynamic_data></dynamic_data>
+			<dynamic_data></dynamic_data>
+		</div>
+		
+		<script>
+			
+			Vue.component( 'dynamic_data',{
+				template:'<button @click="count+=1">{{count}}</button>',
+				data: function () {
+					return {count:0};
+				}
+			});
+			
+			new Vue({
+				el:'#app',
+			})
+		</script>
+	</body>
+</html>

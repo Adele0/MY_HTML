@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习element·timerpicker</title>
+		
+		<!--引入element的index.CSS样式-->
+		<link rel="stylesheet" type="text/css" href="element/index.css"/>
+		<!--引入element的icon.css样式-->
+		<link rel="stylesheet" type="text/css" href="element/icon.css"/>
+		<!--引入vue.js----import Vue before Element, 内容多的时候，全部放到body结尾前-->
+		<script src="../practice/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入element的脚本-->
+		<script src="element/index.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			#app {
+				width: 1200px;
+				margin: 100px auto;
+				text-align: center;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			<div class="block">
+			    <p class="demonstration">起始日期时刻为 12:00:00，结束日期时刻为 08:00:00</p>
+			    <el-date-picker
+			      v-model="value6"
+			      type="datetimerange"
+			      align="right"
+			      start-placeholder="开始日期"
+			      end-placeholder="结束日期"
+			      :default-time="['12:00:00', '08:00:00']">
+			    </el-date-picker>
+			 </div>
+		</div>
+	</body>
+	
+	<script>
+		
+		new Vue({
+	      el: '#app',
+	      
+	      data() {
+		      return {
+		        value6: ''
+		      };
+		    }
+	    })
+		
+	</script>
+</html>

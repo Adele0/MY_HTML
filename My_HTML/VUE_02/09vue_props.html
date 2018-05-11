@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>props多个值</title>
+		
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h3>props 可以是数组或对象，用于接收来自父组件的数据</h3>
+			<h2>-------------------------------</h2>
+			
+			<p>08中动态绑定，：message=‘msg’---msg在data中初始为空<br />
+				这里要获得，多个props数组的多个值，直接使用message1=‘值1’ ，message2=‘值2’ ....
+			</p>
+			<h2>-------------------------------</h2>
+			
+			<parent-component message1='写死的数据，不用冒号' message2='也不用在data中定义，直接在template中的模板中使用'></parent-component>
+		</div>
+		
+		<script>
+			
+			Vue.component('parent-component', {
+				//先申明props
+				props:['message1','message2'],
+				template:"<h3>{{message1+'&&'+message2}}</h3>"
+			});
+			
+			new Vue({
+				el:'#app',
+			})
+		</script>
+	</body>
+</html>

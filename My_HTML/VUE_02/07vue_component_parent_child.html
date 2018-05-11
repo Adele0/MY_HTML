@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>父子组件，练习</title>
+		
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+			<global_component></global_component>
+			
+		</div>
+		
+		<script>
+			var child = {
+				template:`
+					<ul>
+						<li><button>1</button></li>
+						<li><button>2</button></li>
+						<li><button>3</button></li>
+					</ul> 
+				`
+			};
+			
+			var parent = {
+				template: `<div>
+								<ul>
+									<li>这是父的ul>li1</li>
+									<li>这是父的ul>li2</li>
+									<li>这是父的ul>li3</li>
+								</ul>
+								
+								<p>-----my_div就是在父的components里值为child的组件名--------</p>
+								
+								<my_div></my_div>
+							</div>
+						`,
+						
+				components: {
+					'my_div':child
+				}
+			};
+			
+			Vue.component('global_component',parent);
+			
+			new Vue({
+				el: '#app'
+			});
+		</script>
+	</body>
+</html>

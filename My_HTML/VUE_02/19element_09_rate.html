@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>练习element·rate</title>
+		
+		<!--引入element的index.CSS样式-->
+		<link rel="stylesheet" type="text/css" href="element/index.css"/>
+		<!--引入element的icon.css样式-->
+		<link rel="stylesheet" type="text/css" href="element/icon.css"/>
+		<!--引入vue.js----import Vue before Element, 内容多的时候，全部放到body结尾前-->
+		<script src="../practice/lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--引入element的脚本-->
+		<script src="element/index.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.el-rate > span >i {
+				font-size: 30px;
+			}
+			
+			.el-rate > span {
+				font-size: 18px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="app">
+			<el-rate v-model="value3" show-text allow-half></el-rate>
+		</div>
+	</body>
+	
+	<script>
+		
+		new Vue({
+	      el: '#app',
+	      
+	       data() {
+     		 return {
+		        value3: null
+		      }
+		    }
+	    })
+		
+	</script>
+</html>
